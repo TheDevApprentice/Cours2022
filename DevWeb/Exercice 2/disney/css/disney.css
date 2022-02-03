@@ -1,0 +1,66 @@
+body{
+    background: #aaa;
+    color: whitesmoke;
+    background: url('./../images/fireworks.jpg'), url('./../images/mickey.png');
+    
+    background-position: top left, right 200px;
+    background-repeat: repeat-x, no-repeat;
+    
+    
+ 
+}
+header{
+    background: #f2fdfe;
+    padding: 20px 0px;
+    color: red;
+    text-align: center;
+    font-size: 250%;
+    
+}
+
+h2{
+    background: chartreuse;
+    margin-top: -5px;
+    padding: 15px 0px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+article{
+    background: blanchedalmond;
+    color: black;
+}
+article>h3{
+    background: black;
+    color: white;
+    text-align: center;
+}
+article>figure{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.impair{
+    width: 75%;
+   margin: auto;
+   border: 1px solid black;
+   border-radius: 50px 50px;
+   padding: 4%;
+}
+
+#prefere{
+    border: 3px solid black;
+    border: 50px 50px;
+}
+
+.vide{
+    min-height :200px 
+}
+footer{
+    background: #f2fdfe;
+    color: red;
+    padding: 20px 0px;
+    border-radius: 20px;
+}
+
