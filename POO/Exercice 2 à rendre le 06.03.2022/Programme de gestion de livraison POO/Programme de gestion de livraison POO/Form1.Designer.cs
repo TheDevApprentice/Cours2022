@@ -48,7 +48,6 @@ namespace Programme_de_gestion_de_livraison_POO
             this.label_ajouter.Size = new System.Drawing.Size(112, 46);
             this.label_ajouter.TabIndex = 0;
             this.label_ajouter.Text = "Ajouter";
-   
             // 
             // grpb_voyages
             // 
@@ -96,6 +95,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.btn_assigneLivraison.TabIndex = 4;
             this.btn_assigneLivraison.Text = ">";
             this.btn_assigneLivraison.UseVisualStyleBackColor = true;
+            this.btn_assigneLivraison.Click += new System.EventHandler(this.btn_assigneLivraison_Click);
             // 
             // btn_directionNonAssignees
             // 
@@ -105,6 +105,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.btn_directionNonAssignees.TabIndex = 5;
             this.btn_directionNonAssignees.Text = "<";
             this.btn_directionNonAssignees.UseVisualStyleBackColor = true;
+            this.btn_directionNonAssignees.Click += new System.EventHandler(this.btn_directionNonAssignees_Click);
             // 
             // Form1
             // 
@@ -118,6 +119,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.Controls.Add(this.label_ajouter);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.grpb_voyages.ResumeLayout(false);
             this.grpb_livraisonNonAssignees.ResumeLayout(false);
             this.ResumeLayout(false);
