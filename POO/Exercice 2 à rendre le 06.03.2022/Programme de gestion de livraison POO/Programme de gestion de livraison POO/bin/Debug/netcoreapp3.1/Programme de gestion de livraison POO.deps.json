@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Programme de gestion de livraison POO/1.0.0": {
+        "runtime": {
+          "Programme de gestion de livraison POO.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Programme de gestion de livraison POO/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
