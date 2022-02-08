@@ -29,25 +29,22 @@ namespace Programme_de_gestion_de_livraison_POO
         /// </summary>
         private void InitializeComponent()
         {
-            this.label_ajouter = new System.Windows.Forms.Label();
             this.grpb_voyages = new System.Windows.Forms.GroupBox();
             this.lst_voyages = new System.Windows.Forms.ListBox();
             this.lst_livraisonNonAssignees = new System.Windows.Forms.ListBox();
             this.grpb_livraisonNonAssignees = new System.Windows.Forms.GroupBox();
             this.btn_assigneLivraison = new System.Windows.Forms.Button();
             this.btn_directionNonAssignees = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camionneurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.camionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.voyagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.livraisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpb_voyages.SuspendLayout();
             this.grpb_livraisonNonAssignees.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // label_ajouter
-            // 
-            this.label_ajouter.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label_ajouter.Location = new System.Drawing.Point(0, 0);
-            this.label_ajouter.Name = "label_ajouter";
-            this.label_ajouter.Size = new System.Drawing.Size(112, 46);
-            this.label_ajouter.TabIndex = 0;
-            this.label_ajouter.Text = "Ajouter";
             // 
             // grpb_voyages
             // 
@@ -107,6 +104,52 @@ namespace Programme_de_gestion_de_livraison_POO
             this.btn_directionNonAssignees.UseVisualStyleBackColor = true;
             this.btn_directionNonAssignees.Click += new System.EventHandler(this.btn_directionNonAssignees_Click);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ajouterToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1161, 28);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // ajouterToolStripMenuItem
+            // 
+            this.ajouterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.camionneurToolStripMenuItem,
+            this.camionToolStripMenuItem,
+            this.voyagesToolStripMenuItem,
+            this.livraisonToolStripMenuItem});
+            this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
+            this.ajouterToolStripMenuItem.Text = "Ajouter";
+            // 
+            // camionneurToolStripMenuItem
+            // 
+            this.camionneurToolStripMenuItem.Name = "camionneurToolStripMenuItem";
+            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.camionneurToolStripMenuItem.Text = "Camionneur";
+            // 
+            // camionToolStripMenuItem
+            // 
+            this.camionToolStripMenuItem.Name = "camionToolStripMenuItem";
+            this.camionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.camionToolStripMenuItem.Text = "Camion";
+            // 
+            // voyagesToolStripMenuItem
+            // 
+            this.voyagesToolStripMenuItem.Name = "voyagesToolStripMenuItem";
+            this.voyagesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.voyagesToolStripMenuItem.Text = "Voyage";
+            // 
+            // livraisonToolStripMenuItem
+            // 
+            this.livraisonToolStripMenuItem.Name = "livraisonToolStripMenuItem";
+            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.livraisonToolStripMenuItem.Text = "Livraison";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -116,25 +159,33 @@ namespace Programme_de_gestion_de_livraison_POO
             this.Controls.Add(this.btn_assigneLivraison);
             this.Controls.Add(this.grpb_livraisonNonAssignees);
             this.Controls.Add(this.grpb_voyages);
-            this.Controls.Add(this.label_ajouter);
+            this.Controls.Add(this.menuStrip1);
+            this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.grpb_voyages.ResumeLayout(false);
             this.grpb_livraisonNonAssignees.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label_ajouter;
         private System.Windows.Forms.GroupBox grpb_voyages;
         private System.Windows.Forms.ListBox lst_voyages;
         private System.Windows.Forms.ListBox lst_livraisonNonAssignees;
         private System.Windows.Forms.GroupBox grpb_livraisonNonAssignees;
         private System.Windows.Forms.Button btn_assigneLivraison;
         private System.Windows.Forms.Button btn_directionNonAssignees;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camionneurToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem camionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem voyagesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem livraisonToolStripMenuItem;
     }
 }
 
