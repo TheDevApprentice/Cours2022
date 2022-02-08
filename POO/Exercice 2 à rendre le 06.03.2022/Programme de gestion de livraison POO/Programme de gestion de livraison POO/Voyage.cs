@@ -24,7 +24,7 @@ namespace Programme_de_gestion_de_livraison_POO
             Date = date;
             Camionneur = camionneur;
             Camion = camion;
-            Distance = distance;  
+            Distance = distance; 
         }
     }
 
