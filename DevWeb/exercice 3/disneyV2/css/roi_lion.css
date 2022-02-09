@@ -7,5 +7,20 @@ p{
 hr {
  width:50%;
 }
-
-
+.histoire{
+	clear: both;
+	overflow: auto;
+	margin-bottom: 1.5rem;
+}
+.histoire > .droite{
+	float: right;
+	padding: 1.2rem;
+}
+.histoire > .gauche{
+	float: left;
+	
+}
+footer{
+	clear: both;
+	
+}

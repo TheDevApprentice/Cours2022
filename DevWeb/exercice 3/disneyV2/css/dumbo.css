@@ -39,3 +39,45 @@ section div {
 #section2 img, #section2 a {
 	display: block;
 }
+
+#section3 > div > img{
+	float: right;
+}
+
+#section4 > div > p:first-of-type{
+	float: left;
+	width: 50%;
+	background: black;
+	color: blanchedalmond;
+	width: 40%;
+}
+/* solution à la section 4*/
+/* #section4 > div{
+	display: flex;
+	justify-content: center;
+	gap: 2rem;
+}
+#section4 > div> p:nth-of-type(2){
+	width: 60%;
+	
+}
+#section4 > div > p{
+	margin: 1.2rem;
+} */
+/************** */
+#section5{
+	clear: both;
+}
+#section5 > div{
+	overflow: auto;
+}
+#section5 > div > p:first-of-type{
+	float: left;
+	width: 50%;
+	background: black;
+	color: blanchedalmond;
+	width: 40%;
+}
+#section5 > div > p{
+	margin: 1.2rem;
+}
