@@ -4,29 +4,23 @@ using System.Text;
 
 namespace Programme_de_gestion_de_livraison_POO
 {
-    class Camion
+    class livraisonIncluses
     {
-        List<Camion> ListeCamions = new List<Camion>();
-
         int poids;
         int volume;
 
-    
         public int Volume { get => volume; set => volume = value; }
-       
+
         public int Poids { get => poids; set => poids = value; }
 
-        public Camion(int poids, int volume)
+        public livraisonIncluses(int poids, int volume)
         {
             Poids = poids;
-            Volume = volume; 
+            Volume = volume;
         }
         public override string ToString()
         {
-            return "Camion poids : " + Poids + ", volume de : " + Volume;
+            return "Livraison de " + Poids + "  LB " + " avec un volume de  " + Volume;
         }
-
     }
-
-  
 }

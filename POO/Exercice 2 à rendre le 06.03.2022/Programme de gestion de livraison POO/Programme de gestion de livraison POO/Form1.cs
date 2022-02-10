@@ -12,7 +12,24 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     public partial class Form1 : Form
     {
-        Voyage voyage; 
+        List<livraisonIncluses> ListeLivraison = new List<livraisonIncluses>();
+        List<livraisonNonAssignees> ListeLivraisonNonAssignees = new List<livraisonNonAssignees>();
+        List<Voyage> ListeVoyages = new List<Voyage>();
+        List<Camionneur> ListeCamionneurs = new List<Camionneur>();
+        
+        List<Camion> ListeCamions = new List<Camion>();
+
+        BindingSource bindingSource = new BindingSource();
+
+        livraisonIncluses livraisonAssignée;
+        livraisonNonAssignees livraisonEnAttenteDAssignement;
+
+        Voyage voyage;
+        Camion camion;
+        Camionneur camionneur; 
+
+        internal Camion Camion1 { get => camion; set => camion = value; }
+        internal Camionneur Camionneur { get => camionneur; set => camionneur = value; }
 
         public Form1()
         {
@@ -21,15 +38,71 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            binding_LivraisonNonAssignees();
+            binding_Livraisonsincluse();
+            //binding_Voyages();
         }
+                private void binding_LivraisonNonAssignees()
+                {
+                    bindingSource.DataSource = ListeLivraisonNonAssignees;
+                    lst_livraisonNonAssignees.DataSource = bindingSource;
+                }
+        
+                private void binding_Livraisonsincluse()
+                {
+                    bindingSource.DataSource = ListeLivraison;
+                    lst_livraisonIncluses .DataSource = bindingSource;
+                }
+                private void binding_Camion()
+                {
+                    bindingSource.DataSource = ListeCamions;
+                    cmb_camions.DataSource = bindingSource;
+                }
+                private void binding_Camionneur()
+                {
+                    bindingSource.DataSource = ListeCamionneurs;
+                    cmb_camionneurs.DataSource = bindingSource;
+                   
+                }
+
+                //private void binding_Voyages()
+                //{
+                //    bindingSource.DataSource = ListeVoyages;
+                //    lst_voyages.DataSource = bindingSource;
+                   
+                //}
+
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
+            string nom = cmb_camionneurs.Text;
+            string prenom = cmb_camionneurs.Text;
+
+            Camionneur = new Camionneur(nom, prenom);
 
         }
 
         private void btn_directionNonAssignees_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void camionneurToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void camionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void voyagesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void livraisonToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }

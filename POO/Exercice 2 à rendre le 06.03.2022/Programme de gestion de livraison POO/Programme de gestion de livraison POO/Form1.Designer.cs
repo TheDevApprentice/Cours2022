@@ -141,26 +141,30 @@ namespace Programme_de_gestion_de_livraison_POO
             // camionneurToolStripMenuItem
             // 
             this.camionneurToolStripMenuItem.Name = "camionneurToolStripMenuItem";
-            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.camionneurToolStripMenuItem.Text = "Camionneur";
+            this.camionneurToolStripMenuItem.Click += new System.EventHandler(this.camionneurToolStripMenuItem_Click);
             // 
             // camionToolStripMenuItem
             // 
             this.camionToolStripMenuItem.Name = "camionToolStripMenuItem";
-            this.camionToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.camionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.camionToolStripMenuItem.Text = "Camion";
+            this.camionToolStripMenuItem.Click += new System.EventHandler(this.camionToolStripMenuItem_Click);
             // 
             // voyagesToolStripMenuItem
             // 
             this.voyagesToolStripMenuItem.Name = "voyagesToolStripMenuItem";
-            this.voyagesToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.voyagesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.voyagesToolStripMenuItem.Text = "Voyage";
+            this.voyagesToolStripMenuItem.Click += new System.EventHandler(this.voyagesToolStripMenuItem_Click);
             // 
             // livraisonToolStripMenuItem
             // 
             this.livraisonToolStripMenuItem.Name = "livraisonToolStripMenuItem";
-            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(172, 26);
+            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.livraisonToolStripMenuItem.Text = "Livraison";
+            this.livraisonToolStripMenuItem.Click += new System.EventHandler(this.livraisonToolStripMenuItem_Click);
             // 
             // grp_voyageSelectionne
             // 

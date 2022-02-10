@@ -6,7 +6,9 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     class Voyage
     {
-        int id;
+        List<Voyage> ListeVoyages = new List<Voyage>();
+
+        int id = 0;
         DateTime date;
         string camionneur;
         string camion;
@@ -20,11 +22,16 @@ namespace Programme_de_gestion_de_livraison_POO
 
         public Voyage(int id, DateTime date, string camionneur, string camion, float distance)
         {
-            Id = id;
+            Id = id++;
             Date = date;
             Camionneur = camionneur;
             Camion = camion;
             Distance = distance; 
+        }
+
+        public override string ToString()
+        {
+            return "Voyage #" + Id;
         }
     }
 
