@@ -25,11 +25,11 @@ namespace Programme_de_gestion_de_livraison_POO
         livraisonNonAssignees livraisonEnAttenteDAssignement;
 
         Voyage voyage;
-        Camion camion;
-        Camionneur camionneur; 
 
-        internal Camion Camion1 { get => camion; set => camion = value; }
-        internal Camionneur Camionneur { get => camionneur; set => camionneur = value; }
+        Camion camion;
+        Camionneur camionneur;
+
+        DateTime dateVoyageSelectioné;
 
         public Form1()
         {
@@ -40,7 +40,9 @@ namespace Programme_de_gestion_de_livraison_POO
         {
             binding_LivraisonNonAssignees();
             binding_Livraisonsincluse();
-            //binding_Voyages();
+            binding_Voyages();
+
+            
         }
                 private void binding_LivraisonNonAssignees()
                 {
@@ -60,25 +62,24 @@ namespace Programme_de_gestion_de_livraison_POO
                 }
                 private void binding_Camionneur()
                 {
-                    bindingSource.DataSource = ListeCamionneurs;
-                    cmb_camionneurs.DataSource = bindingSource;
+                    
                    
                 }
 
-                //private void binding_Voyages()
-                //{
-                //    bindingSource.DataSource = ListeVoyages;
-                //    lst_voyages.DataSource = bindingSource;
-                   
-                //}
+        private void binding_Voyages()
+        {
+            bindingSource.DataSource = ListeVoyages;
+            lst_voyages.DataSource = bindingSource;
+
+        }
 
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
-            string nom = cmb_camionneurs.Text;
-            string prenom = cmb_camionneurs.Text;
+            
 
-            Camionneur = new Camionneur(nom, prenom);
+            
+
 
         }
 
