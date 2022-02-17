@@ -11,10 +11,9 @@ namespace logiciel_de_gestion_de_panne
 
         int clients;
         Panne pannes;
-        Panne pannesCopié;
+        Panne panneSelectionnée;
 
         
-
         public Form1()
         {
             InitializeComponent();
@@ -28,23 +27,23 @@ namespace logiciel_de_gestion_de_panne
 
         private void btn_progresserEtat_Click(object sender, EventArgs e)
         {
-            pannesCopié = (Panne)lst_pannes.SelectedItem;
-            pannesCopié.Etat++;
+            panneSelectionnée = (Panne)lst_pannes.SelectedItem;
+            panneSelectionnée.Etat++;
        
-            bindingSource.ResetBindings(false);
+        
             
-            if(pannesCopié.Etat <= EtatPanne.ternimné)
+            if(panneSelectionnée.Etat == EtatPanne.ternimné)
             {
-                Listepannes.Remove(pannesCopié);
-
+                Listepannes.Remove(panneSelectionnée);
+                
             }
-            
+            bindingSource.ResetBindings(false);
         }
 
         private void btn_dupliquer_Click(object sender, EventArgs e)
         {
-            pannesCopié = (Panne)lst_pannes.SelectedItem;
-            Panne copiePanne = new Panne(pannesCopié);
+            panneSelectionnée = (Panne)lst_pannes.SelectedItem;
+            Panne copiePanne = new Panne(panneSelectionnée);
             
             Listepannes.Add(copiePanne);
             bindingSource.ResetBindings(false);
@@ -52,14 +51,21 @@ namespace logiciel_de_gestion_de_panne
 
         public void btn_ajouterPanne_Click(object sender, EventArgs e)
         {
-            clients = int.Parse(txtbox_nbClientsTouche.Text);
-            
-            pannes = new Panne(clients);
-            
-          
-            Listepannes.Add(pannes);
+            int nombredeclienttouchee;
+            bool parseSuccesNbCLientTouche = int.TryParse(txtbox_nbClientsTouche.Text, out nombredeclienttouchee);
+            if (parseSuccesNbCLientTouche)
+            {
+                clients = int.Parse(txtbox_nbClientsTouche.Text);
 
-            bindingSource.ResetBindings(false);
+                pannes = new Panne(clients);
+
+                Listepannes.Add(pannes);
+
+                bindingSource.ResetBindings(false);
+            }
+          
+   
+           
 
         }
 

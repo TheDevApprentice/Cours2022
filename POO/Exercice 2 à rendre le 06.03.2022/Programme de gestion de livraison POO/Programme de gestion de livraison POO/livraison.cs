@@ -1,10 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace Programme_de_gestion_de_livraison_POO
+﻿namespace Programme_de_gestion_de_livraison_POO
 {
-    class livraisonIncluses
+    class livraison
     {
         int poids;
         int volume;
@@ -13,14 +9,22 @@ namespace Programme_de_gestion_de_livraison_POO
 
         public int Poids { get => poids; set => poids = value; }
 
-        public livraisonIncluses(int poids, int volume)
+
+        public livraison(int poids, int volume)
         {
             Poids = poids;
             Volume = volume;
+        }
+        public livraison(livraison livraisonAcopier)
+        {
+            Poids = livraisonAcopier.Poids;
+            Volume = livraisonAcopier.Volume;
         }
         public override string ToString()
         {
             return "Livraison de " + Poids + "  LB " + " avec un volume de  " + Volume;
         }
+
+
     }
 }

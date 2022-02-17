@@ -39,7 +39,6 @@ namespace Programme_de_gestion_de_livraison_POO
             this.ajouterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionneurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.voyagesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livraisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grp_voyageSelectionne = new System.Windows.Forms.GroupBox();
             this.lbl_distance = new System.Windows.Forms.Label();
@@ -52,6 +51,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.lst_livraisonIncluses = new System.Windows.Forms.ListBox();
             this.txt_distance = new System.Windows.Forms.TextBox();
+            this.ajouterVoyageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpb_voyages.SuspendLayout();
             this.grpb_livraisonNonAssignees.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -76,6 +76,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.lst_voyages.Name = "lst_voyages";
             this.lst_voyages.Size = new System.Drawing.Size(422, 144);
             this.lst_voyages.TabIndex = 2;
+            this.lst_voyages.SelectedIndexChanged += new System.EventHandler(this.lst_voyages_SelectedIndexChanged);
             // 
             // lst_livraisonNonAssignees
             // 
@@ -132,11 +133,12 @@ namespace Programme_de_gestion_de_livraison_POO
             this.ajouterToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.camionneurToolStripMenuItem,
             this.camionToolStripMenuItem,
-            this.voyagesToolStripMenuItem,
-            this.livraisonToolStripMenuItem});
+            this.livraisonToolStripMenuItem,
+            this.ajouterVoyageToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
+            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // camionneurToolStripMenuItem
             // 
@@ -151,13 +153,6 @@ namespace Programme_de_gestion_de_livraison_POO
             this.camionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.camionToolStripMenuItem.Text = "Camion";
             this.camionToolStripMenuItem.Click += new System.EventHandler(this.camionToolStripMenuItem_Click);
-            // 
-            // voyagesToolStripMenuItem
-            // 
-            this.voyagesToolStripMenuItem.Name = "voyagesToolStripMenuItem";
-            this.voyagesToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.voyagesToolStripMenuItem.Text = "Voyage";
-            this.voyagesToolStripMenuItem.Click += new System.EventHandler(this.voyagesToolStripMenuItem_Click);
             // 
             // livraisonToolStripMenuItem
             // 
@@ -184,6 +179,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.grp_voyageSelectionne.TabIndex = 7;
             this.grp_voyageSelectionne.TabStop = false;
             this.grp_voyageSelectionne.Text = "Voyage Selectionné";
+            this.grp_voyageSelectionne.Visible = false;
             // 
             // lbl_distance
             // 
@@ -270,6 +266,13 @@ namespace Programme_de_gestion_de_livraison_POO
             this.txt_distance.Size = new System.Drawing.Size(155, 27);
             this.txt_distance.TabIndex = 3;
             // 
+            // ajouterVoyageToolStripMenuItem
+            // 
+            this.ajouterVoyageToolStripMenuItem.Name = "ajouterVoyageToolStripMenuItem";
+            this.ajouterVoyageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.ajouterVoyageToolStripMenuItem.Text = "Ajouter voyage";
+            this.ajouterVoyageToolStripMenuItem.Click += new System.EventHandler(this.ajouterVoyageToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -307,7 +310,6 @@ namespace Programme_de_gestion_de_livraison_POO
         private System.Windows.Forms.ToolStripMenuItem ajouterToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camionneurToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem camionToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem voyagesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem livraisonToolStripMenuItem;
         private System.Windows.Forms.GroupBox grp_voyageSelectionne;
         private System.Windows.Forms.ComboBox cmb_camionneurs;
@@ -320,6 +322,7 @@ namespace Programme_de_gestion_de_livraison_POO
         private System.Windows.Forms.Label lbl_camion;
         private System.Windows.Forms.Label lbl_camionneur;
         private System.Windows.Forms.Label lbl_date;
+        private System.Windows.Forms.ToolStripMenuItem ajouterVoyageToolStripMenuItem;
     }
 }
 

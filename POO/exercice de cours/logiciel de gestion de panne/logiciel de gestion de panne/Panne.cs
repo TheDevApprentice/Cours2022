@@ -18,8 +18,12 @@ namespace logiciel_de_gestion_de_panne
 
             set
             {
-                etat = value;
-                dateUpdate = DateTime.Now;
+                if (Enum.IsDefined(typeof(EtatPanne), value))
+                {
+                    etat = value;
+                    dateUpdate = DateTime.Now;
+                }
+               
             }
         }
         public DateTime DateDebut { get => dateDebut; set => dateDebut = value; }
