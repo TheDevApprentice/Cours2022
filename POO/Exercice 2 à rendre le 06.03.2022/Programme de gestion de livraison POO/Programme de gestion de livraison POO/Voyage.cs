@@ -4,8 +4,8 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     class Voyage
     {
-        livraison livraisonAassignee;
 
+        livraison livraisonAassignee;
 
         int id;
         DateTime date;
@@ -18,7 +18,7 @@ namespace Programme_de_gestion_de_livraison_POO
         {
             get => id; set
             {
-                id = value++;
+                id = value;
             }
         }
         public DateTime Date { get => date; set => date = value; }
@@ -27,21 +27,20 @@ namespace Programme_de_gestion_de_livraison_POO
         public float Distance { get => distance; set => distance = value; }
         internal livraison LivraisonAassignee { get => livraisonAassignee; set => livraisonAassignee = value; }
 
-        public Voyage()
+        public Voyage(int id)
         {
-
+            Id = id++; 
         }
 
-        public Voyage(int id, DateTime date, string camionneur, string camion, float distance, livraison livraison)
+        public Voyage(DateTime date, string camionneur, string camion, float distance, livraison livraison)
         {
-            Id = id;
+            
             Date = date;
             Camionneur = camionneur;
             Camion = camion;
             Distance = distance;
 
             LivraisonAassignee = new livraison(livraison);
-
 
         }
 

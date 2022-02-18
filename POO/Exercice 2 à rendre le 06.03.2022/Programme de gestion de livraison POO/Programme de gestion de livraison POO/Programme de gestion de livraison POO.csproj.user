@@ -13,8 +13,5 @@
     <Compile Update="entreeCamionneur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="visualisationVoyage.cs">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
 </Project>

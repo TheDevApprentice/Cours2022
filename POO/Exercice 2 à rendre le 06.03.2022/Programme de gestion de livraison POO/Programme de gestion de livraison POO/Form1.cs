@@ -9,7 +9,6 @@ namespace Programme_de_gestion_de_livraison_POO
         entreeCamionneur entreeCamionneur = new entreeCamionneur();
         entreeCamion entreeCamion = new entreeCamion();
         entreeLivraison entreeLivraison = new entreeLivraison();
-        visualisationVoyage visualisation = new visualisationVoyage();
         Voyage voyage;
         Voyage voyageAvisualiser;
 
@@ -27,22 +26,21 @@ namespace Programme_de_gestion_de_livraison_POO
         BindingSource bindingSource5 = new BindingSource();
         BindingSource bindingSource6 = new BindingSource();
 
-        int id;
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<livraison> ListeLivraison { get => listeLivraison; set => listeLivraison = value; }
         internal List<livraison> ListeLivraisonNonAssignees1 { get => EntreeLivraison.ListeLivraisonNonAssignees; set => listeLivraisonNonAssignees = value; }
         internal List<Voyage> ListeVoyages1 { get => listeVoyages; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
-        public int Id { get => id; set => Voyage.Id = value; }
         internal Voyage Voyage { get => voyage; set => voyage = value; }
         public entreeLivraison EntreeLivraison { get => entreeLivraison; set => entreeLivraison = value; }
         public entreeCamion EntreeCamion { get => entreeCamion; set => entreeCamion = value; }
-        public entreeCamionneur EntreeCamionneur { get => entreeCamionneur; set => entreeCamionneur = value; }
-        public visualisationVoyage Visualisation { get => visualisation; set => visualisation = value; }
+        public entreeCamionneur EntreeCamionneur { get => entreeCamionneur; set => entreeCamionneur = value;}
         internal Voyage VoyageAvisualiser { get => voyageAvisualiser; set => voyageAvisualiser = value; }
+        public int Id { get => id ; set => id = value; }
 
-        livraison livraison;
+        //livraison livraison;
 
+        int id; 
         public Form1()
         {
             InitializeComponent();
@@ -65,7 +63,7 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource.DataSource = ListeCamionneurs1;
             cmb_camionneurs.DataSource = bindingSource;
 
-
+           
         }
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
@@ -123,19 +121,18 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Visualisation.ShowDialog();
-            VoyageAvisualiser = (Voyage)lst_voyages.SelectedItem;
+           
         }
 
         private void ajouterVoyageToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            id++;
-            DateTime date = dtp_date.Value;
-            string camionneur = cmb_camionneurs.Text;
-            string camion = cmb_camions.Text;
-            float distance = int.Parse(txt_distance.Text);
-            livraison = (livraison)lst_livraisonIncluses.SelectedItem;
-            Voyage newVoyage = new Voyage(Id, date, camionneur, camion, distance, livraison);
+            
+            //DateTime date = dtp_date.Value;
+            //string camionneur = cmb_camionneurs.Text;
+            //string camion = cmb_camions.Text;
+            //float distance = int.Parse(txt_distance.Text);
+            //livraison = (livraison)lst_livraisonIncluses.SelectedItem;
+            Voyage newVoyage = new Voyage(Id++);
             ListeVoyages1.Add(newVoyage);
 
             bindingSource4.ResetBindings(false);
