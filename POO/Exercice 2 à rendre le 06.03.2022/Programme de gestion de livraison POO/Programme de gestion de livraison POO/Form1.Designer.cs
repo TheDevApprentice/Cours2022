@@ -40,6 +40,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.camionneurToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.camionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.livraisonToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ajouterVoyageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grp_voyageSelectionne = new System.Windows.Forms.GroupBox();
             this.lbl_distance = new System.Windows.Forms.Label();
             this.lbl_camion = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@ namespace Programme_de_gestion_de_livraison_POO
             this.dtp_date = new System.Windows.Forms.DateTimePicker();
             this.lst_livraisonIncluses = new System.Windows.Forms.ListBox();
             this.txt_distance = new System.Windows.Forms.TextBox();
-            this.ajouterVoyageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.grpb_voyages.SuspendLayout();
             this.grpb_livraisonNonAssignees.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -138,28 +138,34 @@ namespace Programme_de_gestion_de_livraison_POO
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
             this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
-            this.ajouterToolStripMenuItem.Click += new System.EventHandler(this.ajouterToolStripMenuItem_Click);
             // 
             // camionneurToolStripMenuItem
             // 
             this.camionneurToolStripMenuItem.Name = "camionneurToolStripMenuItem";
-            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.camionneurToolStripMenuItem.Text = "Camionneur";
             this.camionneurToolStripMenuItem.Click += new System.EventHandler(this.camionneurToolStripMenuItem_Click);
             // 
             // camionToolStripMenuItem
             // 
             this.camionToolStripMenuItem.Name = "camionToolStripMenuItem";
-            this.camionToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.camionToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.camionToolStripMenuItem.Text = "Camion";
             this.camionToolStripMenuItem.Click += new System.EventHandler(this.camionToolStripMenuItem_Click);
             // 
             // livraisonToolStripMenuItem
             // 
             this.livraisonToolStripMenuItem.Name = "livraisonToolStripMenuItem";
-            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.livraisonToolStripMenuItem.Text = "Livraison";
             this.livraisonToolStripMenuItem.Click += new System.EventHandler(this.livraisonToolStripMenuItem_Click);
+            // 
+            // ajouterVoyageToolStripMenuItem
+            // 
+            this.ajouterVoyageToolStripMenuItem.Name = "ajouterVoyageToolStripMenuItem";
+            this.ajouterVoyageToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
+            this.ajouterVoyageToolStripMenuItem.Text = "Ajouter voyage";
+            this.ajouterVoyageToolStripMenuItem.Click += new System.EventHandler(this.ajouterVoyageToolStripMenuItem_Click);
             // 
             // grp_voyageSelectionne
             // 
@@ -233,6 +239,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.cmb_camionneurs.Name = "cmb_camionneurs";
             this.cmb_camionneurs.Size = new System.Drawing.Size(337, 28);
             this.cmb_camionneurs.TabIndex = 8;
+            this.cmb_camionneurs.TextChanged += new System.EventHandler(this.cmb_camionneurs_TextChanged);
             // 
             // cmb_camions
             // 
@@ -241,6 +248,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.cmb_camions.Name = "cmb_camions";
             this.cmb_camions.Size = new System.Drawing.Size(337, 28);
             this.cmb_camions.TabIndex = 7;
+            this.cmb_camions.TextChanged += new System.EventHandler(this.cmb_camions_TextChanged);
             // 
             // dtp_date
             // 
@@ -248,6 +256,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.dtp_date.Name = "dtp_date";
             this.dtp_date.Size = new System.Drawing.Size(337, 27);
             this.dtp_date.TabIndex = 6;
+            this.dtp_date.ValueChanged += new System.EventHandler(this.dtp_date_ValueChanged);
             // 
             // lst_livraisonIncluses
             // 
@@ -265,13 +274,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.txt_distance.Name = "txt_distance";
             this.txt_distance.Size = new System.Drawing.Size(155, 27);
             this.txt_distance.TabIndex = 3;
-            // 
-            // ajouterVoyageToolStripMenuItem
-            // 
-            this.ajouterVoyageToolStripMenuItem.Name = "ajouterVoyageToolStripMenuItem";
-            this.ajouterVoyageToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.ajouterVoyageToolStripMenuItem.Text = "Ajouter voyage";
-            this.ajouterVoyageToolStripMenuItem.Click += new System.EventHandler(this.ajouterVoyageToolStripMenuItem_Click);
+            this.txt_distance.TextChanged += new System.EventHandler(this.txt_distance_TextChanged);
             // 
             // Form1
             // 

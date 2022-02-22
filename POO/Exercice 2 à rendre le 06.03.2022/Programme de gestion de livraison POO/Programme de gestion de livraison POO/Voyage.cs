@@ -1,12 +1,15 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 
 namespace Programme_de_gestion_de_livraison_POO
 {
     class Voyage
     {
 
-        livraison livraisonAassignee;
+        List<livraison> livraisonAassignee;
 
+       
         int id;
         DateTime date;
         string camionneur;
@@ -25,24 +28,20 @@ namespace Programme_de_gestion_de_livraison_POO
         public string Camionneur { get => camionneur; set => camionneur = value; }
         public string Camion { get => camion; set => camion = value; }
         public float Distance { get => distance; set => distance = value; }
-        internal livraison LivraisonAassignee { get => livraisonAassignee; set => livraisonAassignee = value; }
+        internal List<livraison> LivraisonAassignee1 { get => livraisonAassignee; set => livraisonAassignee = value; }
 
         public Voyage(int id)
         {
-            Id = id++; 
-        }
-
-        public Voyage(DateTime date, string camionneur, string camion, float distance, livraison livraison)
-        {
-            
-            Date = date;
+            Id = id++;
+            Date = DateTime.Now;
             Camionneur = camionneur;
             Camion = camion;
             Distance = distance;
 
-            LivraisonAassignee = new livraison(livraison);
-
+            LivraisonAassignee1 = LivraisonAassignee1;
         }
+
+
 
         public override string ToString()
         {
