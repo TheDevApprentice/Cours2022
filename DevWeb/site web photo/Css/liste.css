@@ -2,12 +2,14 @@
 /*MAIN*/
 main{
     position: relative;
+    top: 3rem;
+    right: -1rem;
     display: flex;
     
     flex-direction: column;
     grid-area: main;
     width: 99vw;
-    height: 100vh;
+    height: 80vh;
     margin: auto 0;
     justify-content: space-around;
     justify-items: center;
