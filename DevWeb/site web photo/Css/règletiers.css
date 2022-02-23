@@ -1,0 +1,16 @@
+
+/*MAIN*/
+main{
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    grid-area: main;
+    width: 99vw;
+    height: 170vh;
+   
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+ 
+}

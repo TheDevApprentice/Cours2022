@@ -1,0 +1,37 @@
+
+/*MAIN*/
+main{
+    position: relative;
+    display: flex;
+    
+    flex-direction: column;
+    grid-area: main;
+    width: 99vw;
+    height: 100vh;
+    margin: auto 0;
+    justify-content: space-around;
+    justify-items: center;
+    align-items: center;
+ 
+}
+
+main>section>article>ul>li{
+    padding: 0.5rem;
+}
+
+main>section>article{
+    text-align: center;
+    
+    margin: 1.5rem;
+ 
+    justify-self: center;
+    align-self: center;
+}
+main>section>article>ul{
+    margin-top: 3rem;
+    display: flex;
+    flex-direction: column;
+ text-align: left;
+ justify-content: center;
+ align-items: center;
+}
