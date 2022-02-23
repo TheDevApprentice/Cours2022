@@ -140,6 +140,7 @@
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "frmAjouterEtudiant";
             this.Text = "Ajouter un étudiant";
+            this.Load += new System.EventHandler(this.frmAjouterEtudiant_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

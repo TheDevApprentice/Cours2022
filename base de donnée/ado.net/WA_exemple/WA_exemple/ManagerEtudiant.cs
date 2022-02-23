@@ -11,9 +11,27 @@ namespace WA_exemple
 {
     class ManagerEtudiant:Manager // hérite de manager
     {
+        public SqlDataReader listeLespays()
+        {
+            // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
+            SqlConnection connection = getConnexion();
+
+            // déclarer une commande
+            string sql = ""; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                             // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            SqlCommand cmdProvenance = new SqlCommand(sql, connection);
+
+            // ouvrir une connexion 
+            connection.Open();
+            // executer la commande
+
+            SqlDataReader readerDeCommande = cmdProvenance.ExecuteReader(CommandBehavior.CloseConnection);
+
+            return readerDeCommande;
+        }
         public void ajouterEtudiant(string prenom, string nom, int age, string pays)
         {
-            using(SqlConnection connection = getConnexion())
+            using(SqlConnection connection = getConnexion()) // le using fermera la connexion
             {
                 //créer ma commande
                 string sql = "dbo.ajouterEtudiants";
