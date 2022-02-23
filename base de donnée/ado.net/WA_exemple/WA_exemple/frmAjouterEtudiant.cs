@@ -19,7 +19,7 @@ namespace WA_exemple
         private Boolean champsRemplis()
         {
             if (txtNom.Text != "" && txtPrenom.Text != "" &&
-                 txtCellulaire.Text != "" && cmbProvenance.SelectedValue != null)
+                 txtCellulaire.Text != "" && cmbProvenance.ToString() != "")
                 return true;
             else
                 return false;
@@ -27,9 +27,26 @@ namespace WA_exemple
        
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            ManagerEtudiant managerEtudiant = new ManagerEtudiant();
+            try
+            {
+                if (champsRemplis())
+                {
+                    ManagerEtudiant managerEtudiant = new ManagerEtudiant();
 
-            managerEtudiant.ajouterEtudiant(txtPrenom.Text, txtNom.Text, Convert.ToInt32(txtCellulaire.Text), cmbProvenance.ToString());
+                    managerEtudiant.ajouterEtudiant(txtPrenom.Text, txtNom.Text, Convert.ToInt32(txtCellulaire.Text), cmbProvenance.Text);
+                    MessageBox.Show("ca a marché");
+                }
+                else
+                {
+                    MessageBox.Show("il faut remplir les champs");
+                }
+               
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+                
+            }
         }
 
         
