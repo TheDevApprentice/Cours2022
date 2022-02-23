@@ -34,3 +34,15 @@ C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exem
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.AssemblyReference.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjouterEtudiant.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb

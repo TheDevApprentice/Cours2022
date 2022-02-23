@@ -11,12 +11,12 @@ namespace WA_exemple
 {
     class ManagerEtudiant:Manager // hérite de manager
     {
-        public void ajouterEtudiant(string prenom, string nom, int no_provenance)
+        public void ajouterEtudiant(string prenom, string nom, int age, string pays)
         {
             using(SqlConnection connection = getConnexion())
             {
                 //créer ma commande
-                string sql = "dbo.ajouterEtudiant";
+                string sql = "dbo.ajouterEtudiants";
                 SqlCommand cmd = new SqlCommand(sql, connection);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 
@@ -24,20 +24,18 @@ namespace WA_exemple
 
                 cmd.Parameters.Add("@nom", SqlDbType.NVarChar,50);
                 cmd.Parameters.Add("@prenom", SqlDbType.NChar,50);
-                cmd.Parameters.Add("@cellulaire", SqlDbType.NChar,13);
-                cmd.Parameters.Add("@humour", SqlDbType.Int);
-                cmd.Parameters.Add("@no_provenance", SqlDbType.Int);
+                cmd.Parameters.Add("@age", SqlDbType.Int);
+                cmd.Parameters.Add("@pays", SqlDbType.NChar,30) ;
 
                 // donner valeur paramètre
 
                 cmd.Parameters["@nom"].Value = nom;
                 cmd.Parameters["@prenom"].Value = prenom;
-                //cmd.Parameters["@cellulaire"].Value = cellulaire;
-                //cmd.Parameters["@humour"].Value = humour;
-                cmd.Parameters["@no_provenance"].Value = no_provenance;
+                cmd.Parameters["@age"].Value = age;
+                cmd.Parameters["@pays"].Value = pays;
                 // ouvrir connexion 
                 connection.Open();
-
+                //exectue la commande
                 cmd.ExecuteNonQuery();
 
                 

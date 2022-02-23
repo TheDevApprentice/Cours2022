@@ -29,7 +29,7 @@ namespace WA_exemple
         {
             ManagerEtudiant managerEtudiant = new ManagerEtudiant();
 
-            managerEtudiant.ajouterEtudiant(txtPrenom.Text, txtNom.Text, int.Parse(cmbProvenance.Text));
+            managerEtudiant.ajouterEtudiant(txtPrenom.Text, txtNom.Text, Convert.ToInt32(txtCellulaire.Text), cmbProvenance.ToString());
         }
 
         

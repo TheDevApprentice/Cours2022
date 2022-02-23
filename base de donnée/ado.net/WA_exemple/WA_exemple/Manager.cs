@@ -12,7 +12,7 @@ namespace WA_exemple
         protected SqlConnection getConnexion() // permet d'acceder à get connexion seulement par l'héritage
         {
             SqlConnection connection = new SqlConnection();
-            connection.ConnectionString = "Data Source=DESKTOP-IKGTJB6;Initial Catalog=AH_ecole;Integrated Security=True";
+            connection.ConnectionString = "Data Source= bd-tinfo;Initial Catalog=AH_EXERCICES;Integrated Security=True";
             return connection; 
 
         }
