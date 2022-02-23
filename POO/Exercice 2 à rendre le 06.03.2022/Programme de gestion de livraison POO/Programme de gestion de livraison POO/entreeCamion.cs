@@ -25,7 +25,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void entreeCamion_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btn_validateEntreeCamion_Click(object sender, EventArgs e)

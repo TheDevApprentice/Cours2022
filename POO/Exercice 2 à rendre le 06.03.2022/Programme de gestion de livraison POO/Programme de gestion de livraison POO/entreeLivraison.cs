@@ -6,7 +6,6 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     public partial class entreeLivraison : Form
     {
-        Form1 form = new Form1(); 
         livraison newLivraisonNonAssignee;
         List<livraison> listeLivraisonNonAssignees = new List<livraison>();
 
@@ -17,7 +16,8 @@ namespace Programme_de_gestion_de_livraison_POO
         public int Poids { get => poids; set => poids = value; }
         public int Volume { get => volume; set => volume = value; }
         internal livraison NewLivraison { get => newLivraisonNonAssignee; set => newLivraisonNonAssignee = value; }
-        internal List<livraison> ListeLivraisonNonAssignees { get => listeLivraisonNonAssignees; set => form.ListeLivraisonNonAssignees1 = value; }
+        internal List<livraison> ListeLivraisonNonAssignees { get => listeLivraisonNonAssignees; set => listeLivraisonNonAssignees = value; }
+
 
         public entreeLivraison()
         {
@@ -26,7 +26,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void entreeLivraison_Load(object sender, EventArgs e)
         {
-
+       
         }
 
         private void btb_validateLivraisonEntree_Click(object sender, EventArgs e)
@@ -40,6 +40,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
             txt_entreePoidsLivraison.Clear();
             txt_entreeVolumeLivraison.Clear();
+
 
             this.Close();
         }

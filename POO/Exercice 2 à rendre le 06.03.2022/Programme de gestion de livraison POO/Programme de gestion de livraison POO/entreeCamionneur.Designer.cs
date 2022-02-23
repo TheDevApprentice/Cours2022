@@ -84,7 +84,6 @@ namespace Programme_de_gestion_de_livraison_POO
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 194);
             this.Controls.Add(this.btn_validerEntreeCamionneur);
-            this.Controls.Add(this.lbl_prenom);
             this.Controls.Add(this.txt_entreePrenom);
             this.Controls.Add(this.lbl_nom);
             this.Controls.Add(this.txt_entreeNom);

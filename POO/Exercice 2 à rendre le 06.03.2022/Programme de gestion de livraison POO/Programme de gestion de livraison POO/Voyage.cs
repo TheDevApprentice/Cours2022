@@ -6,9 +6,11 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     class Voyage
     {
+        Form1 form = new Form1();
 
-        List<livraison> livraisonAassignee;
+        List<livraison> livraisons = new List<livraison>();
 
+        
        
         int id;
         DateTime date;
@@ -28,7 +30,8 @@ namespace Programme_de_gestion_de_livraison_POO
         public string Camionneur { get => camionneur; set => camionneur = value; }
         public string Camion { get => camion; set => camion = value; }
         public float Distance { get => distance; set => distance = value; }
-        internal List<livraison> LivraisonAassignee1 { get => livraisonAassignee; set => livraisonAassignee = value; }
+        internal List<livraison> Livraisons { get => livraisons; set => livraisons= value; }
+        public Form1 Form { get => form; set => form = value; }
 
         public Voyage(int id)
         {
@@ -38,9 +41,8 @@ namespace Programme_de_gestion_de_livraison_POO
             Camion = camion;
             Distance = distance;
 
-            LivraisonAassignee1 = LivraisonAassignee1;
+            Livraisons = livraisons; 
         }
-
 
 
         public override string ToString()
