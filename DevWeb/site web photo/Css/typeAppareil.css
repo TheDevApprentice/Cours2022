@@ -1,7 +1,7 @@
 main{
-    height: 470vh;
+    height: 530vh;
     justify-content: space-evenly;
-    top: 16rem;
+    top: 21rem;
     right: 0rem;
 }
 #imageleft{
@@ -23,7 +23,7 @@ main{
 }
 
 main > section:nth-of-type(2){
-    margin-top: 5rem;
+    margin-top: 25rem;
     margin-bottom: 7rem;
 }
 main > section:nth-of-type(2) > aside{
@@ -32,6 +32,8 @@ main > section:nth-of-type(2) > aside{
 
 
 #parallax{
+    position: relative;
+    top: 9rem;
     grid-area: parallax;
  background-size: cover;
     background: url("../Assets/Jpeg/background3.jpg");
@@ -39,11 +41,12 @@ main > section:nth-of-type(2) > aside{
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 80%;
-    height: 50vh;
+    height: 30vh;
    
 
 }
 #parallax2{
+  
     grid-area: parallax;
  background-size: cover;
     background: url("../Assets/Jpeg/background3.jpg");
@@ -51,7 +54,7 @@ main > section:nth-of-type(2) > aside{
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 85%;
-    height: 50vh;
+    height: 30vh;
    
 
 }
@@ -63,7 +66,7 @@ main > section:nth-of-type(2) > aside{
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 85%;
-    height: 50vh;
+    height: 30vh;
    
 
 }
