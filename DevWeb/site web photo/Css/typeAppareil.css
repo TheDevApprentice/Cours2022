@@ -1,5 +1,5 @@
 main{
-    height: 530vh;
+    height: 770vh;
     justify-content: space-evenly;
     top: 21rem;
     right: 0rem;
@@ -16,14 +16,34 @@ main{
     position: relative;
     left: 30%;
 }
+#imageleft3{
+    top: 15rem;
+    width: 35%;
+    position: relative;
+    left: -35%;
+}
+#imageleft4{
+    top: 3.5rem;
+    width: 50%;
+    position: relative;
+    left: 30%;
+}
 #imageright{
     width: 35%;
     position: relative;
     right: -90%;
 }
-
+#imageright2{
+    width: 35%;
+    position: relative;
+    right: -90%;
+}
+main > section{
+    position: relative;
+    top: 10rem;
+}
 main > section:nth-of-type(2){
-    margin-top: 25rem;
+    margin-top: 70rem;
     margin-bottom: 7rem;
 }
 main > section:nth-of-type(2) > aside{
@@ -33,7 +53,7 @@ main > section:nth-of-type(2) > aside{
 
 #parallax{
     position: relative;
-    top: 9rem;
+    top: 57rem;
     grid-area: parallax;
  background-size: cover;
     background: url("../Assets/Jpeg/background3.jpg");

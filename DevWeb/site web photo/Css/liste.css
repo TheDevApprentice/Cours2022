@@ -2,24 +2,40 @@
 /*MAIN*/
 main{
     position: relative;
-    top: 10rem;
+    top: 4rem;
     right: -1rem;
     display: flex;
     
     flex-direction: column;
     grid-area: main;
     width: 99vw;
-    height: 150vh;
+    height: 170vh;
     margin: auto 0;
     justify-content: space-around;
     justify-items: center;
     align-items: center;
  
 }
+main > section{
+    text-align: center;
+    justify-self: center;
+    align-self: center;
+}
 
+main > section > h2{
+    font-family: 'Alfa Slab One', cursive;
+    padding: 2rem;
+    position: relative;
+    top: 0;
+    width: auto;
+}
 main>section>article>ul>li{
     padding: 0.5rem;
 }
+main>section>article>h2{
+    padding: 0.5rem;
+}
+
 
 main>section>article{
     text-align: center;

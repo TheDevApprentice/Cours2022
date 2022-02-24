@@ -8,7 +8,7 @@ namespace Programme_de_gestion_de_livraison_POO
     {
         Form1 form = new Form1();
 
-        List<livraison> livraisons = new List<livraison>();
+        List<livraison> livraisons;
 
         
        
@@ -30,7 +30,7 @@ namespace Programme_de_gestion_de_livraison_POO
         public string Camionneur { get => camionneur; set => camionneur = value; }
         public string Camion { get => camion; set => camion = value; }
         public float Distance { get => distance; set => distance = value; }
-        internal List<livraison> Livraisons { get => livraisons; set => livraisons= value; }
+        internal List<livraison> Livraisons { get => livraisons; set => livraisons = value; }
         public Form1 Form { get => form; set => form = value; }
 
         public Voyage(int id)
@@ -41,7 +41,7 @@ namespace Programme_de_gestion_de_livraison_POO
             Camion = camion;
             Distance = distance;
 
-            Livraisons = livraisons; 
+            Livraisons = new List<livraison>();
         }
 
 

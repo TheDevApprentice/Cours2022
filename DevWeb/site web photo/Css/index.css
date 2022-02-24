@@ -1,241 +1,48 @@
-@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Archivo+Narrow&family=Libre+Baskerville:wght@700&family=Lobster&family=Permanent+Marker&display=swap');
-/*GENERAL*/
-*{
-    margin: 0;
-    padding: 0; 
-    list-style-type: none;
-    text-decoration: none;
-}
-html{
-    scroll-behavior: smooth;
-    transition: 0.4s;
-}
-body{
-    transform-style: preserve-3d;
+main{
     height: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
 }
 
-header{
+p{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+img{
+ width: 200%;
+
+ clear: both;
+}
+
+span {
+    float: left;
+    width: 0.7em;
+    font-size: 500%;
+    font-family: algerian, courier;
+    line-height: 80%;
+  }
+
+
+#parallax2{
   
-   
-    background-size: cover;
-    background: url("../Assets/Jpeg/background67.jpg");
+    grid-area: parallax;
+ background-size: cover;
+    background: url("../Assets/Jpeg/background3.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    
-    height: 100vh;
-}
 
-footer{
-    background: rgb(65, 60, 60);
-}
-
-/*********************************************************/
-/*HEADER*/
-#logo{
-    grid-area: logo;
-    align-self: center;
-}
-#logo > h2 >a{
-    font-family: 'Lobster', cursive;
-    font-size: 2.5rem;
-    color: #fff;
-}
-#logo > h2 >a:hover{
-    font-style: normal;
-    transition: 0.6s ease-in-out;
-    text-decoration: underline solid rgba(0, 0, 0, 0.637);
-    color: red;
-}
-.navBar{
-    display: grid;
-    position: relative;
-    top: 3rem;
-    grid-template-areas: "logo nav";
-    height: 3rem;
     width: 100%;
-    justify-content: space-around;
-    align-content: center;
-}
-nav{
-    grid-area: nav;
-    align-self: center;
-}
-
-nav>ul{
-    display: flex;
-    flex-direction: row;
-}
-nav>ul>li{
-    margin: 1rem;
-    
-}
-nav>ul>li>a{
-    font-family: 'Lobster', cursive;
-    padding: 10px;
-    color: #fff;
-    transition: 0.4s ease-in;
-   
-    border: 1.5px solid #fff;
-    border-radius: 50px 50px;
-    font-weight: 500;
-    
-    font-size: 1.3rem;
-}
-nav>ul>li>a:hover{
-    border-radius: 50px 50px;
-    background: rgba(255, 0, 0, 0.795);
- 
-    color: rgba(255, 255, 255, 0.911);
-    transition: 0.45s ease-in-out;
-}
-
-/*MAIN*/
-main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
- 
     height: 100vh;
-  
-    justify-content: flex-start;
-    justify-self: center;
-    align-items: center;
- 
-}
-
-main > section{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    justify-items: center;
-    
-    margin-top: 2rem;
-    margin-bottom: 7rem;
-    height: 75vh;
-    width: 58%;
-    float: right;
-}
-main>section>h2{
-    font-family: 'Alfa Slab One', cursive;
-    padding: 2rem;
-    width: max-content;
-    position: relative;
-    top: -10rem;
-}
-main>section>h2:hover{
-    text-decoration: underline 3px solid rgba(255, 0, 0, 0.479);
-    animation: forwards ease-in;
-    transition: 0.4s ease-in-out;
+   
 
 }
-main>section>article{
-    text-align: center;
-    
-    margin: 1.5rem;
- 
-    justify-self: center;
-    align-self: center;
-}
-main>section>article>ul{
- text-align: left;
-}
+#parallax3{
+    grid-area: parallax;
+ background-size: cover;
+    background: url("../Assets/Webp/background1.webp")  ;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100vh;
+   
 
-main>section>article>ul>li{
-    padding: 0.5rem;
-    font-family: 'Permanent Marker', cursive;
-}
-main>section>aside>ul>li>a{
-    padding: 0.5rem;
-    font-family: 'Permanent Marker', cursive;
-    color: rgb(85, 79, 79);
-}
-main>section>aside>ul>li>a:hover{
-    color: rgba(255, 0, 0, 0.829);
-}
-main>section>article>p{
-    font-family: 'Libre Baskerville', serif;
-}
-
-main>section>aside{
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    margin-top: 5rem;
-    padding: 2rem;
-}
-/*FOOTER*/
-footer{
-    position: relative;
-    top: 1rem;
-}
-.container_footer{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-}
-.container_footer>div{
-    margin: 1rem;
-    color: red;
-}
-.container_footer>div>ul>li>a{
-    color: #fff;
-    font-family: 'Libre Baskerville', serif;
-}
-.container_footer>div>a{
-    color: #fff;
-    font-family: 'Libre Baskerville', serif;
-}
-.span3>h3{
-    text-align: center;
-}
-.span3>h3{
-    text-align: center;
-    margin-bottom: 1.2rem;
-}
-.span3>a{
-    color: #fff;
-}
-.span3>ul{
-    text-align: center;
-    
-}
-.span3 > ul > li{
-    margin: 1.2rem;
-}
-
-@media SCREEN AND (max-width: 500px){ 
-
-    header > div > nav > ul{
-        position: relative;
-        right: 0.5rem;
-        top: 15rem;
-        display: flex;
-        flex-direction: column;
-    }
-    header > div > nav > ul >li > a{
-        background: rgba(255, 0, 0, 0.685);
-        width: max-content;
-    }
-    header > div > nav > ul >li > a :hover{
-        background: white;
-        color: black;
-        width: max-content;
-    }
-    
-    footer{
-    
-        display: flex;
-        flex-direction: row;
-    }
-    .container_footer{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-    }
 }

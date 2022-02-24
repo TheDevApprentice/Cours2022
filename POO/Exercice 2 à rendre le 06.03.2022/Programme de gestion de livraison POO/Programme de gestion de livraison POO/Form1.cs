@@ -16,7 +16,7 @@ namespace Programme_de_gestion_de_livraison_POO
         Voyage newVoyage;
         Voyage voyageSelectionnée;
 
-        List<livraison> listeLivraisons;
+
         List<livraison> listeLivraisonNonAssignees;
         List<Voyage> listeVoyages = new List<Voyage>();
         List<Camionneur> listeCamionneurs = new List<Camionneur>();
@@ -39,7 +39,7 @@ namespace Programme_de_gestion_de_livraison_POO
         internal Voyage NewVoyage { get => newVoyage; set => newVoyage = value; }
 
         internal List<livraison> ListeLivraisonNonAssignees { get => EntreeLivraison.ListeLivraisonNonAssignees; set => listeLivraisonNonAssignees = value; }
-        internal List<livraison> ListeLivraisons { get => VoyageSelectionnée.Livraisons; set => listeLivraisons = value; }
+
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<Voyage> ListeVoyages1 { get => listeVoyages; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
@@ -58,11 +58,9 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource4.DataSource = ListeVoyages1;
             lst_voyages.DataSource = bindingSource4;
 
-            //bindingSource3.DataSource = ListeLivraisons;
-            //lst_livraisonIncluses.DataSource = bindingSource3;
 
-            //bindingSource2.DataSource = ListeLivraisonNonAssignees;
-            //lst_livraisonNonAssignees.DataSource = bindingSource2;
+            bindingSource2.DataSource = ListeLivraisonNonAssignees;
+            lst_livraisonNonAssignees.DataSource = bindingSource2;
 
             bindingSource1.DataSource = ListeCamions;
             cmb_camions.DataSource = bindingSource1;
@@ -85,23 +83,23 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
-            //livraison livraisonSelectionné = (livraison)lst_livraisonNonAssignees.SelectedItem;
-        
-            //VoyageSelectionnée.Livraisons.Add(livraisonSelectionné);
-            //ListeLivraisonNonAssignees.Remove(livraisonSelectionné);
+            livraison livraisonSelectionné = (livraison)lst_livraisonNonAssignees.SelectedItem;
 
-            //bindingSource2.ResetBindings(false);
+            VoyageSelectionnée.Livraisons.Add(livraisonSelectionné);
+            ListeLivraisonNonAssignees.Remove(livraisonSelectionné);
+
+            bindingSource2.ResetBindings(false);
         }
 
         private void btn_directionNonAssignees_Click(object sender, EventArgs e)
         {
-            //livraison livraisonSelectionné = (livraison)lst_livraisonIncluses.SelectedItem;
+            livraison livraisonSelectionné = (livraison)lst_livraisonIncluses.SelectedItem;
 
-            //VoyageSelectionnée.Livraisons.Remove(livraisonSelectionné);
-            //ListeLivraisonNonAssignees.Add(livraisonSelectionné);
+            VoyageSelectionnée.Livraisons.Remove(livraisonSelectionné);
+            ListeLivraisonNonAssignees.Add(livraisonSelectionné);
 
-        
-            //bindingSource2.ResetBindings(false);
+
+            bindingSource2.ResetBindings(false);
         }
 
         private void camionneurToolStripMenuItem_Click(object sender, EventArgs e)
@@ -125,14 +123,20 @@ namespace Programme_de_gestion_de_livraison_POO
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
                 grp_voyageSelectionne.Visible = true;
-                VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
             lst_livraisonIncluses.Items.Clear();
+
+                VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
+          
                 dtp_date.Value = VoyageSelectionnée.Date;
                 cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
                 cmb_camions.Text = VoyageSelectionnée.Camion;
                 txt_distance.Text = VoyageSelectionnée.Distance.ToString();
 
-
+            foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
+            {
+                lst_livraisonIncluses.Items.Add(livraisons);
+            }
+               
         }
 
         private void ajouterVoyageToolStripMenuItem_Click(object sender, EventArgs e)
@@ -156,14 +160,14 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void txt_distance_TextChanged(object sender, EventArgs e)
         {
-            const int minimalDistance = 0;
+           
             try
             {
                 int result;
 
                 bool success = int.TryParse(txt_distance.Text, out result);
 
-                if (success && VoyageSelectionnée.Distance > minimalDistance)
+                if (success == true)
                 {
                     VoyageSelectionnée.Distance = result;
                 }
@@ -179,7 +183,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void dtp_date_ValueChanged(object sender, EventArgs e)
         {
-            if (dtp_date.Value.Day <= DateTime.Now.Day)
+            if (dtp_date.Value.Day >= DateTime.Now.Day)
             {
 
                 VoyageSelectionnée.Date = dtp_date.Value;
@@ -191,5 +195,6 @@ namespace Programme_de_gestion_de_livraison_POO
            
         }
 
+     
     }
 }
