@@ -1,9 +1,8 @@
 main{
-    height: 580vh;
-    
-    justify-content: space-around;
+    height: 470vh;
+    justify-content: space-evenly;
     top: 16rem;
-    right: -1rem;
+    right: 0rem;
 }
 #imageleft{
     top: 15rem;
@@ -39,7 +38,7 @@ main > section:nth-of-type(2) > aside{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
+    width: 80%;
     height: 50vh;
    
 
@@ -51,7 +50,7 @@ main > section:nth-of-type(2) > aside{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
+    width: 85%;
     height: 50vh;
    
 
@@ -63,7 +62,7 @@ main > section:nth-of-type(2) > aside{
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100%;
+    width: 85%;
     height: 50vh;
    
 

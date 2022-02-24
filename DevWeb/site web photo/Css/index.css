@@ -5,27 +5,29 @@
     list-style-type: none;
     text-decoration: none;
 }
-
+html{
+    scroll-behavior: smooth;
+ 
+    transition: 0.4s;
+}
 body{
-  
-    margin: 0 auto;
-    position: absolute;
-    height: 99%;
-    width: auto;
-    display: grid;
-    grid-template-areas: 'header' 
-                        ' main'
-                        'footer';
+    transform-style: preserve-3d;
+ 
+    height: 100%;
+ 
+    display: flex;
+    flex-direction: column;
+
 
     justify-content: center;
 
 }
 
 header{
-   width: 99%;
-    padding: -2.5rem;
+  
+   
     background-size: cover;
-    background: url("../Assets/Webp/8416301-hand-drawn-illustration-of-a-photo-camera-on-white-background.webp");
+    background: url("../Assets/Jpeg/background67.jpg");
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -34,7 +36,7 @@ header{
 }
 
 footer{
-    width: 100%;
+   
     background: rgb(65, 60, 60);
     grid-area: 'footer';
     height: max-content;
@@ -47,11 +49,18 @@ footer{
     grid-area: logo;
     align-self: center;
 }
+#logo > h2 >a{
+    color: #fff;
+}
+#logo > h2 >a:hover{
+    color: red;
+    transition: 0.3s ease-in-out;
+}
 .navBar{
     display: grid;
     position: relative;
     top: 3rem;
-    grid-template-areas: ' logo nav ';
+    grid-template-areas: "logo nav";
     height: 3rem;
     width: 100%;
     justify-content: space-around;
@@ -60,7 +69,6 @@ footer{
 nav{
     grid-area: nav;
     align-self: center;
-    background: transparent;
 }
 
 nav>ul{
@@ -69,46 +77,37 @@ nav>ul{
 }
 nav>ul>li{
     margin: 1rem;
-    background: transparent;
- 
-    
-    padding: 10px;
 }
 nav>ul>li>a{
   
     padding: 10px;
-   color: black;
+    color: #fff;
     transition: 0.4s ease-in;
-    background: transparent;
-
-    border: 1px solid black;
+   
+    border: 1.5px solid #fff;
     border-radius: 50px 50px;
     font-weight: 500;
     font-family: 'Times New Roman', Times, serif;
     font-size: 1.1rem;
 }
 nav>ul>li>a:hover{
-   
     border-radius: 50px 50px;
     background: rgba(255, 0, 0, 0.795);
  
     color: rgba(255, 255, 255, 0.911);
     transition: 0.45s ease-in-out;
-
 }
 
 /*MAIN*/
 main{
     position: relative;
-    top: 16rem;
-    right: -1rem;
     display: flex;
-    
     flex-direction: column;
     grid-area: main;
-    width: 99vw;
-    height: 690vh;
-    margin: auto 0;
+
+   
+    height: 100vh;
+  
     justify-content: flex-start;
     justify-self: center;
     align-items: center;
@@ -154,12 +153,11 @@ main>section>aside{
     justify-content: flex-end;
     margin-top: 5rem;
     padding: 2rem;
- 
-   
 }
 /*FOOTER*/
 footer{
-    width: 99%;
+    position: relative;
+    top: 1rem;
 }
 .container_footer{
     display: flex;
@@ -195,7 +193,26 @@ footer{
 }
 
 @media SCREEN AND (max-width: 500px){ 
+
+    header > div > nav > ul{
+        position: relative;
+        right: 0.5rem;
+        top: 15rem;
+        display: flex;
+        flex-direction: column;
+    }
+    header > div > nav > ul >li > a{
+        background: rgba(255, 0, 0, 0.685);
+        width: max-content;
+    }
+    header > div > nav > ul >li > a :hover{
+        background: white;
+        color: black;
+        width: max-content;
+    }
+    
     footer{
+    
         display: flex;
         flex-direction: row;
     }

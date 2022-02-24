@@ -1,15 +1,10 @@
-
 /*MAIN*/
 main{
     position: relative;
     justify-content: flex-start;
-     top: 24rem;
+    top: 24rem;
     right: -1rem;
-
     height: 150vh;
-   
-
- 
 }
 
 #imageleft{
