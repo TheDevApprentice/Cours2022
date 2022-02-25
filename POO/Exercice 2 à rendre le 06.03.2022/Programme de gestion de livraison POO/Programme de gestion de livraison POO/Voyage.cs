@@ -12,7 +12,7 @@ namespace Programme_de_gestion_de_livraison_POO
         string nom; 
         DateTime date;
         string camionneur;
-        string camion;
+        Camion camion;
         float distance;
         List<livraison> livraisons = new List<livraison>();
 
@@ -25,7 +25,7 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         public DateTime Date { get => date; set => date = value; }
         public string Camionneur { get => camionneur; set => camionneur = value; }
-        public string Camion { get => camion; set => camion = value; }
+        public Camion Camion { get => camion; set => camion = value; }
         public float Distance { get => distance; set => distance = value; }
         internal List<livraison> Livraisons { get => livraisons; set => livraisons = value; }
         public Form1 Form { get => form; set => form = value; }

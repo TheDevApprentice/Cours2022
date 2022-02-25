@@ -9,6 +9,10 @@
 
         public int Poids { get => poids; set => poids = value; }
 
+        public Camion()
+        {
+
+        }
         public Camion(int volume, int poids)
         {
             Poids = poids;

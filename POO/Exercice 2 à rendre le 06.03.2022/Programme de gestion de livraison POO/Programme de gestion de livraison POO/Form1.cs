@@ -6,16 +6,17 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     public partial class Form1 : Form
     {
-
+        int id;
         entreeCamionneur entreeCamionneur = new entreeCamionneur();
         entreeCamion entreeCamion = new entreeCamion();
         entreeLivraison entreeLivraison = new entreeLivraison();
         EntreeVoyage EntreeVoyage = new EntreeVoyage();
 
         Voyage voyage;
-
+        Camion camion;
         Voyage voyageSelectionnée;
-
+        livraison livraisonSelectionnéDansLivraisonIncluse;
+        livraison livraisonSelectionnéDansLivraisonNonAssignee;
 
         List<livraison> listeLivraisonNonAssignees = new List<livraison>();
         List<Voyage> listeVoyages = new List<Voyage>();
@@ -41,7 +42,7 @@ namespace Programme_de_gestion_de_livraison_POO
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<Voyage> ListeVoyages1 { get => EntreeVoyage.ListeVoyage; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
-
+        internal Camion Camion { get => camion; set => camion = value; }
 
         public Form1()
         {
@@ -66,50 +67,56 @@ namespace Programme_de_gestion_de_livraison_POO
             cmb_camionneurs.DataSource = bindingSource;
 
             // remmettre des binding sources pour les listes et les lst livraison assignées et non assignées
+            ListeVoyages1.Add(new Voyage(id++, "Carrefour"));
+            ListeVoyages1.Add(new Voyage(id++, "Montmartre"));
+            ListeVoyages1.Add(new Voyage(id++, "Beauceville"));
+            ListeVoyages1.Add(new Voyage(id++, "Paradise"));
+
+            ListeLivraisonNonAssignees.Add(new livraison(300, 1000));
+            ListeLivraisonNonAssignees.Add(new livraison(300, 2000));
+            ListeLivraisonNonAssignees.Add(new livraison(500, 8000));
+            ListeLivraisonNonAssignees.Add(new livraison(500, 2000));
+            ListeLivraisonNonAssignees.Add(new livraison(500, 9000));
+            ListeLivraisonNonAssignees.Add(new livraison(800, 2000));
+            ListeLivraisonNonAssignees.Add(new livraison(900, 1000));
+            ListeLivraisonNonAssignees.Add(new livraison(900, 2000));
 
             ListeCamionneurs1.Add(new Camionneur("Hugo", "Abric"));
             ListeCamionneurs1.Add(new Camionneur("Matieu", "Colin"));
+            ListeCamionneurs1.Add(new Camionneur("Salah", "Kerioudj"));
+            ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
+            //ListeCamions.Add(new Camion());
             ListeCamions.Add(new Camion(8000, 500));
             ListeCamions.Add(new Camion(1000, 300));
             ListeCamions.Add(new Camion(2000, 800));
 
 
+            bindingSource4.ResetBindings(false);
+            bindingSource2.ResetBindings(false);
             bindingSource1.ResetBindings(false);
             bindingSource.ResetBindings(false);
         }
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
+            livraisonSelectionnéDansLivraisonNonAssignee = (livraison)lst_livraisonNonAssignees.SelectedItem;
+
+            VérificationPoidsVolume(livraisonSelectionnéDansLivraisonNonAssignee, VoyageSelectionnée, ListeLivraisonNonAssignees);
            
-
-            livraison livraisonSelectionné = (livraison)lst_livraisonNonAssignees.SelectedItem;
-            if (livraisonSelectionné != null)
-            {
-                VoyageSelectionnée.Livraisons.Add(livraisonSelectionné);
-                ListeLivraisonNonAssignees.Remove(livraisonSelectionné);
-
-            }
-            else
-            {
-                MessageBox.Show("Aucun voyage selectionnée. veuillez essayer à nouveau");
-            }
-
-
 
             bindingSource3.ResetBindings(false);
             bindingSource2.ResetBindings(false);
         }
-
         private void btn_directionNonAssignees_Click(object sender, EventArgs e)
         {
-
-        
-            livraison livraisonSelectionné = (livraison)lst_livraisonIncluses.SelectedItem;
-            if (livraisonSelectionné != null)
+            
+            livraisonSelectionnéDansLivraisonIncluse = (livraison)lst_livraisonIncluses.SelectedItem;
+            if (livraisonSelectionnéDansLivraisonIncluse != null)
             {
-                VoyageSelectionnée.Livraisons.Remove(livraisonSelectionné);
-                ListeLivraisonNonAssignees.Add(livraisonSelectionné);
+
+                VoyageSelectionnée.Livraisons.Remove(livraisonSelectionnéDansLivraisonIncluse);
+                ListeLivraisonNonAssignees.Add(livraisonSelectionnéDansLivraisonIncluse);
 
             }
             else
@@ -146,16 +153,28 @@ namespace Programme_de_gestion_de_livraison_POO
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
             grp_voyageSelectionne.Visible = true;
+            btn_directionLivraisonsNonAssignees.Visible = true;
+            btn_directionsLivraisonIncluses.Visible = true;
 
-             VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
-
-            dtp_date.Value = VoyageSelectionnée.Date;
-            cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
-            cmb_camions.Text = VoyageSelectionnée.Camion;
-            txt_distance.Text = VoyageSelectionnée.Distance.ToString();
+            VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
 
             try
             {
+                dtp_date.Value = VoyageSelectionnée.Date;
+                cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
+
+                if (VoyageSelectionnée.Camion == null)
+                {
+                    cmb_camions.Text = "";
+                }
+                else if (VoyageSelectionnée.Camion != null)
+                {
+                    cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+                }
+
+                txt_distance.Text = VoyageSelectionnée.Distance.ToString();
+
+
                 foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
                 {
                     lst_livraisonIncluses.Items.Add(livraisons);
@@ -164,7 +183,7 @@ namespace Programme_de_gestion_de_livraison_POO
             }
             catch (Exception)
             {
-
+                // contrôle d'une exception qui ne devrait pas exister
 
             }
             bindingSource3.DataSource = VoyageSelectionnée.Livraisons;
@@ -180,9 +199,8 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void cmb_camions_TextChanged(object sender, EventArgs e)
         {
+            VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
 
-            VoyageSelectionnée.Camion = cmb_camions.Text;
-         
         }
 
         private void txt_distance_TextChanged(object sender, EventArgs e)
@@ -229,15 +247,61 @@ namespace Programme_de_gestion_de_livraison_POO
         private void cmb_camions_Click(object sender, EventArgs e)
         {
 
-            if (lst_livraisonIncluses.Items.Count != 0 && cmb_camions.Text != "")
-            {
+            //if (livraisonSelectionnéDansLivraisonIncluse == null)
+            //{
+            //    VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
 
-                MessageBox.Show("on ne peut pas modifier un camion si une livraison est déjà présente dans ce voyage");
+            //}
+            //else if (livraisonSelectionnéDansLivraisonIncluse == null || VoyageSelectionnée.Camion == null)
+            //{
+                
+            //    if (livraisonSelectionnéDansLivraisonIncluse.Poids <= VoyageSelectionnée.Camion.Poids)
+            //    {
+            //        VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
+
+            //    }
+            //    else if (livraisonSelectionnéDansLivraisonIncluse.Poids > VoyageSelectionnée.Camion.Poids)
+            //    {
+            //        MessageBox.Show("Le poid de ce camion est trop petit pour la livraison");
+            //    }
+            //}
+            //else
+            //{
+            //    MessageBox.Show("on ne peut pas modifier un camion si une livraison est déjà présente dans ce voyage");
+            //}
+        }
+
+        
+        private void VérificationPoidsVolume(livraison LivraisonSelectionéeATransferer, Voyage VoyageSelectionnée, List<livraison> ListeLivraison)
+        {
+
+            if (lst_voyages.SelectedItem != null)
+            {
+                if (LivraisonSelectionéeATransferer.Poids > VoyageSelectionnée.Camion.Poids)
+                {
+                    MessageBox.Show("Le poid de ce camion est trop gros pour la livraison");
+
+                }
+                else if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
+                {
+                    if (LivraisonSelectionéeATransferer.Volume <= VoyageSelectionnée.Camion.Volume)
+                    {
+                        VoyageSelectionnée.Livraisons.Add(LivraisonSelectionéeATransferer);
+                        ListeLivraison.Remove(LivraisonSelectionéeATransferer);
+                    }
+                    else if (LivraisonSelectionéeATransferer.Volume > VoyageSelectionnée.Camion.Volume)
+                    {
+                        MessageBox.Show("Le volume de cette livraison est supérieur au camion choisi");
+                    }
+
+                }
             }
             else
             {
-                VoyageSelectionnée.Camion = cmb_camions.Text;
+                MessageBox.Show("Aucun voyage selectionnée. veuillez essayer à nouveau");
             }
         }
     }
+
+
 }
