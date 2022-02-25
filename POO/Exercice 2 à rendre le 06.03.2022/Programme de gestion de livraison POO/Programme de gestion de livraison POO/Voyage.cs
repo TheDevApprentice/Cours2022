@@ -15,7 +15,7 @@ namespace Programme_de_gestion_de_livraison_POO
         Camion camion;
         float distance;
         List<livraison> livraisons = new List<livraison>();
-
+        livraison objetLivraison;
         public int Id
         {
             get => id; set
@@ -30,6 +30,7 @@ namespace Programme_de_gestion_de_livraison_POO
         internal List<livraison> Livraisons { get => livraisons; set => livraisons = value; }
         public Form1 Form { get => form; set => form = value; }
         public string Nom { get => nom; set => nom = value; }
+        internal livraison ObjetLivraison { get => objetLivraison; set => objetLivraison = value; }
 
         public Voyage(int id, string nom)
         {
