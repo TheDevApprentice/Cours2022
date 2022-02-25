@@ -13,10 +13,6 @@ namespace Programme_de_gestion_de_livraison_POO
 
         public int Poids { get => poids; set => poids = value; }
 
-        public livraison()
-        {
-
-        }
 
         public livraison(int poids, int volume)
         {
