@@ -11,7 +11,8 @@
 
         public Camion()
         {
-
+            Poids = poids;
+            Volume = volume;
         }
         public Camion(int volume, int poids)
         {

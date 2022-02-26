@@ -126,7 +126,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.ajouterToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1124, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1124, 28);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -138,34 +138,34 @@ namespace Programme_de_gestion_de_livraison_POO
             this.livraisonToolStripMenuItem,
             this.ajouterVoyageToolStripMenuItem});
             this.ajouterToolStripMenuItem.Name = "ajouterToolStripMenuItem";
-            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
+            this.ajouterToolStripMenuItem.Size = new System.Drawing.Size(72, 24);
             this.ajouterToolStripMenuItem.Text = "Ajouter";
             // 
             // camionneurToolStripMenuItem
             // 
             this.camionneurToolStripMenuItem.Name = "camionneurToolStripMenuItem";
-            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.camionneurToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.camionneurToolStripMenuItem.Text = "Camionneur";
             this.camionneurToolStripMenuItem.Click += new System.EventHandler(this.camionneurToolStripMenuItem_Click);
             // 
             // camionToolStripMenuItem
             // 
             this.camionToolStripMenuItem.Name = "camionToolStripMenuItem";
-            this.camionToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.camionToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.camionToolStripMenuItem.Text = "Camion";
             this.camionToolStripMenuItem.Click += new System.EventHandler(this.camionToolStripMenuItem_Click);
             // 
             // livraisonToolStripMenuItem
             // 
             this.livraisonToolStripMenuItem.Name = "livraisonToolStripMenuItem";
-            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.livraisonToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.livraisonToolStripMenuItem.Text = "Livraison";
             this.livraisonToolStripMenuItem.Click += new System.EventHandler(this.livraisonToolStripMenuItem_Click);
             // 
             // ajouterVoyageToolStripMenuItem
             // 
             this.ajouterVoyageToolStripMenuItem.Name = "ajouterVoyageToolStripMenuItem";
-            this.ajouterVoyageToolStripMenuItem.Size = new System.Drawing.Size(150, 26);
+            this.ajouterVoyageToolStripMenuItem.Size = new System.Drawing.Size(193, 26);
             this.ajouterVoyageToolStripMenuItem.Text = "Ajouter voyage";
             this.ajouterVoyageToolStripMenuItem.Click += new System.EventHandler(this.ajouterVoyageToolStripMenuItem_Click);
             // 

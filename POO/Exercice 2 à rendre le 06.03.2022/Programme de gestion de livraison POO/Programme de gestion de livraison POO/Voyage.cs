@@ -47,7 +47,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
         public override string ToString()
         {
-            return "Voyage #" + Id + " Direction : " + Nom;
+            return "Voyage Direction : " + Nom;
         }
     }
 
