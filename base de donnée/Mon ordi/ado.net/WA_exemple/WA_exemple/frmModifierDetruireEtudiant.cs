@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Data.SqlClient;
 namespace WA_exemple
 {
     public partial class frmModifierDetruireEtudiant : Form
@@ -31,15 +31,36 @@ namespace WA_exemple
             txtPrenom.Text = "";
             txtCellulaire.Text = "";
             NUDHumour.Value = 5;
-            cmbProvenance.SelectedValue = "";
+            cmbRecherche.SelectedValue = "";
         }
         private void btnModification_Click(object sender, EventArgs e)
         {
 
+
+            viderChamps();
         }
 
         private void frmModifierDetruireEtudiant_Load(object sender, EventArgs e)
         {
+         
+            remplirCombobox();
+        }
+
+        private void remplirCombobox()
+        {
+       
+                ManagerEtudiant managerEtudiant = new ManagerEtudiant();
+
+                BindingSource bindingsourceEtudiant = new BindingSource();
+
+                using (SqlDataReader readerEtudiant = managerEtudiant.listerLesEtudiants())
+                {
+                    bindingsourceEtudiant.DataSource = readerEtudiant;
+                    cmbRecherche.ValueMember = "no_etudiant, nom ,prenom";
+                    cmbRecherche.DisplayMember = "noms"; // ce qui est affiché
+                    cmbRecherche.DataSource = bindingsourceEtudiant;
+                }
+            
 
         }
     }

@@ -31,7 +31,25 @@ namespace WA_exemple
 
             return readerDeProvenance;
         }
+        public SqlDataReader listerLesEtudiants()
+        {
+            // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
+            SqlConnection connectionListerEtudiant = getConnexion();
 
+            // déclarer une commande
+            string sql = "listerEtudiant"; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                                                                                                             // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            SqlCommand cmdListerEtudiant = new SqlCommand(sql, connectionListerEtudiant);
+            cmdListerEtudiant.CommandType = CommandType.StoredProcedure;
+
+            // ouvrir une connexion 
+            connectionListerEtudiant.Open();
+            // executer la commande
+
+            SqlDataReader readerEtudiant = cmdListerEtudiant.ExecuteReader(CommandBehavior.CloseConnection);
+
+            return readerEtudiant;
+        }
         public void ajouterEtudiant(string prenom, string nom, string cellulaire, int humour, int no_provenance)
         {
 
