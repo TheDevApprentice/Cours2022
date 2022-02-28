@@ -1,0 +1,60 @@
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csprojAssemblyReference.cache
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjoutEtudiant.resources
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
+C:\Luce apres a2017\H2021\bd1\ado\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csprojAssemblyReference.cache
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjoutEtudiant.resources
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\LuceApresH2021\H2022\BD1\coursParSemaine\semaine 3- adoNEt\adoNet\fichierDepart\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.AssemblyReference.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjouterEtudiant.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.AssemblyReference.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjouterEtudiant.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\Users\2035121\Documents\Cours2022\base de donnée\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe.config
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.exe
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\bin\Debug\WA_exemple.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.AssemblyReference.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmAjouterEtudiant.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.FrmMenu.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.frmModifierDetruireEtudiant.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.Properties.Resources.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.GenerateResource.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.exe
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Mon ordi\ado.net\WA_exemple\WA_exemple\obj\Debug\WA_exemple.pdb
