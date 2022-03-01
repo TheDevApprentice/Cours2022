@@ -102,10 +102,29 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
-            livraisonSelectionnéDansLivraisonNonAssignee = (livraison)lst_livraisonNonAssignees.SelectedItem;
+            int poidTotal = 0;
+            int volumeTotal = 0;
 
-            VérificationPoidsVolume(livraisonSelectionnéDansLivraisonNonAssignee, VoyageSelectionnée, ListeLivraisonNonAssignees);
+            foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
+            {
+                poidTotal += livraisons.Poids;
+                volumeTotal += livraisons.Volume;
+            }
 
+            if (VoyageSelectionnée.Camion != null)
+            {
+                livraisonSelectionnéDansLivraisonNonAssignee = (livraison)lst_livraisonNonAssignees.SelectedItem;
+                VérificationPoidsVolume(livraisonSelectionnéDansLivraisonNonAssignee, VoyageSelectionnée, ListeLivraisonNonAssignees, poidTotal, volumeTotal);
+
+            }
+            else
+            {
+                MessageBox.Show("Pas de camion choisi");
+            }
+                
+                
+          
+           
 
             bindingSource3.ResetBindings(false);
             bindingSource2.ResetBindings(false);
@@ -244,15 +263,21 @@ namespace Programme_de_gestion_de_livraison_POO
         }
 
 
-        private void VérificationPoidsVolume(livraison LivraisonSelectionéeATransferer, Voyage VoyageSelectionnée, List<livraison> ListeLivraison)
+        private void VérificationPoidsVolume(livraison LivraisonSelectionéeATransferer, Voyage VoyageSelectionnée, List<livraison> ListeLivraison, int poidTotalLivraisonnIncluse, int volumeTotalLivraisonIncluse)
         {
+            int poidTotalAvecLaLivraisonAInclure = LivraisonSelectionéeATransferer.Poids + poidTotalLivraisonnIncluse;
+            int volumeTotalAvecLivraisonAInclure = LivraisonSelectionéeATransferer.Volume + volumeTotalLivraisonIncluse;
 
             if (lst_voyages.SelectedItem != null)
             {
                 if (LivraisonSelectionéeATransferer.Poids > VoyageSelectionnée.Camion.Poids)
                 {
-                    MessageBox.Show("Le poid de ce camion est trop gros pour la livraison");
+                    MessageBox.Show("Le poid de ce camion est trop petit pour la livraison");
 
+                }
+                if (poidTotalAvecLaLivraisonAInclure > VoyageSelectionnée.Camion.Poids || volumeTotalAvecLivraisonAInclure > VoyageSelectionnée.Camion.Volume)
+                {
+                    MessageBox.Show("la livraison totale sera trop grosse pour le camion");
                 }
                 else if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
                 {

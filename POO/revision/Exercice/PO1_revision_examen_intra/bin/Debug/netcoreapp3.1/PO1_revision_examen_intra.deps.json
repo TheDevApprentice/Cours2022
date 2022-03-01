@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "PO1_revision_examen_intra/1.0.0": {
+        "runtime": {
+          "PO1_revision_examen_intra.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "PO1_revision_examen_intra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
