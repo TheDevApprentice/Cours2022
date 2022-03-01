@@ -16,15 +16,7 @@ namespace WA_exemple
         {
             InitializeComponent();
         }
-        
-        private Boolean champsRempli()
-        {
-            if (txtCellulaire.Text != ""  && txtPrenom.Text != "" &&
-                 txtNom.Text != "" )
-                return true;
-            else
-                return false;
-        }
+
         private void viderChamps()
         {
             txtNom.Text = "";
@@ -35,7 +27,26 @@ namespace WA_exemple
         }
         private void btnModification_Click(object sender, EventArgs e)
         {
+            try
+            {
+                if (true)
+                {
+                    ManagerEtudiant managerEtudiant = new ManagerEtudiant();
+                  
+                    managerEtudiant.updateEtudiant(2,txtPrenom.Text, txtNom.Text, txtCellulaire.Text, Convert.ToInt32(NUDHumour.Value), Convert.ToInt32(cmbProvenance.SelectedValue));
 
+                    MessageBox.Show("tout c'est bien passé");
+                }
+                else
+                {
+                    MessageBox.Show("tout ne s'est pas bien passé");
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
 
             viderChamps();
         }
@@ -44,6 +55,7 @@ namespace WA_exemple
         {
          
             remplirCombobox();
+            remplirComboboxProvenance();
         }
 
         private void remplirCombobox()
@@ -61,6 +73,31 @@ namespace WA_exemple
                     cmbRecherche.DataSource = bindingsourceEtudiant;
                 }
             
+
+        }
+
+        private void remplirComboboxProvenance()
+        {
+
+            try
+            {
+                ManagerEtudiant managerEtudiant = new ManagerEtudiant();
+
+                BindingSource bindingsourceProvenance = new BindingSource();
+
+                using (SqlDataReader readerdeProvenance = managerEtudiant.listeLespays())
+                {
+                    bindingsourceProvenance.DataSource = readerdeProvenance;
+                    cmbProvenance.ValueMember = "no_provenance";
+                    cmbProvenance.DisplayMember = "nom_provenance";
+                    cmbProvenance.DataSource = bindingsourceProvenance;
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
 
         }
     }

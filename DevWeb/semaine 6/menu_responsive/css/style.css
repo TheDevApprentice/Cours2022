@@ -1,0 +1,59 @@
+@charset "utf-8";
+
+body{
+	margin-top:20px;
+	font-family:"Comic Sans MS", Sans-serif;
+	font-size:100%;
+}
+
+#contenu_global{
+	max-width:1000px;
+	margin-right:auto; 
+	margin-left:auto;
+}
+
+header, footer{
+	padding: 10px;
+}
+
+footer p {
+	text-align: right;
+	font-size: .75em;
+}
+
+h1, h2
+{
+	text-align:center;
+} 
+
+/* Menu */ 
+nav ul{
+	list-style-type: none;
+	margin: 0px;
+	padding: 0px;
+	border-bottom: solid 1px black;
+	border-top: solid 1px black;
+	overflow: hidden;
+}
+nav li a {
+	text-decoration: none;
+	color: black;
+	padding: 5px 20px 5px 20px;
+	text-align: center;
+}
+nav li a:hover {
+	background-color: LightGrey;	
+}
+nav li { 
+	float: left;	 
+ }
+
+/* pour rendre le menu responsive */
+@media screen and (max-width: 600px) {
+  nav li {
+	  float: none;
+	  text-align:center;
+	  }
+}
+
+
