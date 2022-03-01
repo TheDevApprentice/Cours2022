@@ -66,7 +66,6 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource.DataSource = ListeCamionneurs1;
             cmb_camionneurs.DataSource = bindingSource;
 
-            // remmettre des binding sources pour les listes et les lst livraison assignées et non assignées
             ListeVoyages1.Add(new Voyage(id++, "Carrefour"));
             ListeVoyages1.Add(new Voyage(id++, "Montmartre"));
             ListeVoyages1.Add(new Voyage(id++, "Beauceville"));
@@ -87,7 +86,6 @@ namespace Programme_de_gestion_de_livraison_POO
             ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
             //ListeCamions.Add(new Camion());
-            ListeCamions.Add(new Camion());
             ListeCamions.Add(new Camion(8000, 500));
             ListeCamions.Add(new Camion(1000, 300));
             ListeCamions.Add(new Camion(5000, 300));
@@ -98,6 +96,7 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource2.ResetBindings(false);
             bindingSource1.ResetBindings(false);
             bindingSource.ResetBindings(false);
+
         }
 
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
@@ -121,10 +120,6 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 MessageBox.Show("Pas de camion choisi");
             }
-                
-                
-          
-           
 
             bindingSource3.ResetBindings(false);
             bindingSource2.ResetBindings(false);
@@ -135,11 +130,8 @@ namespace Programme_de_gestion_de_livraison_POO
             livraisonSelectionnéDansLivraisonIncluse = (livraison)lst_livraisonIncluses.SelectedItem;
             if (livraisonSelectionnéDansLivraisonIncluse != null)
             {
-
                 VoyageSelectionnée.Livraisons.Remove(livraisonSelectionnéDansLivraisonIncluse);
                 ListeLivraisonNonAssignees.Add(livraisonSelectionnéDansLivraisonIncluse);
-
-
 
             }
             else
@@ -173,40 +165,17 @@ namespace Programme_de_gestion_de_livraison_POO
             EntreeVoyage1.ShowDialog();
             bindingSource4.ResetBindings(false);
         }
+
+
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
             grp_voyageSelectionne.Visible = true;
             btn_directionLivraisonsNonAssignees.Visible = true;
             btn_directionsLivraisonIncluses.Visible = true;
 
-            VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
+            cmb_camions.Text = "";
 
-            try
-            {
-                dtp_date.Value = VoyageSelectionnée.Date;
-                cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
-
-                if (VoyageSelectionnée.Camion != null)
-                {
-                    cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
-                }
-
-                txt_distance.Text = VoyageSelectionnée.Distance.ToString();
-
-
-                foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
-                {
-                    lst_livraisonIncluses.Items.Add(livraisons);
-
-                }
-            }
-            catch (Exception)
-            {
-                // contrôle d'une exception qui ne devrait pas exister
-
-            }
-            bindingSource3.DataSource = VoyageSelectionnée.Livraisons;
-            bindingSource3.ResetBindings(true);
+            lst_voyage_SelectedItemChange();
         }
 
 
@@ -218,7 +187,11 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void cmb_camions_TextChanged(object sender, EventArgs e)
         {
-            VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
+            if (cmb_camions.Text != "")
+            {
+                VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
+            }
+
         }
 
         private void txt_distance_TextChanged(object sender, EventArgs e)
@@ -250,15 +223,23 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void dtp_date_ValueChanged(object sender, EventArgs e)
         {
-            if (dtp_date.Value.Day >= DateTime.Now.Day)
+            try
             {
+                if (dtp_date.Value.Date >= VoyageSelectionnée.Date.Date)
+                {
+                    VoyageSelectionnée.Date = dtp_date.Value;
+                }
+                else
+                {
+                    MessageBox.Show("Une date antérieure à aujourd'hui n'est pas valide");
+                }
+            }
+            catch (Exception)
+            {
+                // ici j'empêche un bug qui fait que lorsque que je veux selectionné la date d'aujourd'hui, malgrès la validation, me retourne 
+                // un message d'erreur comme quoi la date ne peux pas être celle d'aujourd'hui
+            }
 
-                VoyageSelectionnée.Date = dtp_date.Value;
-            }
-            else
-            {
-                MessageBox.Show("Une date antérieure à aujourd'hui n'est pas valide");
-            }
 
         }
 
@@ -268,42 +249,72 @@ namespace Programme_de_gestion_de_livraison_POO
             int poidTotalAvecLaLivraisonAInclure = LivraisonSelectionéeATransferer.Poids + poidTotalLivraisonnIncluse;
             int volumeTotalAvecLivraisonAInclure = LivraisonSelectionéeATransferer.Volume + volumeTotalLivraisonIncluse;
 
-            if (poidTotalAvecLaLivraisonAInclure > VoyageSelectionnée.Camion.Poids && volumeTotalAvecLivraisonAInclure > VoyageSelectionnée.Camion.Volume)
+            if (volumeTotalAvecLivraisonAInclure <= VoyageSelectionnée.Camion.Volume && poidTotalAvecLaLivraisonAInclure <= VoyageSelectionnée.Camion.Poids)
             {
-                MessageBox.Show("la livraison totale sera trop grosse pour le camion");
-            }
-
-            if (lst_voyages.SelectedItem != null)
-            {
-                if (LivraisonSelectionéeATransferer.Poids > VoyageSelectionnée.Camion.Poids)
-                {
-                    MessageBox.Show("Le poid de ce camion est trop petit pour la livraison");
-
-                }
-                else if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
+                if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
                 {
                     if (LivraisonSelectionéeATransferer.Volume <= VoyageSelectionnée.Camion.Volume)
                     {
                         VoyageSelectionnée.Livraisons.Add(LivraisonSelectionéeATransferer);
                         ListeLivraison.Remove(LivraisonSelectionéeATransferer);
                     }
-                    else if (LivraisonSelectionéeATransferer.Volume > VoyageSelectionnée.Camion.Volume)
-                    {
-                        MessageBox.Show("Le volume de cette livraison est supérieur au camion choisi");
-                    }
-
                 }
             }
+            else if (LivraisonSelectionéeATransferer.Poids > VoyageSelectionnée.Camion.Poids)
+            {
+                MessageBox.Show("Le poid de ce camion est trop petit pour la livraison");
+
+            }
+            else if (LivraisonSelectionéeATransferer.Volume > VoyageSelectionnée.Camion.Volume)
+            {
+                MessageBox.Show("Le volume de cette livraison est supérieur au camion choisi");
+            }
+            
             else
             {
-                MessageBox.Show("Aucun voyage selectionnée. veuillez essayer à nouveau");
+                MessageBox.Show("La livraison total sera trop grosse pour le camion");
             }
+
         }
 
         private void cmb_camions_Click(object sender, EventArgs e)
         {
-            
-        } 
+
+        }
+
+        private void lst_voyage_SelectedItemChange()
+        {
+            cmb_camions.Text = "";
+
+            VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
+
+            try
+            {
+                dtp_date.Value = VoyageSelectionnée.Date.Date;
+                cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
+
+                if (VoyageSelectionnée.Camion != null)
+                {
+                    cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+                }
+
+                txt_distance.Text = VoyageSelectionnée.Distance.ToString();
+
+
+                foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
+                {
+                    lst_livraisonIncluses.Items.Add(livraisons);
+
+                }
+            }
+            catch (Exception)
+            {
+                // contrôle d'une exception qui ne devrait pas exister
+
+            }
+            bindingSource3.DataSource = VoyageSelectionnée.Livraisons;
+            bindingSource3.ResetBindings(true);
+        }
     }
 
 
