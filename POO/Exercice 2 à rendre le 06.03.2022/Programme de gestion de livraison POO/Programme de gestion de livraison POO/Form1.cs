@@ -268,16 +268,17 @@ namespace Programme_de_gestion_de_livraison_POO
             int poidTotalAvecLaLivraisonAInclure = LivraisonSelectionéeATransferer.Poids + poidTotalLivraisonnIncluse;
             int volumeTotalAvecLivraisonAInclure = LivraisonSelectionéeATransferer.Volume + volumeTotalLivraisonIncluse;
 
+            if (poidTotalAvecLaLivraisonAInclure > VoyageSelectionnée.Camion.Poids && volumeTotalAvecLivraisonAInclure > VoyageSelectionnée.Camion.Volume)
+            {
+                MessageBox.Show("la livraison totale sera trop grosse pour le camion");
+            }
+
             if (lst_voyages.SelectedItem != null)
             {
                 if (LivraisonSelectionéeATransferer.Poids > VoyageSelectionnée.Camion.Poids)
                 {
                     MessageBox.Show("Le poid de ce camion est trop petit pour la livraison");
 
-                }
-                if (poidTotalAvecLaLivraisonAInclure > VoyageSelectionnée.Camion.Poids || volumeTotalAvecLivraisonAInclure > VoyageSelectionnée.Camion.Volume)
-                {
-                    MessageBox.Show("la livraison totale sera trop grosse pour le camion");
                 }
                 else if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
                 {
