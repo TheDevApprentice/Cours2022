@@ -33,7 +33,7 @@ namespace Programme_de_gestion_de_livraison_POO
             Poids = int.Parse(txt_poids.Text);
             Volume = int.Parse(txt_volume.Text);
 
-            NewCamion = new Camion(Poids, Volume);
+            NewCamion = new Camion(Volume,Poids);
 
             ListeCamion.Add(NewCamion);
 

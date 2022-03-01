@@ -51,6 +51,8 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void Form1_Load(object sender, EventArgs e)
         {
+          
+
             bindingSource4.DataSource = ListeVoyages1;
             lst_voyages.DataSource = bindingSource4;
 
@@ -85,6 +87,7 @@ namespace Programme_de_gestion_de_livraison_POO
             ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
             //ListeCamions.Add(new Camion());
+            ListeCamions.Add(new Camion(5000, 2000));
             ListeCamions.Add(new Camion(8000, 500));
             ListeCamions.Add(new Camion(1000, 300));
             ListeCamions.Add(new Camion(5000, 300));
@@ -95,7 +98,6 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource1.ResetBindings(false);
             bindingSource.ResetBindings(false);
         }
-
         private void btn_assigneLivraison_Click(object sender, EventArgs e)
         {
             int poidTotal = 0;
@@ -105,6 +107,19 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 poidTotal += livraisons.Poids;
                 volumeTotal += livraisons.Volume;
+
+                if (VoyageSelectionnée.Livraisons.Count != 0)
+                {
+                    foreach (Camion camion in ListeCamions)
+                    {
+
+                        if (poidTotal > camion.Poids && volumeTotal > camion.Volume)
+                        {
+                           
+                            cmb_camions.Enabled = false;
+                        }
+                    }
+                }
             }
 
             if (VoyageSelectionnée.Camion != null)
@@ -123,6 +138,25 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void btn_directionNonAssignees_Click(object sender, EventArgs e)
         {
+            int poidTotal = 0;
+            int volumeTotal = 0;
+
+            foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
+            {
+                poidTotal += livraisons.Poids;
+                volumeTotal += livraisons.Volume;
+
+                if (VoyageSelectionnée.Livraisons.Count != 0)
+                {
+                    foreach (Camion camion in ListeCamions)
+                    {
+                        if (poidTotal <= camion.Poids && volumeTotal <= camion.Volume)
+                        {
+                            cmb_camions.Enabled = true;
+                        }
+                    }
+                }
+            }
 
             livraisonSelectionnéDansLivraisonIncluse = (livraison)lst_livraisonIncluses.SelectedItem;
             if (livraisonSelectionnéDansLivraisonIncluse != null)
@@ -167,7 +201,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
             cmb_camions.Text = "";
 
-            lst_voyage_SelectedItemChange();
+            remplissageTxtBox();
         }
         private void cmb_camionneurs_TextChanged(object sender, EventArgs e)
         {
@@ -236,7 +270,6 @@ namespace Programme_de_gestion_de_livraison_POO
             int poidTotalAvecLaLivraisonAInclure = LivraisonSelectionéeATransferer.Poids + poidTotalLivraisonnIncluse;
             int volumeTotalAvecLivraisonAInclure = LivraisonSelectionéeATransferer.Volume + volumeTotalLivraisonIncluse;
 
-            
             if (volumeTotalAvecLivraisonAInclure <= VoyageSelectionnée.Camion.Volume && poidTotalAvecLaLivraisonAInclure <= VoyageSelectionnée.Camion.Poids)
             {
                 if (LivraisonSelectionéeATransferer.Poids <= VoyageSelectionnée.Camion.Poids)
@@ -266,14 +299,8 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 MessageBox.Show("La livraison total sera trop grosse pour le camion");
             }
-
-         
-
-           
-
         }
-
-        private void lst_voyage_SelectedItemChange()
+        private void remplissageTxtBox()
         {
             cmb_camions.Text = "";
 
