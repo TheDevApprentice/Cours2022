@@ -42,7 +42,7 @@ namespace Programme_de_gestion_de_livraison_POO
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<Voyage> ListeVoyages1 { get => EntreeVoyage.ListeVoyage; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
-    
+
 
         public Form1()
         {
@@ -51,7 +51,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void Form1_Load(object sender, EventArgs e)
         {
-          
+
 
             bindingSource4.DataSource = ListeVoyages1;
             lst_voyages.DataSource = bindingSource4;
@@ -110,12 +110,10 @@ namespace Programme_de_gestion_de_livraison_POO
 
                 if (VoyageSelectionnée.Livraisons.Count != 0)
                 {
-                    foreach (Camion camion in ListeCamions)
+                    foreach (Camion camion in ListeCamions) // faire en sorte que je puisse faire une exception sur le camion qui est déja dans la textbox
                     {
-
                         if (poidTotal > camion.Poids && volumeTotal > camion.Volume)
                         {
-                           
                             cmb_camions.Enabled = false;
                         }
                     }
@@ -195,20 +193,52 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            grp_voyageSelectionne.Visible = true;
-            btn_directionLivraisonsNonAssignees.Visible = true;
-            btn_directionsLivraisonIncluses.Visible = true;
-
             cmb_camions.Text = "";
 
+            if (ListeVoyages1[lst_voyages.SelectedIndex] != null)
+            {
+                grp_voyageSelectionne.Visible = true;
+                btn_directionLivraisonsNonAssignees.Visible = true;
+                btn_directionsLivraisonIncluses.Visible = true;
+            }
             remplissageTxtBox();
         }
         private void cmb_camionneurs_TextChanged(object sender, EventArgs e)
         {
-            if (cmb_camionneurs.Text != "")
+            if (cmb_camionneurs.Text != " ")
             {
                 VoyageSelectionnée.Camionneur = cmb_camionneurs.Text;
+
+                //int poidTotal = 0;
+                //int volumeTotal = 0;
+
+                //foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
+                //{
+                //    poidTotal += livraisons.Poids;
+                //    volumeTotal += livraisons.Volume;
+                //}
+                //if (VoyageSelectionnée.Camion == null)
+                //{
+                //    VoyageSelectionnée.Camionneur = cmb_camionneurs.Text;
+                //}
+                //else if (VoyageSelectionnée.Camion != null)
+                //{
+
+                //    if (ListeCamions[cmb_camions.SelectedIndex].Poids >= poidTotal && ListeCamions[cmb_camions.SelectedIndex].Volume >= volumeTotal)
+                //    {
+                //        VoyageSelectionnée.Camionneur = cmb_camionneurs.Text;
+                //    }
+                //    else if (ListeCamions[cmb_camions.SelectedIndex].Poids < poidTotal && ListeCamions[cmb_camions.SelectedIndex].Volume < volumeTotal)
+                //    {
+                //        cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+                //        MessageBox.Show("mauvais camion");
+                //    }
+
+
+                //}
+
             }
+
 
         }
         private void cmb_camions_TextChanged(object sender, EventArgs e)
@@ -279,7 +309,7 @@ namespace Programme_de_gestion_de_livraison_POO
                         VoyageSelectionnée.Livraisons.Add(LivraisonSelectionéeATransferer);
                         ListeLivraison.Remove(LivraisonSelectionéeATransferer);
                     }
-                    else 
+                    else
                     {
                         MessageBox.Show("Le volume de cette livraison est supérieur au camion choisi");
                     }
