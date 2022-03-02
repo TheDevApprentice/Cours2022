@@ -7,6 +7,7 @@ namespace Programme_de_gestion_de_livraison_POO
     public partial class Form1 : Form
     {
         int id;
+        bool sucessStory = true;
 
         lbl_entreeCamionneurPrenom entreeCamionneur = new lbl_entreeCamionneurPrenom();
         entreeCamion entreeCamion = new entreeCamion();
@@ -43,6 +44,7 @@ namespace Programme_de_gestion_de_livraison_POO
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<Voyage> ListeVoyages1 { get => EntreeVoyage.ListeVoyage; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
+
 
         public Form1()
         {
@@ -85,14 +87,11 @@ namespace Programme_de_gestion_de_livraison_POO
             ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
             //ListeCamions.Add(new Camion());
-           
-            ListeCamions.Add(new Camion(6000, 500));
-            ListeCamions.Add(new Camion(3000, 300));
+            ListeCamions.Add(new Camion(5000, 2000));
             ListeCamions.Add(new Camion(8000, 500));
-            ListeCamions.Add(new Camion(2000, 300));
+            ListeCamions.Add(new Camion(1000, 300));
             ListeCamions.Add(new Camion(5000, 300));
             ListeCamions.Add(new Camion(2000, 800));
-            ListeCamions.Add(new Camion(5000, 2000));
 
             bindingSource4.ResetBindings(false);
             bindingSource2.ResetBindings(false);
@@ -161,6 +160,7 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 VoyageSelectionnée.Livraisons.Remove(livraisonSelectionnéDansLivraisonIncluse);
                 ListeLivraisonNonAssignees.Add(livraisonSelectionnéDansLivraisonIncluse);
+
             }
             else
             {
@@ -211,14 +211,14 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void cmb_camions_TextChanged(object sender, EventArgs e)
         {
-            if (cmb_camions.Text != "")
+            if (cmb_camions.Text != "" && sucessStory == true)
             {
                 VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
             }
         }
         private void cmb_camions_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if (lst_livraisonIncluses.Items.Count != 0 && VoyageSelectionnée.Camion != null)
+            if (lst_livraisonIncluses.Items.Count != 0)
             {
                 int poidTotal = 0;
                 int volumeTotal = 0;
@@ -227,11 +227,17 @@ namespace Programme_de_gestion_de_livraison_POO
 
                 if (volumeTotal > ListeCamions[cmb_camions.SelectedIndex].Volume && poidTotal > ListeCamions[cmb_camions.SelectedIndex].Poids)
                 {
-                    cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+                    sucessStory = false;
                     MessageBox.Show("mauvais camion");
+                    if (sucessStory == false)
+                    {
+
+                        cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+                    }
                 }
                 else
                 {
+                  
                     VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
                 }
 
@@ -314,7 +320,7 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void remplissageTxtBox()
         {
-            cmb_camions.Text = " ";
+            cmb_camions.Text = "";
 
             VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
 
@@ -330,9 +336,11 @@ namespace Programme_de_gestion_de_livraison_POO
 
                 txt_distance.Text = VoyageSelectionnée.Distance.ToString();
 
+
                 foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
                 {
                     lst_livraisonIncluses.Items.Add(livraisons);
+
                 }
             }
             catch (Exception)
@@ -349,8 +357,11 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 poidTotal += livraisons.Poids;
                 volumeTotal += livraisons.Volume;
+
             }
+
         }
-       
+
+      
     }
 }
