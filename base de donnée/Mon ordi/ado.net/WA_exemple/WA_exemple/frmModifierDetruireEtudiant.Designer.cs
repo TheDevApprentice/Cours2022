@@ -215,6 +215,7 @@
             this.cmbRecherche.Name = "cmbRecherche";
             this.cmbRecherche.Size = new System.Drawing.Size(391, 33);
             this.cmbRecherche.TabIndex = 1;
+            this.cmbRecherche.SelectedIndexChanged += new System.EventHandler(this.cmbRecherche_SelectedIndexChanged);
             // 
             // frmModifierDetruireEtudiant
             // 

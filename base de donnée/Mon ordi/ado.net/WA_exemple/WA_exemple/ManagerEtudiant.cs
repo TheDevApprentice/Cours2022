@@ -55,7 +55,7 @@ namespace WA_exemple
             using (SqlConnection updateConnection = getConnexion())
             {
                 //créer ma commande
-                string sql = "dbo.updateEtudiant";
+                string sql = "updateEtudiant";
                 SqlCommand cmd = new SqlCommand(sql, updateConnection);
                 cmd.CommandType = System.Data.CommandType.StoredProcedure;
 

@@ -53,9 +53,9 @@ namespace WA_exemple
 
         private void frmModifierDetruireEtudiant_Load(object sender, EventArgs e)
         {
-         
-            remplirCombobox();
-            remplirComboboxProvenance();
+
+            remplirChamps();
+            
         }
 
         private void remplirCombobox()
@@ -72,8 +72,11 @@ namespace WA_exemple
                     cmbRecherche.DisplayMember = "noms"; // ce qui est affiché
                     cmbRecherche.DataSource = bindingsourceEtudiant;
                 }
-            
-
+        }
+        private void remplirChamps()
+        {
+            remplirCombobox();
+            remplirComboboxProvenance();
         }
 
         private void remplirComboboxProvenance()
@@ -98,6 +101,11 @@ namespace WA_exemple
 
                 throw;
             }
+
+        }
+
+        private void cmbRecherche_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
