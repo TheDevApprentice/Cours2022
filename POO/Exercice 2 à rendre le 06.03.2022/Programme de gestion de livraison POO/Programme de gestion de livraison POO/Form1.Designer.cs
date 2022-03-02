@@ -250,6 +250,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.cmb_camions.Name = "cmb_camions";
             this.cmb_camions.Size = new System.Drawing.Size(337, 28);
             this.cmb_camions.TabIndex = 7;
+            this.cmb_camions.SelectedIndexChanged += new System.EventHandler(this.cmb_camions_SelectedIndexChanged);
             this.cmb_camions.TextChanged += new System.EventHandler(this.cmb_camions_TextChanged);
             // 
             // dtp_date

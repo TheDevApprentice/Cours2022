@@ -31,18 +31,37 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void btb_validateLivraisonEntree_Click(object sender, EventArgs e)
         {
-            Poids = int.Parse(txt_entreePoidsLivraison.Text);
-            Volume = int.Parse(txt_entreeVolumeLivraison.Text);
+            try
+            {
+                int resultPoids;
+                int resultVolume;
 
-            newLivraisonNonAssignee = new livraison(Poids, Volume);
+                bool successPoids = int.TryParse(txt_entreePoidsLivraison.Text, out resultPoids);
+                bool successVolume = int.TryParse(txt_entreeVolumeLivraison.Text, out resultVolume);
 
-            listeLivraisonNonAssignees.Add(newLivraisonNonAssignee);
+                if (successPoids == true && successVolume == true)
+                {
+                    Poids = resultPoids;
+                    Volume = resultVolume;
 
-            txt_entreePoidsLivraison.Clear();
-            txt_entreeVolumeLivraison.Clear();
+                    newLivraisonNonAssignee = new livraison(Poids, Volume);
+                    listeLivraisonNonAssignees.Add(newLivraisonNonAssignee);
 
+                    txt_entreePoidsLivraison.Clear();
+                    txt_entreeVolumeLivraison.Clear();
 
-            this.Close();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ceci n'est pas une valeur approprié.");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

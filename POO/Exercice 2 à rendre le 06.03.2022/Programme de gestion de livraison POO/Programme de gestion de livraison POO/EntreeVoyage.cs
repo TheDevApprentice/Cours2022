@@ -33,15 +33,37 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void btn_entreeDestination_Click(object sender, EventArgs e)
         {
-            NomDestination = txt_entreeDestiantion.Text;
+            try
+            {
+                int resultDestination;
+         
+                bool sucessNom = int.TryParse(txt_entreeDestiantion.Text, out resultDestination);
 
-            NouveauVoyage = new Voyage(Id++,NomDestination);
+                if (sucessNom == false)
+                {
+                    NomDestination = txt_entreeDestiantion.Text;
 
-            ListeVoyage.Add(NouveauVoyage);
+                    NouveauVoyage = new Voyage(Id++, NomDestination);
 
-            txt_entreeDestiantion.Clear();
+                    ListeVoyage.Add(NouveauVoyage);
 
-            this.Close();
+                    txt_entreeDestiantion.Clear();
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ceci n'est pas une chaine de characteres, en revanche si vous voulez apporter un renseigment important mais unique que vous souhaiter communiqué avec le lecteur de la commande, il est possible de rajouter " +
+                        "des +, dans le cas où vous souhaiterais renseigner des chiffres");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+
+          
         }
     }
 }

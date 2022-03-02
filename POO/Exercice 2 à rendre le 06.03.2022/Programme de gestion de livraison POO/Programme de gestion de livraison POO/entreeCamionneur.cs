@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace Programme_de_gestion_de_livraison_POO
 {
-    public partial class entreeCamionneur : Form
+    public partial class lbl_entreeCamionneurPrenom : Form
     {
 
         Camionneur newCamionneur;
@@ -22,23 +22,45 @@ namespace Programme_de_gestion_de_livraison_POO
         internal Camionneur NewCamionneur { get => newCamionneur; set => newCamionneur = value; }
         internal List<Camionneur> ListeCamionneur { get => ListeCamionneurs; set => ListeCamionneurs = value; }
 
-        public entreeCamionneur()
+        public lbl_entreeCamionneurPrenom()
         {
             InitializeComponent();
         }
         
         private void btn_validerEntreeCamionneur_Click(object sender, EventArgs e)
         {
-            Nom = txt_entreeNom.Text;
-            Prenom = txt_entreePrenom.Text;
-            NewCamionneur = new Camionneur(Nom, Prenom);
+            try
+            {
+                int resultNom;
+                int resultPrenom;
 
-            ListeCamionneurs.Add(NewCamionneur);
+                bool sucessNom = int.TryParse(txt_entreeNom.Text, out resultNom);
+                bool sucessPrenom = int.TryParse(txt_entreePrenom.Text, out resultPrenom);
 
-            txt_entreeNom.Clear();
-            txt_entreePrenom.Clear(); 
+                if (sucessNom == false && sucessPrenom == false)
+                {
+                    Nom = txt_entreeNom.Text;
+                    Prenom = txt_entreePrenom.Text;
 
-            this.Close(); 
+                    NewCamionneur = new Camionneur(Nom, Prenom);
+
+                    ListeCamionneurs.Add(NewCamionneur);
+
+                    txt_entreeNom.Clear();
+                    txt_entreePrenom.Clear();
+
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Ceci n'est pas une chaine de characteres");
+                }
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
 
       

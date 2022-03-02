@@ -1,7 +1,7 @@
 ﻿
 namespace Programme_de_gestion_de_livraison_POO
 {
-    partial class entreeCamionneur
+    partial class lbl_entreeCamionneurPrenom
     {
         /// <summary>
         /// Required designer variable.
@@ -34,6 +34,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.lbl_prenom = new System.Windows.Forms.Label();
             this.txt_entreePrenom = new System.Windows.Forms.TextBox();
             this.btn_validerEntreeCamionneur = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txt_entreeNom
@@ -78,18 +79,28 @@ namespace Programme_de_gestion_de_livraison_POO
             this.btn_validerEntreeCamionneur.UseVisualStyleBackColor = true;
             this.btn_validerEntreeCamionneur.Click += new System.EventHandler(this.btn_validerEntreeCamionneur_Click);
             // 
-            // entreeCamionneur
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(47, 98);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(60, 20);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Prénom";
+            // 
+            // lbl_entreeCamionneurPrenom
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(377, 194);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btn_validerEntreeCamionneur);
             this.Controls.Add(this.txt_entreePrenom);
             this.Controls.Add(this.lbl_nom);
             this.Controls.Add(this.txt_entreeNom);
-            this.Name = "entreeCamionneur";
+            this.Name = "lbl_entreeCamionneurPrenom";
             this.Text = "Form2";
-   
+            this.ResumeLayout(false);
             this.PerformLayout();
 
         }
@@ -101,5 +112,6 @@ namespace Programme_de_gestion_de_livraison_POO
         private System.Windows.Forms.Label lbl_prenom;
         private System.Windows.Forms.TextBox txt_entreePrenom;
         private System.Windows.Forms.Button btn_validerEntreeCamionneur;
+        private System.Windows.Forms.Label label1;
     }
 }
