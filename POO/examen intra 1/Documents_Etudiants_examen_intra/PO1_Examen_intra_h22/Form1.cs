@@ -31,8 +31,8 @@ namespace PO1_Examen_intra_h22
             bindingSource.DataSource = ListeVoiture;
             listBox_voiture.DataSource = bindingSource;
 
-            //ListeVoiture.Add(new Voiture("Toyota yarris"));
-            //ListeVoiture.Add(new Voiture("Ferrari feroce"));
+            ListeVoiture.Add(new Voiture("Toyota yarris"));
+            ListeVoiture.Add(new Voiture("Ferrari feroce"));
 
             bindingSource.ResetBindings(false);
         }
