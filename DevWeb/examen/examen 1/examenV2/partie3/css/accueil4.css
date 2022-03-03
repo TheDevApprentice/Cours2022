@@ -2,3 +2,36 @@ header, footer {
 	background-color: deepskyblue;
 	text-align: center;
 }
+.image{
+	display: flex;
+	border: 1px solid black;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	margin: auto;
+}
+.image > h2{
+	background-color: deepskyblue;
+	width: 100%;
+	margin: 0;
+	text-align: center;
+
+}
+.image > div > figure > img{
+	margin-top: 1.2rem;
+}
+.image >div{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(204, 204, 204, 0.575);
+	
+}
+.image>div>p{
+	text-align: center;
+	padding: 5%;
+	margin: 7%;
+	background: white;
+}
