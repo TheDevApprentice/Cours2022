@@ -6,21 +6,17 @@
         int volume;
 
         public int Volume { get => volume; set => volume = value; }
-
         public int Poids { get => poids; set => poids = value; }
 
-        //public Camion()
-        //{
-            
-        //}
         public Camion(int volume, int poids)
         {
-            Poids = poids;
+
             Volume = volume;
+            Poids = poids;
         }
         public override string ToString()
         {
-            return "Camion poids : " + Poids.ToString() + ", volume de : " + Volume.ToString();
+            return "Camion poids : " + Poids + ", volume de : " + Volume;
         }
 
     }

@@ -36,9 +36,9 @@ namespace Programme_de_gestion_de_livraison_POO
                 int resultVolume;
 
                 bool successPoids = int.TryParse(txt_poids.Text, out resultPoids);
-                bool successVolume = int.TryParse(txt_poids.Text, out resultVolume);
+                bool successVolume = int.TryParse(txt_volume.Text, out resultVolume);
 
-                if (successPoids == true && successVolume == true)
+                if (successPoids && successVolume)
                 {
                     Poids = resultPoids;
                     Volume = resultVolume;
@@ -49,6 +49,7 @@ namespace Programme_de_gestion_de_livraison_POO
 
                     txt_poids.Clear();
                     txt_volume.Clear();
+
                     this.Close();
                 }
                 else
@@ -59,9 +60,10 @@ namespace Programme_de_gestion_de_livraison_POO
             catch (Exception)
             {
 
-                throw;
+                
             }
         
         }
+
     }
 }

@@ -241,7 +241,9 @@ namespace Programme_de_gestion_de_livraison_POO
             this.cmb_camionneurs.Name = "cmb_camionneurs";
             this.cmb_camionneurs.Size = new System.Drawing.Size(337, 28);
             this.cmb_camionneurs.TabIndex = 8;
-            this.cmb_camionneurs.TextChanged += new System.EventHandler(this.cmb_camionneurs_TextChanged);
+            this.cmb_camionneurs.SelectedIndexChanged += new System.EventHandler(this.cmb_camionneurs_SelectedIndexChanged);
+     
+            this.cmb_camionneurs.Leave += new System.EventHandler(this.cmb_camionneurs_Leave);
             // 
             // cmb_camions
             // 
@@ -252,6 +254,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.cmb_camions.TabIndex = 7;
             this.cmb_camions.SelectedIndexChanged += new System.EventHandler(this.cmb_camions_SelectedIndexChanged);
             this.cmb_camions.TextChanged += new System.EventHandler(this.cmb_camions_TextChanged);
+            this.cmb_camions.Leave += new System.EventHandler(this.cmb_camions_Leave);
             // 
             // dtp_date
             // 
@@ -278,6 +281,7 @@ namespace Programme_de_gestion_de_livraison_POO
             this.txt_distance.Size = new System.Drawing.Size(155, 27);
             this.txt_distance.TabIndex = 3;
             this.txt_distance.TextChanged += new System.EventHandler(this.txt_distance_TextChanged);
+            this.txt_distance.Leave += new System.EventHandler(this.txt_distance_Leave);
             // 
             // Form1
             // 
