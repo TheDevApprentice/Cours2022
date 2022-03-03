@@ -8,4 +8,11 @@ header {
 }
 article {
 	border:solid blue;
+	margin-bottom: 2rem;
+}
+article > h2{
+	color: red;
+}
+article > p:nth-of-type(1){
+	background-color: blue;
 }
