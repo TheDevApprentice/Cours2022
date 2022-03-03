@@ -112,7 +112,7 @@ namespace Programme_de_gestion_de_livraison_POO
                 {
                     foreach (Camion camion in ListeCamions) // faire en sorte que je puisse faire une exception sur le camion qui est déja dans la textbox
                     {
-                        if (poidTotal > camion.Poids && volumeTotal > camion.Volume)
+                        if (poidTotal > camion.Poids && volumeTotal > camion.Volume )
                         {
                             cmb_camions.Enabled = false;
                         }

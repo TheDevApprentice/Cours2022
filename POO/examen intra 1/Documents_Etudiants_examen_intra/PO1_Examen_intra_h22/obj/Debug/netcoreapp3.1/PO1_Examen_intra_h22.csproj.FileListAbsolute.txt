@@ -1,0 +1,48 @@
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.exe
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.deps.json
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.json
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.dev.json
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.AssemblyReference.cache
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.Form1.resources
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.GenerateResource.cache
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfoInputs.cache
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfo.cs
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.CoreCompileInputs.cache
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Repo\PO1\PO1_Examen_intra_h22\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.genruntimeconfig.cache
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.exe
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.deps.json
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.json
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.dev.json
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.AssemblyReference.cache
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.Form1.resources
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.GenerateResource.cache
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfoInputs.cache
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfo.cs
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.CoreCompileInputs.cache
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Users\agagnon.CORPORATIF\Desktop\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.genruntimeconfig.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.exe
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.deps.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.runtimeconfig.dev.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\bin\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.AssemblyReference.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.Form1.resources
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.GenerateResource.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfoInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.AssemblyInfo.cs
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.dll
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\POO\examen intra 1\Documents_Etudiants_examen_intra\PO1_Examen_intra_h22\obj\Debug\netcoreapp3.1\PO1_Examen_intra_h22.genruntimeconfig.cache
