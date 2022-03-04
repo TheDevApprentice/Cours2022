@@ -6,13 +6,19 @@ namespace Programme_de_gestion_de_livraison_POO
 {
     public partial class Form1 : Form
     {
+        /* Initialisation des attributs*/
+
         int id;
-        bool sucessStory = true;
+        bool PoidsEtVolumeBonPourAssignation = true;
+
+        /***/
 
         lbl_entreeCamionneurPrenom entreeCamionneur = new lbl_entreeCamionneurPrenom();
         entreeCamion entreeCamion = new entreeCamion();
         entreeLivraison entreeLivraison = new entreeLivraison();
         EntreeVoyage EntreeVoyage = new EntreeVoyage();
+
+        /*******/
 
         Voyage voyage;
         Camion camion;
@@ -20,10 +26,14 @@ namespace Programme_de_gestion_de_livraison_POO
         livraison livraisonSelectionnéDansLivraisonIncluse;
         livraison livraisonSelectionnéDansLivraisonNonAssignee;
 
+        /*******/
+
         List<livraison> listeLivraisonNonAssignees = new List<livraison>();
         List<Voyage> listeVoyages = new List<Voyage>();
         List<Camionneur> listeCamionneurs = new List<Camionneur>();
         List<Camion> listeCamions = new List<Camion>();
+
+        /*******/
 
         BindingSource bindingSource = new BindingSource();
         BindingSource bindingSource1 = new BindingSource();
@@ -31,26 +41,34 @@ namespace Programme_de_gestion_de_livraison_POO
         BindingSource bindingSource3 = new BindingSource();
         BindingSource bindingSource4 = new BindingSource();
 
+        /**********************************************************/
+
+        /* Encapsulation des attribut en utilisant leurs propriétés*/
+
         public entreeLivraison EntreeLivraison { get => entreeLivraison; set => entreeLivraison = value; }
         public entreeCamion EntreeCamion { get => entreeCamion; set => entreeCamion = value; }
         public lbl_entreeCamionneurPrenom EntreeCamionneur { get => entreeCamionneur; set => entreeCamionneur = value; }
         public EntreeVoyage EntreeVoyage1 { get => EntreeVoyage; set => EntreeVoyage = value; }
 
+        /*******/
+
         internal Voyage Voyage { get => voyage; set => voyage = value; }
         internal Voyage VoyageSelectionnée { get => voyageSelectionnée; set => voyageSelectionnée = value; }
         internal Camion Camion { get => camion; set => camion = value; }
+
+        /*******/
 
         internal List<livraison> ListeLivraisonNonAssignees { get => EntreeLivraison.ListeLivraisonNonAssignees; set => listeLivraisonNonAssignees = value; }
         internal List<Camionneur> ListeCamionneurs1 { get => EntreeCamionneur.ListeCamionneur; set => listeCamionneurs = value; }
         internal List<Voyage> ListeVoyages1 { get => EntreeVoyage.ListeVoyage; set => listeVoyages = value; }
         internal List<Camion> ListeCamions { get => EntreeCamion.ListeCamion; set => listeCamions = value; }
 
+        /**********************************************************/
 
         public Form1()
         {
             InitializeComponent();
         }
-
         private void Form1_Load(object sender, EventArgs e)
         {
             bindingSource4.DataSource = ListeVoyages1;
@@ -86,7 +104,7 @@ namespace Programme_de_gestion_de_livraison_POO
             ListeCamionneurs1.Add(new Camionneur("Salah", "Kerioudj"));
             ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
-            //ListeCamions.Add(new Camion());
+
             ListeCamions.Add(new Camion(5000, 2000));
             ListeCamions.Add(new Camion(8000, 500));
             ListeCamions.Add(new Camion(1000, 300));
@@ -98,8 +116,7 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource1.ResetBindings(true);
             bindingSource.ResetBindings(true);
         }
-
-        private void btn_assigneLivraison_Click(object sender, EventArgs e)
+        private void btn_assigneLivraison_Click(object sender, EventArgs e) /*Bouton d'assignation de livraison à un voyage */
         {
             int poidTotal = 0;
             int volumeTotal = 0;
@@ -133,11 +150,13 @@ namespace Programme_de_gestion_de_livraison_POO
                 cmb_camions.Enabled = true;
                 MessageBox.Show("Impossible de lier une livraison si le camion n'est pas spécifié");
             }
+
             bindingSource3.ResetBindings(true);
             bindingSource2.ResetBindings(true);
             bindingSource1.ResetBindings(true);
+
         }
-        private void btn_directionNonAssignees_Click(object sender, EventArgs e)
+        private void btn_directionNonAssignees_Click(object sender, EventArgs e) /*Bouton pour enlever une livraison à un voyage */
         {
             int poidTotal = 0;
             int volumeTotal = 0;
@@ -178,6 +197,9 @@ namespace Programme_de_gestion_de_livraison_POO
             bindingSource2.ResetBindings(true);
             bindingSource1.ResetBindings(true);
         }
+
+        /* Bouton pour accès aux formulaires d'entrée   */
+
         private void camionneurToolStripMenuItem_Click(object sender, EventArgs e)
         {
             EntreeCamionneur.ShowDialog();
@@ -198,10 +220,13 @@ namespace Programme_de_gestion_de_livraison_POO
             EntreeVoyage1.ShowDialog();
             bindingSource4.ResetBindings(false);
         }
+
+        /*************************************************/
+
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
             cmb_camions.Text = "";
-         
+
             if (ListeVoyages1[lst_voyages.SelectedIndex] != null)
             {
                 grp_voyageSelectionne.Visible = true;
@@ -214,7 +239,6 @@ namespace Programme_de_gestion_de_livraison_POO
         {
             VoyageSelectionnée.Camionneur = cmb_camionneurs.Text;
         }
-        
         private void cmb_camionneurs_Leave(object sender, EventArgs e)
         {
             cmb_camionneurs.Text = VoyageSelectionnée.Camionneur;
@@ -230,7 +254,6 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void cmb_camions_SelectedIndexChanged(object sender, EventArgs e)
         {
-           
             if (lst_livraisonIncluses.Items.Count != 0)
             {
                 int poidTotal = 0;
@@ -240,16 +263,15 @@ namespace Programme_de_gestion_de_livraison_POO
 
                 if (poidTotal > ListeCamions[cmb_camions.SelectedIndex].Poids && volumeTotal > ListeCamions[cmb_camions.SelectedIndex].Volume)
                 {
-                    sucessStory = false;
+                    PoidsEtVolumeBonPourAssignation = false;
                     MessageBox.Show("mauvais camion");
-                    if (!sucessStory)
+                    if (!PoidsEtVolumeBonPourAssignation)
                     {
                         cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
                     }
                 }
                 else
                 {
-
                     VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
                 }
 
@@ -309,6 +331,11 @@ namespace Programme_de_gestion_de_livraison_POO
 
 
         }
+
+        /* VérificationPoidsVolumeCamion */
+        /*Fonction qui permet de calculer la livraison totale (poids/volume totale) qui est présente dans le voyage et qui vérifie que l'on peut mettre dans le voyage 
+           * la livraison choisi dans les les livraison en attentes
+           * d'assignation et qui gère cette assignation */
         private void VérificationPoidsVolumeCamion(livraison LivraisonSelectionéeATransferer, Voyage VoyageSelectionnée, List<livraison> ListeLivraison, int poidTotalLivraisonnIncluse, int volumeTotalLivraisonIncluse)
         {
             int poidTotalAvecLaLivraisonAInclure = LivraisonSelectionéeATransferer.Poids + poidTotalLivraisonnIncluse;
@@ -360,7 +387,7 @@ namespace Programme_de_gestion_de_livraison_POO
                 {
                     cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
                 }
-              
+
 
                 if (VoyageSelectionnée.Distance != 0)
                 {
@@ -386,7 +413,7 @@ namespace Programme_de_gestion_de_livraison_POO
             }
             bindingSource3.DataSource = VoyageSelectionnée.Livraisons;
             bindingSource3.ResetBindings(true);
-        }
+        } /* Fonction pour remplir les TextBox lors d'un clic sur un voyage */
         private void verificationPoidsVolumeLivraison(ref int poidTotal, ref int volumeTotal)
         {
             foreach (livraison livraisons in VoyageSelectionnée.Livraisons)
@@ -395,8 +422,8 @@ namespace Programme_de_gestion_de_livraison_POO
                 poidTotal += livraisons.Poids;
             }
 
-        }
+        } /* Fonction qui permet de calculer le poids total et le volume totale des livraisons dans un voyage */
 
-      
+
     }
 }
