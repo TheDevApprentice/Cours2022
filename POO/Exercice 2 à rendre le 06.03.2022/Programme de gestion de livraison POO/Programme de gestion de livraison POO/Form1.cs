@@ -169,9 +169,13 @@ namespace Programme_de_gestion_de_livraison_POO
                 {
                     if (camion != ListeCamions[cmb_camions.SelectedIndex])
                     {
-                        if (poidTotal <= camion.Poids && volumeTotal <= camion.Volume)
+                        if (poidTotal <= camion.Poids || volumeTotal <= camion.Volume)
                         {
                             cmb_camions.Enabled = true;
+                        }
+                        if (poidTotal > camion.Poids || volumeTotal > camion.Volume)
+                        {
+                            cmb_camions.Enabled = false;
                         }
                     }
                 }
@@ -225,8 +229,6 @@ namespace Programme_de_gestion_de_livraison_POO
 
         private void lst_voyages_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cmb_camions.Text = "";
-
             if (ListeVoyages1[lst_voyages.SelectedIndex] != null)
             {
                 grp_voyageSelectionne.Visible = true;
@@ -374,9 +376,12 @@ namespace Programme_de_gestion_de_livraison_POO
         }
         private void remplissageTxtBox()
         {
-            cmb_camions.Text = "";
-
             VoyageSelectionnée = ListeVoyages1[lst_voyages.SelectedIndex];
+
+            int poidTotal = 0;
+            int volumeTotal = 0;
+            verificationPoidsVolumeLivraison(ref poidTotal, ref volumeTotal);
+
 
             try
             {
@@ -386,6 +391,20 @@ namespace Programme_de_gestion_de_livraison_POO
                 if (VoyageSelectionnée.Camion != null)
                 {
                     cmb_camions.Text = VoyageSelectionnée.Camion.ToString();
+
+                    if (volumeTotal >= VoyageSelectionnée.Camion.Volume || poidTotal >= VoyageSelectionnée.Camion.Poids)
+                    {
+                        cmb_camions.Enabled = false;
+                    }
+                }
+                else
+                {
+                    cmb_camions.Text = " ";
+                    cmb_camions.Enabled = true;
+                }
+
+                if (VoyageSelectionnée.Camion != null)
+                {
                 }
 
 
