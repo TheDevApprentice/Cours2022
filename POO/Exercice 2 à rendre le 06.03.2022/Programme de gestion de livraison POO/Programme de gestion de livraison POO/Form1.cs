@@ -252,6 +252,11 @@ namespace Programme_de_gestion_de_livraison_POO
             {
                 VoyageSelectionnée.Camion = (Camion)cmb_camions.SelectedItem;
             }
+            if (VoyageSelectionnée.Camion == null)
+            {
+                cmb_camions.Enabled = true;
+                cmb_camions.Text = "";
+            }
 
         }
         private void cmb_camions_SelectedIndexChanged(object sender, EventArgs e)
@@ -397,15 +402,13 @@ namespace Programme_de_gestion_de_livraison_POO
                         cmb_camions.Enabled = false;
                     }
                 }
-                else
+                if (VoyageSelectionnée.Camion == null)
                 {
-                    cmb_camions.Text = " ";
                     cmb_camions.Enabled = true;
+                    cmb_camions.Text = "";
                 }
 
-                if (VoyageSelectionnée.Camion != null)
-                {
-                }
+              
 
 
                 if (VoyageSelectionnée.Distance != 0)
