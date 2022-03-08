@@ -4,6 +4,7 @@ using System.Windows.Forms;
 
 namespace Programme_de_gestion_de_livraison_POO
 {
+    /*Confirmation que c'est ok */
     public partial class Form1 : Form
     {
         /* Initialisation des attributs*/
