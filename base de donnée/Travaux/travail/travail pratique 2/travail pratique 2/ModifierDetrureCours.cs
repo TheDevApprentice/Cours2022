@@ -140,9 +140,6 @@ namespace travail_pratique_2
 
                     }
                 }
-
-
-
             }
             catch (Exception)
             {
