@@ -104,7 +104,6 @@ namespace Programme_de_gestion_de_livraison_POO
             ListeCamionneurs1.Add(new Camionneur("Salah", "Kerioudj"));
             ListeCamionneurs1.Add(new Camionneur("Colin", "Farrel"));
 
-
             ListeCamions.Add(new Camion(5000, 2000));
             ListeCamions.Add(new Camion(8000, 500));
             ListeCamions.Add(new Camion(1000, 300));
