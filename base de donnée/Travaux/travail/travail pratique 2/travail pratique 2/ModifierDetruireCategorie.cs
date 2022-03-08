@@ -11,9 +11,11 @@ namespace travail_pratique_2
 {
     public partial class ModifierDetruireCategorie : Form
     {
+        int no_categorie; 
         ManagerCours managerCours = new ManagerCours();
         BindingSource bindingsourceAfficheCategorie = new BindingSource();
         internal ManagerCours ManagerCours { get => managerCours; set => managerCours = value; }
+        public int No_categorie { get => no_categorie; set => no_categorie = value; }
 
         public ModifierDetruireCategorie()
         {
@@ -34,9 +36,10 @@ namespace travail_pratique_2
         }
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
+            No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
             try
             {
-                ManagerCours.detruireCategorie(12);
+                ManagerCours.detruireCategorie(No_categorie);
                 MessageBox.Show("La catégorie a bien été détruit avec succès");
             }
             catch (Exception ex)
@@ -50,9 +53,10 @@ namespace travail_pratique_2
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
+            No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
             try
             {
-                ManagerCours.modifierCategorie(11, txt_ModifierCategorie.Text);
+                ManagerCours.modifierCategorie(No_categorie, txt_ModifierCategorie.Text);
                 MessageBox.Show("La catégorie a bien été modifié avec succès");
             }
             catch (Exception ex)

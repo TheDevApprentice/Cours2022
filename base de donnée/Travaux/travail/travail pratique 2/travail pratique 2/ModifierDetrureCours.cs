@@ -11,6 +11,8 @@ namespace travail_pratique_2
 {
     public partial class ModifierDetrureCours : Form
     {
+        int no_cours;
+        int no_categorie;
         ManagerCours managerCours = new ManagerCours();
         string mixte;
         SqlDataReader readerDeCours;
@@ -21,6 +23,8 @@ namespace travail_pratique_2
         public BindingSource BindingsourceAfficheCategorie { get => bindingsourceAfficheCategorie; set => bindingsourceAfficheCategorie = value; }
         public BindingSource BindingsourceAfficheCours { get => bindingsourceAfficheCours; set => bindingsourceAfficheCours = value; }
         public SqlDataReader ReaderDeCours { get => readerDeCours; set => readerDeCours = value; }
+        public int No_cours { get => no_cours; set => no_cours = value; }
+        public int No_categorie { get => no_categorie; set => no_categorie = value; }
 
         public ModifierDetrureCours()
         {
@@ -35,6 +39,7 @@ namespace travail_pratique_2
                 cmb_Categorie.DisplayMember = "categorie";
                 cmb_Categorie.DataSource = BindingsourceAfficheCategorie;
             }
+            //No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
             using ( readerDeCours = ManagerCours.afficherLesCours())
             {
                 BindingsourceAfficheCours.DataSource = readerDeCours;
@@ -44,11 +49,17 @@ namespace travail_pratique_2
             }
 
             cmb_Categorie.Text = "";
+            txt_NbHeure.Clear();
+            txt_NomDCours.Clear();
+            rad_Non.Checked = false;
+            rad_Oui.Checked = false;
             cmb_RechercheEntreprise.Text = "";
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
+            No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+            No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
             try
             {
                 if (rad_Oui.Checked == true)
@@ -60,7 +71,7 @@ namespace travail_pratique_2
                     Mixte = "non";
                 }
 
-                ManagerCours.modifierCours(20, textBox1.Text, textBox3.Text, Mixte, cmb_Categorie.SelectedIndex);
+                ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
                 MessageBox.Show("Le cours a bien été mofifié avec succès");
             }
             catch (Exception ex)
@@ -74,9 +85,10 @@ namespace travail_pratique_2
         }
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
+            No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
             try
             {
-                ManagerCours.detruireCours(cmb_RechercheEntreprise.SelectedIndex);
+                ManagerCours.detruireCours(No_cours);
                 MessageBox.Show("Le cours a bien été détruit avec succès");
              
             }
@@ -98,16 +110,45 @@ namespace travail_pratique_2
 
         private void cmb_RechercheEntreprise_SelectedIndexChanged(object sender, EventArgs e)
         {
-            //try
-            //{
+            ManagerCours managerCours = new ManagerCours();
+            int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+            try
+            {
+                using (SqlDataReader datareader = managerCours.afficherInformationCours(No_cours))
+                {
+                    if (datareader.Read())
+                    {
+                        txt_NomDCours.Text = datareader["nom_cours"].ToString();
+                        txt_NbHeure.Text = datareader["nbHeureDeCours"].ToString();
+                        if (datareader["mixte"].ToString() == "oui")
+                        {
+                            rad_Oui.Checked = true;
+                        }
+                        else
+                        {
+                            rad_Oui.Checked = false; 
+                        }
+                        if (datareader["mixte"].ToString() == "non")
+                        {
+                            rad_Oui.Checked = true;
+                        }
+                        else
+                        {
+                            rad_Non.Checked = false;
+                        }
+                        cmb_Categorie.Text = datareader["nom_categorie"].ToString();
 
-            //    ManagerCours.afficherInformationCours(cmb_RechercheEntreprise.SelectedIndex);
-            //}
-            //catch (Exception)
-            //{
+                    }
+                }
 
-            //    throw;
-            //}
+
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
         }
     }
 }

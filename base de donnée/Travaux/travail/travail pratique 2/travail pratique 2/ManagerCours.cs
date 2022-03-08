@@ -16,12 +16,16 @@ namespace travail_pratique_2
         {
             // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
             SqlConnection afficherInformationConnection = getConnexion();
-
             // déclarer une commande
-            string sql = "afficherInformationCours"+ no_cours.ToString(); //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
-                                                                                                             // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            string sql = "afficherInformationCours " ; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                                                                     // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            
             SqlCommand cmdAfficherInformationCours = new SqlCommand(sql, afficherInformationConnection);
             cmdAfficherInformationCours.CommandType = CommandType.StoredProcedure;
+            // creer des paramètres
+            cmdAfficherInformationCours.Parameters.Add("@no_cours", SqlDbType.Int);
+            // donner valeur paramètre
+            cmdAfficherInformationCours.Parameters["@no_cours"].Value = no_cours;
             // ouvrir une connexion 
             afficherInformationConnection.Open();
             // executer la commande

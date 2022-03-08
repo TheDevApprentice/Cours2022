@@ -41,8 +41,8 @@ namespace travail_pratique_2
             this.rad_Oui = new System.Windows.Forms.RadioButton();
             this.btn_Detruire = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txt_NbHeure = new System.Windows.Forms.TextBox();
+            this.txt_NomDCours = new System.Windows.Forms.TextBox();
             this.cmb_Categorie = new System.Windows.Forms.ComboBox();
             this.grpb_RechercheEntreprise.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -77,8 +77,8 @@ namespace travail_pratique_2
             this.groupBox2.Controls.Add(this.grpbox_Mixte);
             this.groupBox2.Controls.Add(this.btn_Detruire);
             this.groupBox2.Controls.Add(this.btn_Modifier);
-            this.groupBox2.Controls.Add(this.textBox3);
-            this.groupBox2.Controls.Add(this.textBox1);
+            this.groupBox2.Controls.Add(this.txt_NbHeure);
+            this.groupBox2.Controls.Add(this.txt_NomDCours);
             this.groupBox2.Controls.Add(this.cmb_Categorie);
             this.groupBox2.Location = new System.Drawing.Point(12, 112);
             this.groupBox2.Name = "groupBox2";
@@ -177,19 +177,19 @@ namespace travail_pratique_2
             this.btn_Modifier.UseVisualStyleBackColor = true;
             this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
-            // textBox3
+            // txt_NbHeure
             // 
-            this.textBox3.Location = new System.Drawing.Point(274, 119);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(125, 27);
-            this.textBox3.TabIndex = 4;
+            this.txt_NbHeure.Location = new System.Drawing.Point(274, 119);
+            this.txt_NbHeure.Name = "txt_NbHeure";
+            this.txt_NbHeure.Size = new System.Drawing.Size(125, 27);
+            this.txt_NbHeure.TabIndex = 4;
             // 
-            // textBox1
+            // txt_NomDCours
             // 
-            this.textBox1.Location = new System.Drawing.Point(274, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(125, 27);
-            this.textBox1.TabIndex = 2;
+            this.txt_NomDCours.Location = new System.Drawing.Point(274, 36);
+            this.txt_NomDCours.Name = "txt_NomDCours";
+            this.txt_NomDCours.Size = new System.Drawing.Size(125, 27);
+            this.txt_NomDCours.TabIndex = 2;
             // 
             // cmb_Categorie
             // 
@@ -223,14 +223,14 @@ namespace travail_pratique_2
         private System.Windows.Forms.ComboBox cmb_RechercheEntreprise;
         private System.Windows.Forms.GroupBox grpb_RechercheEntreprise;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txt_NomDCours;
         private System.Windows.Forms.ComboBox cmb_Categorie;
         private System.Windows.Forms.GroupBox grpbox_Mixte;
         private System.Windows.Forms.RadioButton rad_Non;
         private System.Windows.Forms.RadioButton rad_Oui;
         private System.Windows.Forms.Button btn_Detruire;
         private System.Windows.Forms.Button btn_Modifier;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txt_NbHeure;
         private System.Windows.Forms.Button btn_AjouterCategorie;
         private System.Windows.Forms.Label lbl_Categorie;
         private System.Windows.Forms.Label label3;

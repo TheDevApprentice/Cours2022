@@ -42,3 +42,10 @@ C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de don
 C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.pdb
 C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.genruntimeconfig.cache
 C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetrureCours.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetrureCours.resources
