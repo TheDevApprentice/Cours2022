@@ -31,7 +31,7 @@ namespace travail_pratique_2
         {
             this.label1 = new System.Windows.Forms.Label();
             this.btn_AjouterCategorie = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtAjoutCategorie = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // label1
@@ -51,20 +51,21 @@ namespace travail_pratique_2
             this.btn_AjouterCategorie.TabIndex = 1;
             this.btn_AjouterCategorie.Text = "Ajouter";
             this.btn_AjouterCategorie.UseVisualStyleBackColor = true;
+            this.btn_AjouterCategorie.Click += new System.EventHandler(this.btn_AjouterCategorie_Click);
             // 
-            // textBox1
+            // txtAjoutCategorie
             // 
-            this.textBox1.Location = new System.Drawing.Point(180, 61);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(237, 27);
-            this.textBox1.TabIndex = 2;
+            this.txtAjoutCategorie.Location = new System.Drawing.Point(180, 61);
+            this.txtAjoutCategorie.Name = "txtAjoutCategorie";
+            this.txtAjoutCategorie.Size = new System.Drawing.Size(237, 27);
+            this.txtAjoutCategorie.TabIndex = 2;
             // 
             // AjouterUneCategorie
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(442, 184);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtAjoutCategorie);
             this.Controls.Add(this.btn_AjouterCategorie);
             this.Controls.Add(this.label1);
             this.Name = "AjouterUneCategorie";
@@ -78,6 +79,6 @@ namespace travail_pratique_2
 
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_AjouterCategorie;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtAjoutCategorie;
     }
 }

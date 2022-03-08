@@ -10,7 +10,7 @@
     <Compile Update="ModifierDetruireCategorie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ModifierDetrureEntreprise.cs">
+    <Compile Update="ModifierDetrureCours.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

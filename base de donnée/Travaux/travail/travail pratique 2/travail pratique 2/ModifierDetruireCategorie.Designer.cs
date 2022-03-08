@@ -30,10 +30,10 @@ namespace travail_pratique_2
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.txt_ModifierCategorie = new System.Windows.Forms.TextBox();
             this.lbl_Categorie = new System.Windows.Forms.Label();
             this.btn_Detruire = new System.Windows.Forms.Button();
             this.btn_Modifier = new System.Windows.Forms.Button();
-            this.cmb_Categorie = new System.Windows.Forms.ComboBox();
             this.grpb_RechercheEntreprise = new System.Windows.Forms.GroupBox();
             this.cmb_RechercheCategorie = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
@@ -42,16 +42,23 @@ namespace travail_pratique_2
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txt_ModifierCategorie);
             this.groupBox2.Controls.Add(this.lbl_Categorie);
             this.groupBox2.Controls.Add(this.btn_Detruire);
             this.groupBox2.Controls.Add(this.btn_Modifier);
-            this.groupBox2.Controls.Add(this.cmb_Categorie);
             this.groupBox2.Location = new System.Drawing.Point(23, 112);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(689, 219);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modifier/Détruire";
+            // 
+            // txt_ModifierCategorie
+            // 
+            this.txt_ModifierCategorie.Location = new System.Drawing.Point(167, 92);
+            this.txt_ModifierCategorie.Name = "txt_ModifierCategorie";
+            this.txt_ModifierCategorie.Size = new System.Drawing.Size(415, 27);
+            this.txt_ModifierCategorie.TabIndex = 12;
             // 
             // lbl_Categorie
             // 
@@ -82,14 +89,6 @@ namespace travail_pratique_2
             this.btn_Modifier.UseVisualStyleBackColor = true;
             this.btn_Modifier.Click += new System.EventHandler(this.btn_Modifier_Click);
             // 
-            // cmb_Categorie
-            // 
-            this.cmb_Categorie.FormattingEnabled = true;
-            this.cmb_Categorie.Location = new System.Drawing.Point(218, 89);
-            this.cmb_Categorie.Name = "cmb_Categorie";
-            this.cmb_Categorie.Size = new System.Drawing.Size(372, 28);
-            this.cmb_Categorie.TabIndex = 1;
-            // 
             // grpb_RechercheEntreprise
             // 
             this.grpb_RechercheEntreprise.Controls.Add(this.cmb_RechercheCategorie);
@@ -98,7 +97,7 @@ namespace travail_pratique_2
             this.grpb_RechercheEntreprise.Size = new System.Drawing.Size(652, 65);
             this.grpb_RechercheEntreprise.TabIndex = 3;
             this.grpb_RechercheEntreprise.TabStop = false;
-            this.grpb_RechercheEntreprise.Text = "Recherche d\'une cetegorie";
+            this.grpb_RechercheEntreprise.Text = "Recherche d\'une categorie";
             // 
             // cmb_RechercheCategorie
             // 
@@ -117,6 +116,7 @@ namespace travail_pratique_2
             this.Controls.Add(this.grpb_RechercheEntreprise);
             this.Name = "ModifierDetruireCategorie";
             this.Text = "ModifierDetruireCategorie";
+            this.Load += new System.EventHandler(this.ModifierDetruireCategorie_Load);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
             this.grpb_RechercheEntreprise.ResumeLayout(false);
@@ -130,8 +130,8 @@ namespace travail_pratique_2
         private System.Windows.Forms.Label lbl_Categorie;
         private System.Windows.Forms.Button btn_Detruire;
         private System.Windows.Forms.Button btn_Modifier;
-        private System.Windows.Forms.ComboBox cmb_Categorie;
         private System.Windows.Forms.GroupBox grpb_RechercheEntreprise;
         private System.Windows.Forms.ComboBox cmb_RechercheCategorie;
+        private System.Windows.Forms.TextBox txt_ModifierCategorie;
     }
 }

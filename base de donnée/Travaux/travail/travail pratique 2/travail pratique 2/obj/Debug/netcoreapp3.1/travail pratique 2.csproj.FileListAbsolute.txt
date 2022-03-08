@@ -17,3 +17,28 @@ C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pr
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.AjouterUneCategorie.resources
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetruireCategorie.resources
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetrureEntreprise.resources
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.exe
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.deps.json
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.runtimeconfig.json
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.runtimeconfig.dev.json
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\travail pratique 2.pdb
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.csproj.AssemblyReference.cache
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.AjouterUneCategorie.resources
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.Form1.resources
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetruireCategorie.resources
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.csproj.GenerateResource.cache
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.AssemblyInfoInputs.cache
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.AssemblyInfo.cs
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.dll
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.pdb
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail pratique 2.genruntimeconfig.cache
+C:\Users\hugoe\Desktop\Cours 2022\base de données\Sauvegarde github\base de donnée\Travaux\travail\travail pratique 2\travail pratique 2\obj\Debug\netcoreapp3.1\travail_pratique_2.ModifierDetrureCours.resources
