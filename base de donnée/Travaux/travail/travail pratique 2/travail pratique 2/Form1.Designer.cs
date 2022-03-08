@@ -29,44 +29,43 @@ namespace travail_pratique_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
+            this.btnAjouter = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.txtNbHeure = new System.Windows.Forms.TextBox();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton_Non = new System.Windows.Forms.RadioButton();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmbListeCategorie = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtNomDuCours = new System.Windows.Forms.TextBox();
             this.txtTelephone = new System.Windows.Forms.TextBox();
-            this.txtNbHeure = new System.Windows.Forms.TextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.btnModifier = new System.Windows.Forms.Button();
-            this.btnDetruire = new System.Windows.Forms.Button();
-            this.cmbListeCategorie = new System.Windows.Forms.ComboBox();
+            this.btn_AjoutCategorie = new System.Windows.Forms.Button();
+            this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btn_ModifierCours = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_ModifierDetruireCategorie = new System.Windows.Forms.ToolStripLabel();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.btn_AjouterCategorie = new System.Windows.Forms.ToolStripLabel();
             this.groupBox1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label1
+            // btnAjouter
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(58, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom du cours";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(58, 97);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Numéro de téléphone";
+            this.btnAjouter.Location = new System.Drawing.Point(488, 514);
+            this.btnAjouter.Name = "btnAjouter";
+            this.btnAjouter.Size = new System.Drawing.Size(94, 29);
+            this.btnAjouter.TabIndex = 10;
+            this.btnAjouter.Text = "Ajouter";
+            this.btnAjouter.UseVisualStyleBackColor = true;
+            this.btnAjouter.Click += new System.EventHandler(this.btnDetruire_Click);
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 155);
+            this.label3.Location = new System.Drawing.Point(99, 200);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(117, 20);
             this.label3.TabIndex = 2;
@@ -75,43 +74,18 @@ namespace travail_pratique_2
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(58, 379);
+            this.label4.Location = new System.Drawing.Point(99, 424);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(72, 20);
+            this.label4.Size = new System.Drawing.Size(74, 20);
             this.label4.TabIndex = 3;
-            this.label4.Text = "categorie";
-            // 
-            // txtNomDuCours
-            // 
-            this.txtNomDuCours.Location = new System.Drawing.Point(216, 36);
-            this.txtNomDuCours.Name = "txtNomDuCours";
-            this.txtNomDuCours.Size = new System.Drawing.Size(261, 27);
-            this.txtNomDuCours.TabIndex = 4;
-            // 
-            // txtTelephone
-            // 
-            this.txtTelephone.Location = new System.Drawing.Point(216, 94);
-            this.txtTelephone.Name = "txtTelephone";
-            this.txtTelephone.Size = new System.Drawing.Size(261, 27);
-            this.txtTelephone.TabIndex = 5;
+            this.label4.Text = "Categorie";
             // 
             // txtNbHeure
             // 
-            this.txtNbHeure.Location = new System.Drawing.Point(216, 155);
+            this.txtNbHeure.Location = new System.Drawing.Point(257, 200);
             this.txtNbHeure.Name = "txtNbHeure";
             this.txtNbHeure.Size = new System.Drawing.Size(261, 27);
             this.txtNbHeure.TabIndex = 6;
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.radioButton2);
-            this.groupBox1.Controls.Add(this.radioButton1);
-            this.groupBox1.Location = new System.Drawing.Point(216, 214);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(411, 128);
-            this.groupBox1.TabIndex = 8;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Mixte";
             // 
             // radioButton1
             // 
@@ -124,51 +98,130 @@ namespace travail_pratique_2
             this.radioButton1.Text = "oui";
             this.radioButton1.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // radioButton_Non
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(203, 41);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(122, 24);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "internationale";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.radioButton_Non.AutoSize = true;
+            this.radioButton_Non.Location = new System.Drawing.Point(203, 41);
+            this.radioButton_Non.Name = "radioButton_Non";
+            this.radioButton_Non.Size = new System.Drawing.Size(55, 24);
+            this.radioButton_Non.TabIndex = 1;
+            this.radioButton_Non.TabStop = true;
+            this.radioButton_Non.Text = "non";
+            this.radioButton_Non.UseVisualStyleBackColor = true;
             // 
-            // btnModifier
+            // groupBox1
             // 
-            this.btnModifier.Location = new System.Drawing.Point(312, 469);
-            this.btnModifier.Name = "btnModifier";
-            this.btnModifier.Size = new System.Drawing.Size(94, 29);
-            this.btnModifier.TabIndex = 9;
-            this.btnModifier.Text = "Modifier";
-            this.btnModifier.UseVisualStyleBackColor = true;
-            // 
-            // btnDetruire
-            // 
-            this.btnDetruire.Location = new System.Drawing.Point(447, 469);
-            this.btnDetruire.Name = "btnDetruire";
-            this.btnDetruire.Size = new System.Drawing.Size(94, 29);
-            this.btnDetruire.TabIndex = 10;
-            this.btnDetruire.Text = "Détruire";
-            this.btnDetruire.UseVisualStyleBackColor = true;
+            this.groupBox1.Controls.Add(this.radioButton_Non);
+            this.groupBox1.Controls.Add(this.radioButton1);
+            this.groupBox1.Location = new System.Drawing.Point(257, 259);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(411, 128);
+            this.groupBox1.TabIndex = 8;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Mixte";
             // 
             // cmbListeCategorie
             // 
             this.cmbListeCategorie.FormattingEnabled = true;
-            this.cmbListeCategorie.Location = new System.Drawing.Point(216, 379);
+            this.cmbListeCategorie.Location = new System.Drawing.Point(257, 424);
             this.cmbListeCategorie.Name = "cmbListeCategorie";
             this.cmbListeCategorie.Size = new System.Drawing.Size(261, 28);
             this.cmbListeCategorie.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(99, 81);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(102, 20);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Nom du cours";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(99, 142);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 20);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Numéro de téléphone";
+            // 
+            // txtNomDuCours
+            // 
+            this.txtNomDuCours.Location = new System.Drawing.Point(257, 81);
+            this.txtNomDuCours.Name = "txtNomDuCours";
+            this.txtNomDuCours.Size = new System.Drawing.Size(261, 27);
+            this.txtNomDuCours.TabIndex = 4;
+            // 
+            // txtTelephone
+            // 
+            this.txtTelephone.Location = new System.Drawing.Point(257, 139);
+            this.txtTelephone.Name = "txtTelephone";
+            this.txtTelephone.Size = new System.Drawing.Size(261, 27);
+            this.txtTelephone.TabIndex = 5;
+            // 
+            // btn_AjoutCategorie
+            // 
+            this.btn_AjoutCategorie.Location = new System.Drawing.Point(545, 424);
+            this.btn_AjoutCategorie.Name = "btn_AjoutCategorie";
+            this.btn_AjoutCategorie.Size = new System.Drawing.Size(50, 29);
+            this.btn_AjoutCategorie.TabIndex = 12;
+            this.btn_AjoutCategorie.Text = "+";
+            this.btn_AjoutCategorie.UseVisualStyleBackColor = true;
+            this.btn_AjoutCategorie.Click += new System.EventHandler(this.btn_AjoutCategorie_Click);
+            // 
+            // toolStrip1
+            // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_ModifierCours,
+            this.toolStripSeparator1,
+            this.btn_ModifierDetruireCategorie,
+            this.toolStripSeparator2,
+            this.btn_AjouterCategorie});
+            this.toolStrip1.Location = new System.Drawing.Point(0, 0);
+            this.toolStrip1.Name = "toolStrip1";
+            this.toolStrip1.Size = new System.Drawing.Size(737, 25);
+            this.toolStrip1.TabIndex = 13;
+            this.toolStrip1.Text = "toolStrip1";
+            // 
+            // btn_ModifierCours
+            // 
+            this.btn_ModifierCours.Name = "btn_ModifierCours";
+            this.btn_ModifierCours.Size = new System.Drawing.Size(167, 22);
+            this.btn_ModifierCours.Text = "Modifier/Détruire Cours";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_ModifierDetruireCategorie
+            // 
+            this.btn_ModifierDetruireCategorie.Name = "btn_ModifierDetruireCategorie";
+            this.btn_ModifierDetruireCategorie.Size = new System.Drawing.Size(185, 22);
+            this.btn_ModifierDetruireCategorie.Text = "ModifierDetruireCategorie";
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(6, 25);
+            // 
+            // btn_AjouterCategorie
+            // 
+            this.btn_AjouterCategorie.Name = "btn_AjouterCategorie";
+            this.btn_AjouterCategorie.Size = new System.Drawing.Size(123, 22);
+            this.btn_AjouterCategorie.Text = "AjouterCatgeorie";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(737, 564);
+            this.Controls.Add(this.toolStrip1);
+            this.Controls.Add(this.btn_AjoutCategorie);
             this.Controls.Add(this.cmbListeCategorie);
-            this.Controls.Add(this.btnDetruire);
-            this.Controls.Add(this.btnModifier);
+            this.Controls.Add(this.btnAjouter);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtNbHeure);
             this.Controls.Add(this.txtTelephone);
@@ -181,26 +234,33 @@ namespace travail_pratique_2
             this.Text = "Form1";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btnAjouter;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txtNbHeure;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton_Non;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.ComboBox cmbListeCategorie;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtNomDuCours;
         private System.Windows.Forms.TextBox txtTelephone;
-        private System.Windows.Forms.TextBox txtNbHeure;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.Button btnModifier;
-        private System.Windows.Forms.Button btnDetruire;
-        private System.Windows.Forms.ComboBox cmbListeCategorie;
+        private System.Windows.Forms.Button btn_AjoutCategorie;
+        private System.Windows.Forms.ToolStrip toolStrip1;
+        private System.Windows.Forms.ToolStripLabel btn_ModifierCours;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripLabel btn_ModifierDetruireCategorie;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
+        private System.Windows.Forms.ToolStripLabel btn_AjouterCategorie;
     }
 }
 

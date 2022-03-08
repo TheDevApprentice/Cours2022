@@ -17,5 +17,14 @@ namespace travail_pratique_2
             InitializeComponent();
         }
 
+        private void btnDetruire_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_AjoutCategorie_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
