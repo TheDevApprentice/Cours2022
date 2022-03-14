@@ -47,8 +47,8 @@ namespace travail_pratique_2
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-            No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
-            No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
+           int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+           int No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
             try
             {
                 if (rad_Oui.Checked == true)
@@ -70,7 +70,7 @@ namespace travail_pratique_2
                 MessageBox.Show(ex.Message);
                
             }
-
+            AfficherLesCours();
         }
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
@@ -89,6 +89,10 @@ namespace travail_pratique_2
           
             cmb_Categorie.Text = "";
             cmb_RechercheEntreprise.Text = "";
+            txt_NbHeure.Clear();
+            txt_NomDCours.Clear();
+
+            AfficherLesCours();
         }
 
         private void btn_AjouterCategorie_Click(object sender, EventArgs e)

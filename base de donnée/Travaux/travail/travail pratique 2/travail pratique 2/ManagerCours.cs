@@ -189,13 +189,13 @@ namespace travail_pratique_2
 
                 // creer des paramètres
                 cmd.Parameters.Add("@no_categorie", SqlDbType.Int);
-                cmd.Parameters.Add("@nom", SqlDbType.NChar, 50);
+                cmd.Parameters.Add("@nom_categorie", SqlDbType.NChar, 50);
        
 
                 // donner valeur paramètre
 
-                cmd.Parameters["@no_etudiant"].Value = no_categorie;
-                cmd.Parameters["@nom"].Value = nom_categorie;
+                cmd.Parameters["@no_categorie"].Value = no_categorie;
+                cmd.Parameters["@nom_categorie"].Value = nom_categorie;
   
                 // ouvrir connexion 
                 updateConnection.Open();

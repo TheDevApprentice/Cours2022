@@ -13,7 +13,6 @@ namespace travail_pratique_2
 {
     public partial class Form1 : Form
     {
-        int no_categorie; 
         ManagerCours managerCours = new ManagerCours();
 
         BindingSource bindingsourceAfficheCategorie = new BindingSource();
@@ -21,7 +20,6 @@ namespace travail_pratique_2
 
         internal ManagerCours ManagerCours { get => managerCours; set => managerCours = value; }
         public string Mixte { get => mixte; set => mixte = value; }
-        public int No_categorie { get => no_categorie; set => no_categorie = value; }
 
         public Form1()
         {
@@ -41,7 +39,7 @@ namespace travail_pratique_2
             using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
             {
                 bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmbListeCategorie.ValueMember = "no_categorie, nom_categorie";
+                cmbListeCategorie.ValueMember = "no_categorie";
                 cmbListeCategorie.DisplayMember = "categorie";
                 cmbListeCategorie.DataSource = bindingsourceAfficheCategorie;
             }
@@ -55,7 +53,7 @@ namespace travail_pratique_2
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-            No_categorie = int.Parse(cmbListeCategorie.SelectedValue.ToString());
+       
             try
             {
                 if (radioButton_Oui.Checked == true)
@@ -66,7 +64,7 @@ namespace travail_pratique_2
                 {
                     Mixte = "non";
                 }
-                ManagerCours.ajouterCours(txtNomDuCours.Text, txtNbHeure.Text, Mixte, No_categorie);
+                ManagerCours.ajouterCours(txtNomDuCours.Text, txtNbHeure.Text, Mixte, int.Parse(cmbListeCategorie.SelectedValue.ToString()));
                 MessageBox.Show("L'ajout du cours a été effectué avec succès");
                
             }
@@ -79,8 +77,9 @@ namespace travail_pratique_2
            
             txtNomDuCours.Clear();
             txtNbHeure.Clear();
-
-            cmbListeCategorie.Text = "";
+            radioButton_Non.Checked = false;
+            radioButton_Oui.Checked = false;
+            cmbListeCategorie.SelectedValue = "";
         }
 
 
@@ -94,6 +93,11 @@ namespace travail_pratique_2
         {
             ModifierDetruireCategorie modifierDetruireCategorie = new ModifierDetruireCategorie();
             modifierDetruireCategorie.ShowDialog();
+        }
+
+        private void cmbListeCategorie_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

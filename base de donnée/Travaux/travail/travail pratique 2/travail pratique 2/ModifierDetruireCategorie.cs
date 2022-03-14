@@ -46,6 +46,8 @@ namespace travail_pratique_2
                 throw;
             }
             cmb_RechercheCategorie.Text = "";
+            txt_ModifierCategorie.Clear();
+            AfficherLesCategories();
         }
 
         private void btn_Modifier_Click(object sender, EventArgs e)
@@ -60,10 +62,11 @@ namespace travail_pratique_2
             {
                 MessageBox.Show("la catégorie n'a pas bien été modifié");
                 MessageBox.Show(ex.Message);
-                throw;
             }
 
             cmb_RechercheCategorie.Text = "";
+            txt_ModifierCategorie.Clear();
+            AfficherLesCategories();
         }
         private void AfficherLesCategories()
         {
@@ -75,8 +78,7 @@ namespace travail_pratique_2
                 cmb_RechercheCategorie.DataSource = bindingsourceAfficheCategorie;
             }
         }
-
-        private void cmb_RechercheCategorie_SelectionChangeCommitted(object sender, EventArgs e)
+        private void cmb_RechercheCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
             txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text;
         }
