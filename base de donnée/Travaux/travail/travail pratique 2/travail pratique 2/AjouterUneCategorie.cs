@@ -31,7 +31,9 @@ namespace travail_pratique_2
             }
 
             txtAjoutCategorie.Clear();
-            
+
+            this.Close(); 
+
         }
     }
 }

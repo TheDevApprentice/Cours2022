@@ -23,17 +23,14 @@ namespace travail_pratique_2
         }
         private void ModifierDetruireCategorie_Load(object sender, EventArgs e)
         {
-            using (SqlDataReader readerDeCategorie = managerCours.afficherLesCategories())
-            {
-                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmb_RechercheCategorie.ValueMember = "no_categorie";
-                cmb_RechercheCategorie.DisplayMember = "categorie";
-                cmb_RechercheCategorie.DataSource = bindingsourceAfficheCategorie;
-            }
+            AfficherLesCategories(); 
 
+            txt_ModifierCategorie.Text = ""; 
             cmb_RechercheCategorie.Text = "";
+           
     
         }
+        
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
             No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
@@ -68,7 +65,20 @@ namespace travail_pratique_2
 
             cmb_RechercheCategorie.Text = "";
         }
+        private void AfficherLesCategories()
+        {
+            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+            {
+                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
+                cmb_RechercheCategorie.ValueMember = "no_categorie";
+                cmb_RechercheCategorie.DisplayMember = "categorie";
+                cmb_RechercheCategorie.DataSource = bindingsourceAfficheCategorie;
+            }
+        }
 
-      
+        private void cmb_RechercheCategorie_SelectionChangeCommitted(object sender, EventArgs e)
+        {
+            txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text;
+        }
     }
 }

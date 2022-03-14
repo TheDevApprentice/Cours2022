@@ -30,6 +30,14 @@ namespace travail_pratique_2
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            AfficherLesCategories(); 
+
+            txtNomDuCours.Clear();
+            txtNbHeure.Clear();
+            cmbListeCategorie.Text = "";
+        }
+        private void AfficherLesCategories()
+        {
             using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
             {
                 bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
@@ -37,16 +45,12 @@ namespace travail_pratique_2
                 cmbListeCategorie.DisplayMember = "categorie";
                 cmbListeCategorie.DataSource = bindingsourceAfficheCategorie;
             }
-
-            txtNomDuCours.Clear();
-            txtNbHeure.Clear();
-
-            cmbListeCategorie.Text = "";
         }
         private void btn_AjoutCategorie_Click(object sender, EventArgs e)
         {
             AjouterUneCategorie ajouterUneCategorie = new AjouterUneCategorie();
-            ajouterUneCategorie.ShowDialog(); 
+            ajouterUneCategorie.ShowDialog();
+            AfficherLesCategories();
         }
 
         private void btnAjouter_Click(object sender, EventArgs e)

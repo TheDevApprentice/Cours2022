@@ -56,7 +56,7 @@ namespace travail_pratique_2
             this.cmb_RechercheEntreprise.Name = "cmb_RechercheEntreprise";
             this.cmb_RechercheEntreprise.Size = new System.Drawing.Size(580, 28);
             this.cmb_RechercheEntreprise.TabIndex = 0;
-            this.cmb_RechercheEntreprise.SelectedIndexChanged += new System.EventHandler(this.cmb_RechercheEntreprise_SelectedIndexChanged);
+            this.cmb_RechercheEntreprise.SelectionChangeCommitted += new System.EventHandler(this.cmb_RechercheEntreprise_SelectionChangeCommitted);
             // 
             // grpb_RechercheEntreprise
             // 

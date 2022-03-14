@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\hugoe\\Desktop\\Cours 2022\\POO\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj": {}
+    "C:\\Users\\hugoe\\Documents\\GitHub\\Cours\\POO\\revision\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\hugoe\\Desktop\\Cours 2022\\POO\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj": {
+    "C:\\Users\\hugoe\\Documents\\GitHub\\Cours\\POO\\revision\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\hugoe\\Desktop\\Cours 2022\\POO\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj",
+        "projectUniqueName": "C:\\Users\\hugoe\\Documents\\GitHub\\Cours\\POO\\revision\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj",
         "projectName": "PO1_Methodes",
-        "projectPath": "C:\\Users\\hugoe\\Desktop\\Cours 2022\\POO\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj",
+        "projectPath": "C:\\Users\\hugoe\\Documents\\GitHub\\Cours\\POO\\revision\\Documents_etudiants_cours7\\PO1_Methodes\\PO1_Methodes.csproj",
         "packagesPath": "C:\\Users\\hugoe\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\hugoe\\Desktop\\Cours 2022\\POO\\Documents_etudiants_cours7\\PO1_Methodes\\obj\\",
+        "outputPath": "C:\\Users\\hugoe\\Documents\\GitHub\\Cours\\POO\\revision\\Documents_etudiants_cours7\\PO1_Methodes\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

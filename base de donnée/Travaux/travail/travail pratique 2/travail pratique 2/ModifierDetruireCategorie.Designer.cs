@@ -106,6 +106,7 @@ namespace travail_pratique_2
             this.cmb_RechercheCategorie.Name = "cmb_RechercheCategorie";
             this.cmb_RechercheCategorie.Size = new System.Drawing.Size(580, 28);
             this.cmb_RechercheCategorie.TabIndex = 0;
+            this.cmb_RechercheCategorie.SelectionChangeCommitted += new System.EventHandler(this.cmb_RechercheCategorie_SelectionChangeCommitted);
             // 
             // ModifierDetruireCategorie
             // 

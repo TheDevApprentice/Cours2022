@@ -30,25 +30,14 @@ namespace travail_pratique_2
         {
             InitializeComponent();
         }
+
         private void ModifierDetruireCours_Load(object sender, EventArgs e)
         {
-            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
-            {
-                BindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmb_Categorie.ValueMember = "no_categorie";
-                cmb_Categorie.DisplayMember = "categorie";
-                cmb_Categorie.DataSource = BindingsourceAfficheCategorie;
-            }
-            //No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
-            using ( readerDeCours = ManagerCours.afficherLesCours())
-            {
-                BindingsourceAfficheCours.DataSource = readerDeCours;
-                cmb_RechercheEntreprise.ValueMember = "no_cours";
-                cmb_RechercheEntreprise.DisplayMember = "cours";
-                cmb_RechercheEntreprise.DataSource = BindingsourceAfficheCours;
-            }
+            AfficherLesCategories();
 
-            cmb_Categorie.Text = "";
+            AfficherLesCours(); 
+
+            cmb_Categorie.Text = null;
             txt_NbHeure.Clear();
             txt_NomDCours.Clear();
             rad_Non.Checked = false;
@@ -106,12 +95,13 @@ namespace travail_pratique_2
         {
             AjouterUneCategorie ajouterUneCategorie = new AjouterUneCategorie();
             ajouterUneCategorie.ShowDialog();
+            AfficherLesCategories(); 
         }
-
-        private void cmb_RechercheEntreprise_SelectedIndexChanged(object sender, EventArgs e)
+        private void cmb_RechercheEntreprise_SelectionChangeCommitted(object sender, EventArgs e)
         {
             ManagerCours managerCours = new ManagerCours();
             int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+
             try
             {
                 using (SqlDataReader datareader = managerCours.afficherInformationCours(No_cours))
@@ -126,7 +116,7 @@ namespace travail_pratique_2
                         }
                         else
                         {
-                            rad_Oui.Checked = false; 
+                            rad_Oui.Checked = false;
                         }
                         if (datareader["mixte"].ToString() == "non")
                         {
@@ -136,7 +126,7 @@ namespace travail_pratique_2
                         {
                             rad_Non.Checked = false;
                         }
-                        cmb_Categorie.Text = datareader["nom_categorie"].ToString();
+                        cmb_Categorie.SelectedValue = datareader["no_categorie"];
 
                     }
                 }
@@ -147,5 +137,26 @@ namespace travail_pratique_2
                 throw;
             }
         }
+        private void AfficherLesCategories()
+        {
+            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+            {
+                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
+                cmb_Categorie.ValueMember = "no_categorie";
+                cmb_Categorie.DisplayMember = "categorie";
+                cmb_Categorie.DataSource = bindingsourceAfficheCategorie;
+            }
+        }
+        private void AfficherLesCours()
+        {
+            using (SqlDataReader readerDeCours = ManagerCours.afficherLesCours())
+            {
+                BindingsourceAfficheCours.DataSource = readerDeCours;
+                cmb_RechercheEntreprise.ValueMember = "no_cours";
+                cmb_RechercheEntreprise.DisplayMember = "cours";
+                cmb_RechercheEntreprise.DataSource = BindingsourceAfficheCours;
+            }
+        }
+
     }
 }
