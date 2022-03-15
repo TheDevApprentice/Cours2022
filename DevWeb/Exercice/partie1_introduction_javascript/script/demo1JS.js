@@ -45,7 +45,7 @@ function DemanderConfirmation()
 		alert("Désolé pour vous...");
 	}
 }
-let incrémentation = 0;
+var incrémentation = 0;
 function IncrementationClics()
 {
 
