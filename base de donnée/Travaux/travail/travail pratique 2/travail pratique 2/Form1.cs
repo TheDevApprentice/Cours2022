@@ -14,10 +14,8 @@ namespace travail_pratique_2
     public partial class Form1 : Form
     {
         ManagerCours managerCours = new ManagerCours();
-
         BindingSource bindingsourceAfficheCategorie = new BindingSource();
         string mixte;
-
         internal ManagerCours ManagerCours { get => managerCours; set => managerCours = value; }
         public string Mixte { get => mixte; set => mixte = value; }
 
@@ -93,11 +91,6 @@ namespace travail_pratique_2
         {
             ModifierDetruireCategorie modifierDetruireCategorie = new ModifierDetruireCategorie();
             modifierDetruireCategorie.ShowDialog();
-        }
-
-        private void cmbListeCategorie_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
     }
 }

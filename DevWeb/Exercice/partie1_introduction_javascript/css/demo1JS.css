@@ -1,0 +1,37 @@
+@charset "utf-8";
+
+* {
+	box-sizing: border-box;
+}
+body
+{
+	font-size:100%;
+	max-width:1000px;
+	margin:auto;
+	background-color:lightgray;
+}
+main {
+	border:solid black 1px;
+	padding:25px;
+	background-color: white;
+}
+h1, h2
+{
+	text-align:center;
+}
+
+button{
+	display:block;
+	width:250px;
+	padding:10px 0px;
+	margin:auto;
+	margin-bottom: 10px;
+	background-color: lightgray;
+} 
+
+div {
+	padding:20px;
+	margin-bottom: 10px;
+	border: solid black 1px;
+	background-color: white;	
+}

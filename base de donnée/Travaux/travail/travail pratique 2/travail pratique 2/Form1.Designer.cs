@@ -124,8 +124,7 @@ namespace travail_pratique_2
             this.cmbListeCategorie.Name = "cmbListeCategorie";
             this.cmbListeCategorie.Size = new System.Drawing.Size(261, 28);
             this.cmbListeCategorie.TabIndex = 11;
-            this.cmbListeCategorie.SelectedIndexChanged += new System.EventHandler(this.cmbListeCategorie_SelectedIndexChanged);
-            // 
+           // 
             // label1
             // 
             this.label1.AutoSize = true;

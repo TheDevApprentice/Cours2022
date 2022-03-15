@@ -43,7 +43,6 @@ namespace travail_pratique_2
             {
                 MessageBox.Show("La catégorie n'a pas bien été détruit");
                 MessageBox.Show(ex.Message);
-                throw;
             }
             cmb_RechercheCategorie.Text = "";
             txt_ModifierCategorie.Clear();
@@ -80,7 +79,7 @@ namespace travail_pratique_2
         }
         private void cmb_RechercheCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text;
+            txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text.Trim(' ');
         }
     }
 }

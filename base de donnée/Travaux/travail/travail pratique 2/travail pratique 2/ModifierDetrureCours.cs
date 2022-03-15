@@ -47,10 +47,10 @@ namespace travail_pratique_2
 
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
-           int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
-           int No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
             try
             {
+                No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+                No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
                 if (rad_Oui.Checked == true)
                 {
                     Mixte = "oui";
