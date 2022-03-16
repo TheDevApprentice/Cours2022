@@ -62,7 +62,7 @@ namespace travail_pratique_2
                 MessageBox.Show(ex.Message);
             }
 
-            cmb_RechercheCategorie.Text = "";
+            cmb_RechercheCategorie.SelectedValue = "";
             txt_ModifierCategorie.Clear();
             AfficherLesCategories();
         }
@@ -78,7 +78,7 @@ namespace travail_pratique_2
         }
         private void cmb_RechercheCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {
-            txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text.Trim(' ');
+            txt_ModifierCategorie.Text = cmb_RechercheCategorie.Text.Trim('');
         }
     }
 }
