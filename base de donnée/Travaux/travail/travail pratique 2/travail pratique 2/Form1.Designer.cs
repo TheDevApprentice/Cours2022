@@ -83,6 +83,7 @@ namespace travail_pratique_2
             this.txtNbHeure.Name = "txtNbHeure";
             this.txtNbHeure.Size = new System.Drawing.Size(261, 27);
             this.txtNbHeure.TabIndex = 6;
+            this.txtNbHeure.TextChanged += new System.EventHandler(this.txtNbHeure_TextChanged);
             // 
             // radioButton_Oui
             // 
@@ -124,7 +125,7 @@ namespace travail_pratique_2
             this.cmbListeCategorie.Name = "cmbListeCategorie";
             this.cmbListeCategorie.Size = new System.Drawing.Size(261, 28);
             this.cmbListeCategorie.TabIndex = 11;
-           // 
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -140,6 +141,7 @@ namespace travail_pratique_2
             this.txtNomDuCours.Name = "txtNomDuCours";
             this.txtNomDuCours.Size = new System.Drawing.Size(261, 27);
             this.txtNomDuCours.TabIndex = 4;
+            this.txtNomDuCours.TextChanged += new System.EventHandler(this.txtNomDuCours_TextChanged);
             // 
             // btn_AjoutCategorie
             // 

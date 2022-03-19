@@ -13,11 +13,17 @@ namespace travail_pratique_2
 {
     public partial class Form1 : Form
     {
+        int nbHeure;
+        int nomDuCours;
+
         ManagerCours managerCours = new ManagerCours();
         BindingSource bindingsourceAfficheCategorie = new BindingSource();
         string mixte;
         internal ManagerCours ManagerCours { get => managerCours; set => managerCours = value; }
         public string Mixte { get => mixte; set => mixte = value; }
+        public int NbHeure { get => nbHeure; set => nbHeure = value; }
+        public int NomDuCours { get => nomDuCours; set => nomDuCours = value; }
+  
 
         public Form1()
         {
@@ -48,10 +54,38 @@ namespace travail_pratique_2
             ajouterUneCategorie.ShowDialog();
             AfficherLesCategories();
         }
+        private void txtNbHeure_TextChanged(object sender, EventArgs e)
+        {
+            
+            bool sucessHeure = int.TryParse(txtNbHeure.Text, out int heure);
+            if (sucessHeure)
+            {
+                NbHeure = heure;
+            }
+            else
+            {
+                txtNbHeure.Text = " ";
+            }
+        }
+        private void txtNomDuCours_TextChanged(object sender, EventArgs e)
+        {
+
+            bool sucessNomDuCours = int.TryParse(txtNomDuCours.Text, out int nom);
+            if (!sucessNomDuCours)
+            {
+                NomDuCours = nom;
+            }
+            else
+            {
+                txtNomDuCours.Text = " ";
+            }
+        }
 
         private void btnAjouter_Click(object sender, EventArgs e)
         {
-       
+            int categorie;
+            int mixte;
+            
             try
             {
                 if (radioButton_Oui.Checked == true)
@@ -62,7 +96,7 @@ namespace travail_pratique_2
                 {
                     Mixte = "non";
                 }
-                ManagerCours.ajouterCours(txtNomDuCours.Text, txtNbHeure.Text, Mixte, int.Parse(cmbListeCategorie.SelectedValue.ToString()));
+                ManagerCours.ajouterCours(NomDuCours.ToString(), NbHeure.ToString(), Mixte, int.Parse(cmbListeCategorie.SelectedValue.ToString()));
                 MessageBox.Show("L'ajout du cours a été effectué avec succès");
                
             }
@@ -92,5 +126,7 @@ namespace travail_pratique_2
             ModifierDetruireCategorie modifierDetruireCategorie = new ModifierDetruireCategorie();
             modifierDetruireCategorie.ShowDialog();
         }
+
+     
     }
 }

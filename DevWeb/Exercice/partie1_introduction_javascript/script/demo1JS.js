@@ -43,6 +43,7 @@ function DemanderConfirmation()
 	 }
 	else{
 		alert("Désolé pour vous...");
+		
 	}
 }
 var incrémentation = 0;

@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Windows.Forms;
 using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace travail_pratique_2
 {
     public partial class ModifierDetrureCours : Form
     {
+        int nbHeure;
+        int nomDuCours;
         int no_cours;
         int no_categorie;
         ManagerCours managerCours = new ManagerCours();
@@ -25,6 +22,8 @@ namespace travail_pratique_2
         public SqlDataReader ReaderDeCours { get => readerDeCours; set => readerDeCours = value; }
         public int No_cours { get => no_cours; set => no_cours = value; }
         public int No_categorie { get => no_categorie; set => no_categorie = value; }
+        public int NbHeure { get => nbHeure; set => nbHeure = value; }
+        public int NomDuCours { get => nomDuCours; set => nomDuCours = value; }
 
         public ModifierDetrureCours()
         {
@@ -35,7 +34,7 @@ namespace travail_pratique_2
         {
             AfficherLesCategories();
 
-            AfficherLesCours(); 
+            AfficherLesCours();
 
             cmb_Categorie.Text = null;
             txt_NbHeure.Clear();
@@ -49,57 +48,71 @@ namespace travail_pratique_2
         {
             try
             {
-                No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
-                No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
-                if (rad_Oui.Checked == true)
+                if (txt_NbHeure.Text != "" && txt_NomDCours.Text != "")
                 {
-                    Mixte = "oui";
-                }
-                else if (rad_Non.Checked == true)
-                {
-                    Mixte = "non";
-                }
+                    No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+                    No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
+                    if (rad_Oui.Checked == true)
+                    {
+                        Mixte = "oui";
+                    }
+                    else if (rad_Non.Checked == true)
+                    {
+                        Mixte = "non";
+                    }
 
-                ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
-                MessageBox.Show("Le cours a bien été mofifié avec succès");
+                    ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
+                    MessageBox.Show("Le cours a bien été mofifié avec succès");
+                }
             }
             catch (Exception ex)
             {
 
                 MessageBox.Show("Le cours n'a pas bien été modifié");
                 MessageBox.Show(ex.Message);
-               
+
             }
-            AfficherLesCours();
+
         }
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
-            No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+
             try
             {
-                ManagerCours.detruireCours(No_cours);
-                MessageBox.Show("Le cours a bien été détruit avec succès");
-             
+                No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+                if (txt_NbHeure.Text != "" && txt_NomDCours.Text != "")
+                {
+                    ManagerCours.detruireCours(No_cours);
+                    MessageBox.Show("Le cours a bien été détruit avec succès");
+                    AfficherLesCours();
+                }
+
+                else
+                {
+                    cmb_Categorie.Text = " ";
+                    cmb_RechercheEntreprise.Text = " ";
+                    txt_NbHeure.Clear();
+                    txt_NomDCours.Clear();
+                }
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Le cours n'a pas bien été détruit");
                 MessageBox.Show(ex.Message);
             }
-          
-            cmb_Categorie.Text = "";
-            cmb_RechercheEntreprise.Text = "";
-            txt_NbHeure.Clear();
-            txt_NomDCours.Clear();
 
-            AfficherLesCours();
+
+
+
+
+
         }
 
         private void btn_AjouterCategorie_Click(object sender, EventArgs e)
         {
             AjouterUneCategorie ajouterUneCategorie = new AjouterUneCategorie();
             ajouterUneCategorie.ShowDialog();
-            AfficherLesCategories(); 
+            AfficherLesCategories();
         }
         private void cmb_RechercheEntreprise_SelectionChangeCommitted(object sender, EventArgs e)
         {
@@ -162,5 +175,34 @@ namespace travail_pratique_2
             }
         }
 
+        private void txt_NomDCours_TextChanged(object sender, EventArgs e)
+        {
+
+            bool sucessNomDuCours = int.TryParse(txt_NomDCours.Text, out int nom);
+            if (!sucessNomDuCours)
+            {
+                NomDuCours = nom;
+            }
+            else
+            {
+                txt_NomDCours.Text = " ";
+            }
+        }
+
+        private void txt_NbHeure_TextChanged(object sender, EventArgs e)
+        {
+
+
+            bool sucessHeure = int.TryParse(txt_NbHeure.Text, out int heure);
+            if (sucessHeure)
+            {
+                NbHeure = heure;
+            }
+            else
+            {
+                txt_NbHeure.Text = " ";
+            }
+
+        }
     }
 }

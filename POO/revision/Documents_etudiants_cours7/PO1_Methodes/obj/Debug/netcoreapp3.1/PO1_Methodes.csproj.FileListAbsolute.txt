@@ -30,3 +30,19 @@ C:\Users\hugoe\Desktop\Cours 2022\POO\Documents_etudiants_cours7\PO1_Methodes\ob
 C:\Users\hugoe\Desktop\Cours 2022\POO\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.dll
 C:\Users\hugoe\Desktop\Cours 2022\POO\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.pdb
 C:\Users\hugoe\Desktop\Cours 2022\POO\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.genruntimeconfig.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.exe
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.deps.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.runtimeconfig.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.runtimeconfig.dev.json
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.dll
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\bin\Debug\netcoreapp3.1\PO1_Methodes.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.csproj.AssemblyReference.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.Form1.resources
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.csproj.GenerateResource.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.AssemblyInfoInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.AssemblyInfo.cs
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.dll
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\POO\revision\Documents_etudiants_cours7\PO1_Methodes\obj\Debug\netcoreapp3.1\PO1_Methodes.genruntimeconfig.cache

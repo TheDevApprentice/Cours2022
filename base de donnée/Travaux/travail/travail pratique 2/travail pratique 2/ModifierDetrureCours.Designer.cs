@@ -183,6 +183,7 @@ namespace travail_pratique_2
             this.txt_NbHeure.Name = "txt_NbHeure";
             this.txt_NbHeure.Size = new System.Drawing.Size(125, 27);
             this.txt_NbHeure.TabIndex = 4;
+            this.txt_NbHeure.TextChanged += new System.EventHandler(this.txt_NbHeure_TextChanged);
             // 
             // txt_NomDCours
             // 
@@ -190,6 +191,7 @@ namespace travail_pratique_2
             this.txt_NomDCours.Name = "txt_NomDCours";
             this.txt_NomDCours.Size = new System.Drawing.Size(125, 27);
             this.txt_NomDCours.TabIndex = 2;
+            this.txt_NomDCours.TextChanged += new System.EventHandler(this.txt_NomDCours_TextChanged);
             // 
             // cmb_Categorie
             // 
