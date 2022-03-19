@@ -61,7 +61,7 @@ namespace travail_pratique_2
                         Mixte = "non";
                     }
 
-                    ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
+                    ManagerCours.modifierCours(No_cours, NomDuCours.ToString(), NbHeure.ToString(), Mixte, No_categorie);
                     MessageBox.Show("Le cours a bien été mofifié avec succès");
                 }
             }
