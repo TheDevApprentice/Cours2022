@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+body{
+	font-size:100%;
+	background-color: black;
+	box-sizing: border-box;
+}
+section {
+	max-width:1000px;
+	margin:auto;
+}
+article {
+	background-color: white;
+	border:solid black 1px;
+	border-radius: 10px;
+	margin-bottom:20px;
+	padding:0px 10px 20px 20px;
+}
+h1{
+  text-align:center;
+  font-size: 3em;
+}
+h2 {
+	font-size:2em;
+}
+p{
+	font-size: 1.2em;
+}
+button{
+	display:block;	
+	margin: 20px;
+	padding: 10px;
+}
+#ex3 div {
+	width:50%;
+	margin:auto;
+	padding-bottom:20px;
+}
+#ex3 span {
+	padding:20px;
+	border:solid black 1px;
+}
+
+#longueurChaine {
+	color: red;
+}
+
+#ex3 h2 {
+	color: red;
+}

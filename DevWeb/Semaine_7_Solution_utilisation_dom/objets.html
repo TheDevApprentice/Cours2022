@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<title>Exemples JavaScript</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="css/objets.css" type="text/css" />
+		<script src="script/objets.js"></script>		
+	</head>
+
+	<body>
+	<section id="demo">
+		<h1>Accès aux éléments d'une page et modification</h1>
+		<div class="fondPale">
+			<article>
+				<h2>Rubriques correspondantes sur le site du w3schools</h2>
+				<ul>
+				<li><a href="https://www.w3schools.com/js/js_htmldom_elements.asp" target="_blank">accès aux éléments: </a>
+					<ul>
+						<li>à l'aide du id (getElementById)</li>
+						<li>à l'aide d'une balise (getElementsByTagName)</li>
+						<li>à l'aide d'un nom de classe (getElementsByClassName)</li>
+						<li>à l'aide d'un sélecteur css (querySelector et querySelectorAll)</li>
+					</ul>
+				</li>
+				<li><a href="https://www.w3schools.com/js/js_htmldom_html.asp" target="_blank">modifier du code HTML et des attributs(.innerHtml et .<i>nomAttribut</i>)</a></li>
+				<li><a href="https://www.w3schools.com/js/js_htmldom_css.asp" target="_blank">modifier le CSS (.style.<i>nomPropriété</i></a></li>
+				</ul>
+			</article>
+		</div>
+		
+		<div class="fondFonce">
+			<article id="exemple1">
+				<h2>Javascript peut changer le contenu HTML <span class="instructionJS">(.innerHTML)</span></h2>
+				<h2>et accéder à UN élément à l'aide d'un sélecteur CSS <span class="instructionJS">(.querySelector)</span></h2>
+				<button type="button" id="changementHTML">Faire apparaître du texte </button>
+				<p></p>
+				<div></div>
+			</article>
+		</div>
+
+		<div class="fondPale">
+			<article id="exemple2">
+				<h2>Javascript peut changer des attributs des balises <span class="instructionJS">(.nom_attribut)</span></h2>
+				<button type="button">Changer l'image</button>
+				<img src="images/asterix.jpg" alt="asterix" id="imageExemple2" width="97" height="97" />
+			</article>
+		</div>
+
+		<div class="fondFonce">
+			<article id="exemple3">
+				<h2>Javascript peut changer le CSS <span class="instructionJS">(.style.nom_propriété)</span></h2>
+				<button type="button">Apparaître - Disparaître</button>
+				<button type="button">Changer bordures</button>
+				<div></div>
+				<img src="images/asterix.jpg" alt="asterix"  width="97" height="97"/>
+			</article>
+		</div>
+
+		<div class="fondPale">
+			<article id="exemple4">
+				<h2>Javascript peut accéder aux éléments à l'aide des balises HTML<span class="instructionJS">(.getElementsByTagName)</span></h2>
+				<button type="button" class="demoClasse">Changer couleur des titres</button>
+			</article>
+		</div>
+
+		<div class="fondFonce">
+			<article id="exemple5">
+				<h2>Javascript peut accéder à tous les éléments appartenant à une 'classe'<span class="instructionJS">(.getElementsByClassName)</span></h2>
+				<button type="button" class="demoClasse">Modifier background des classes</button>
+			</article>
+		</div>
+
+		<div  class="fondPale">
+			<article id="exemple6">
+				<h2>Javascript peut accéder à plusieurs éléments à l'aide d'un sélecteur CSS <span class="instructionJS">(.querySelectorAll)</span></h2>
+				<button type="button">Modifier texte des paragraphes</button>
+				<p>paragraphe 1</p>
+				<p>paragraphe 2</p>
+				<p>paragraphe 3</p>
+				<p>paragraphe 4</p>
+				<p>paragraphe 5</p>
+			</article>
+		</div>
+
+		<div class="fondFonce">
+			<article id="exemple7">
+				<h2>Javascript peut déterminer l'élément utilisé<span class="instructionJS">(this)</span></h2>
+				<button type="button">Bonjour</button>
+				<button type="button">Good morning</button>
+				<button type="button">Buenos dias</button>
+				<button type="button">Guten tag</button>
+			</article>
+		</div>
+	</section>
+
+	</body>
+
+</html>
