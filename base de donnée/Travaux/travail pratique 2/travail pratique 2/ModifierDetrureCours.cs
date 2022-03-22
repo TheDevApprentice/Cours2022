@@ -52,26 +52,31 @@ namespace travail_pratique_2
         private void btn_Modifier_Click(object sender, EventArgs e)
         {
 
-            if (txt_NbHeure.Text != " " && txt_NomDCours.Text != " " && cmb_Categorie.Text != " ")
+            if (txt_NbHeure.Text != "" && txt_NomDCours.Text != "" && cmb_Categorie.Text != "")
             {
-                int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
-                int No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
-
                 try
                 {
-                    if (rad_Oui.Checked == true)
+                    DialogResult dialogResult = MessageBox.Show("Voulez vous modifier le cours ? ","Oui", MessageBoxButtons.YesNo); ;
+                    if (dialogResult == DialogResult.Yes)
                     {
-                        Mixte = "oui";
+                        int No_cours = int.Parse(cmb_RechercheEntreprise.SelectedValue.ToString());
+                        int No_categorie = int.Parse(cmb_Categorie.SelectedValue.ToString());
+                        if (rad_Oui.Checked == true)
+                        {
+                            Mixte = "oui";
+                        }
+                        else if (rad_Non.Checked == true)
+                        {
+                            Mixte = "non";
+                        }
+                        ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
+                        MessageBox.Show("Le cours a bien été mofifié avec succès");
+                        EffacerTextBox();
                     }
-                    else if (rad_Non.Checked == true)
+                    else if (dialogResult == DialogResult.No)
                     {
-                        Mixte = "non";
+                        EffacerTextBox();
                     }
-
-                    ManagerCours.modifierCours(No_cours, txt_NomDCours.Text, txt_NbHeure.Text, Mixte, No_categorie);
-                    MessageBox.Show("Le cours a bien été mofifié avec succès");
-
-                    EffacerTextBox();
                 }
                 catch (Exception)
                 {
@@ -80,7 +85,7 @@ namespace travail_pratique_2
             }
             else
             {
-                MessageBox.Show("Le cours n'a pas bien été modifié");
+                MessageBox.Show("Vous devez Choisir un cours pour faire une modification");
                 EffacerTextBox();
             }
 
@@ -93,19 +98,27 @@ namespace travail_pratique_2
 
                 try
                 {
-                    ManagerCours.detruireCours(No_cours);
-                    MessageBox.Show("Le cours a bien été détruit avec succès");
-
-                    EffacerTextBox();
+                    DialogResult dialogResult = MessageBox.Show("Voulez vous vraiment détruire le cours ? ", "Oui", MessageBoxButtons.YesNo);
+                    if (dialogResult == DialogResult.Yes)
+                    {
+                        ManagerCours.detruireCours(No_cours);
+                        MessageBox.Show("Le cours a bien été détruit avec succès");
+                        EffacerTextBox();
+                    }
+                    else if (dialogResult == DialogResult.No)
+                    {
+                        EffacerTextBox();
+                    }
                 }
                 catch (Exception)
                 {
+
                 }
 
             }
             else
             {
-                MessageBox.Show("Le cours n'a pas bien été détruit");
+                MessageBox.Show("Vous devez Choisir un cours pour faire une destruction");
                 EffacerTextBox();
             }
         }

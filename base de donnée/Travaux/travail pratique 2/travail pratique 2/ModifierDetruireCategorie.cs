@@ -31,30 +31,34 @@ namespace travail_pratique_2
         
         private void btn_Detruire_Click(object sender, EventArgs e)
         {
-            if (txt_ModifierCategorie.Text != "" || cmb_RechercheCategorie.Text != " ")
+            if (txt_ModifierCategorie.Text != "" && cmb_RechercheCategorie.Text != "")
             {
-                No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
-                try
+                DialogResult dialogResult = MessageBox.Show("VOulez vous vraiment détuire cette Catégorie ? ", "Oui", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    ManagerCours.detruireCategorie(No_categorie);
-                    MessageBox.Show("La catégorie a bien été détruit avec succès");
-         
-                    EffacerTextBox();
+                    try
+                    {
+                        No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
+                        ManagerCours.detruireCategorie(No_categorie);
+                        MessageBox.Show("La catégorie a bien été détruit avec succès");
 
-                   
+                        EffacerTextBox();
+                    }
+                    catch (Exception)
+                    {
+                        MessageBox.Show("Impossible de supprimer une catégorie actuellement relié à un cours de natation");
+
+                        EffacerTextBox();
+                    }
                 }
-                catch (Exception)
+                else if (dialogResult == DialogResult.No)
                 {
-                    MessageBox.Show("Impossible de supprimer une catégorie actuellement relié à un cours de natation");
-
                     EffacerTextBox();
                 }
-
-               
             }
             else
             {
-                MessageBox.Show("La catégorie n'a pas bien été détruit");
+                MessageBox.Show("Il vous faut choisir une catégorie pour la supprimer");
 
                 EffacerTextBox();
 
@@ -70,22 +74,31 @@ namespace travail_pratique_2
         {
             if (txt_ModifierCategorie.Text != "" || cmb_RechercheCategorie.Text != "")
             {
-                No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
-                try
+                DialogResult dialogResult = MessageBox.Show("Voulez vous vraiment modifier cette categorie ?", "Oui", MessageBoxButtons.YesNo);
+                if (dialogResult == DialogResult.Yes)
                 {
-                    ManagerCours.modifierCategorie(No_categorie, txt_ModifierCategorie.Text);
-                    MessageBox.Show("La catégorie a bien été modifié avec succès");
+                    try
+                    {
+                        No_categorie = int.Parse(cmb_RechercheCategorie.SelectedValue.ToString());
+                        ManagerCours.modifierCategorie(No_categorie, txt_ModifierCategorie.Text);
+                        MessageBox.Show("La catégorie a bien été modifié avec succès");
+                        EffacerTextBox();
+                    }
+                    catch (Exception)
+                    {
+
+                    }
+                }
+                else if (dialogResult == DialogResult.No)
+                {
                     EffacerTextBox();
                 }
-                catch (Exception )
-                {
-                   
-                }
+             
 
             }
             else
             {
-                MessageBox.Show("la catégorie n'a pas bien été modifié");
+                MessageBox.Show("Il vous faut choisir une Catégorie pour modifier cette dernière");
                 EffacerTextBox();
             }
         }
