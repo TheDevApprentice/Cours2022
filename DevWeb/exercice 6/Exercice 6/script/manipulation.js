@@ -52,7 +52,24 @@ function TraiterChaine()
 function TraiterMath()
 {
 	var N1,N2;
+	N1 = prompt("Entrez un Nombre");
+	N2 = prompt("Entrez un Nombre");
+ 
+	let Nombre1 = parseInt(N1, 10);
+	let Nombre2 = parseInt(N2, 10);
+	parseInt(N2, 10);
 
+	if(isNaN(Nombre1)  && isNaN(Nombre2))
+	{
+		document.getElementById("resultatMath").innerHTML = "Vous devez entrez des Nombres"; 
+
+	}
+	else{
+		let total = Nombre1 + Nombre2;
+		document.getElementById("resultatMath").innerHTML = " " + total + " "; 
+
+	}
+	
 	/* ATTENTION
 	Lorsqu'on concatène chaine et nombre: aussitôt qu'il y a une chaine alors la concaténation est faite sous forme de chaine. Exemples:
 	1 + 2 donne 3
@@ -77,21 +94,26 @@ function Calculer()
 	var cpt=0;
 	var elements = document.querySelectorAll("#ex3 span");
 
-	var unElement = document.querySelector("");
-
 	var total=0;
 	GenererNombres();
 	for (cpt=0; cpt<elements.length; cpt++)
 	{
-		elements[cpt].innerHTML = nombres[cpt];
+		elements[cpt].innerHTML = nombreDetermine[cpt];
+	
 	}
+
 
 }
 
  function GenererNombres()
  {
-	var cpt=0;
+	
+	for(var cpt = 0; cpt <= nombreDetermine.length; cpt++)
+	{
 
+		nombreDetermine[cpt] = Math.floor((Math.random() * 10) + 1); 
+	
+	}
  }
 
  function DebuterChrono() 
