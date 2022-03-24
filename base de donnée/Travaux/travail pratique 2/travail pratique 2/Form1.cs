@@ -30,13 +30,22 @@ namespace travail_pratique_2
         }
         private void AfficherLesCategories()
         {
-            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+            try
             {
-                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmbListeCategorie.ValueMember = "no_categorie";
-                cmbListeCategorie.DisplayMember = "categorie";
-                cmbListeCategorie.DataSource = bindingsourceAfficheCategorie;
+                using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+                {
+                    bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
+                    cmbListeCategorie.ValueMember = "no_categorie";
+                    cmbListeCategorie.DisplayMember = "categorie";
+                    cmbListeCategorie.DataSource = bindingsourceAfficheCategorie;
+                }
             }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+       
         }
         private void btn_AjoutCategorie_Click(object sender, EventArgs e)
         {

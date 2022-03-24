@@ -104,13 +104,23 @@ namespace travail_pratique_2
         }
         private void AfficherLesCategories()
         {
-            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+            try
             {
-                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmb_RechercheCategorie.ValueMember = "no_categorie";
-                cmb_RechercheCategorie.DisplayMember = "categorie";
-                cmb_RechercheCategorie.DataSource = bindingsourceAfficheCategorie;
+                using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+                {
+                    bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
+                    cmb_RechercheCategorie.ValueMember = "no_categorie";
+                    cmb_RechercheCategorie.DisplayMember = "categorie";
+                    cmb_RechercheCategorie.DataSource = bindingsourceAfficheCategorie;
+                }
             }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+
+        
         }
         private void cmb_RechercheCategorie_SelectedIndexChanged(object sender, EventArgs e)
         {

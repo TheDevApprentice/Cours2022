@@ -171,33 +171,50 @@ namespace travail_pratique_2
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex )
             {
-
+                MessageBox.Show(ex.Message);
          
             }
         }
         private void AfficherLesCategories()
         {
-            using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+            try
             {
-                bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
-                cmb_Categorie.ValueMember = "no_categorie";
-                cmb_Categorie.DisplayMember = "categorie";
-                cmb_Categorie.DataSource = bindingsourceAfficheCategorie;
+                using (SqlDataReader readerDeCategorie = ManagerCours.afficherLesCategories())
+                {
+                    bindingsourceAfficheCategorie.DataSource = readerDeCategorie;
+                    cmb_Categorie.ValueMember = "no_categorie";
+                    cmb_Categorie.DisplayMember = "categorie";
+                    cmb_Categorie.DataSource = bindingsourceAfficheCategorie;
+                }
             }
+            catch (Exception ex )
+            {
+
+                MessageBox.Show(ex.Message);
+            }
+          
         }
         private void AfficherLesCours()
         {
-            using (SqlDataReader readerDeCours = ManagerCours.afficherLesCours())
+            try
             {
-                BindingsourceAfficheCours.DataSource = readerDeCours;
-                cmb_RechercheEntreprise.ValueMember = "no_cours";
-                cmb_RechercheEntreprise.DisplayMember = "cours";
-                cmb_RechercheEntreprise.DataSource = BindingsourceAfficheCours;
+                using (SqlDataReader readerDeCours = ManagerCours.afficherLesCours())
+                {
+                    BindingsourceAfficheCours.DataSource = readerDeCours;
+                    cmb_RechercheEntreprise.ValueMember = "no_cours";
+                    cmb_RechercheEntreprise.DisplayMember = "cours";
+                    cmb_RechercheEntreprise.DataSource = BindingsourceAfficheCours;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
             }
         }
- 
+
 
         private void txt_NomDCours_TextChanged_1(object sender, EventArgs e)
         {
