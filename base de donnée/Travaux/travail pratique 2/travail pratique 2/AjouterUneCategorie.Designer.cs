@@ -29,19 +29,19 @@ namespace travail_pratique_2
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_NomDeLaCategorie = new System.Windows.Forms.Label();
             this.btn_AjouterCategorie = new System.Windows.Forms.Button();
             this.txtAjoutCategorie = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
-            // label1
+            // lbl_NomDeLaCategorie
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 64);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(146, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom de la categorie";
+            this.lbl_NomDeLaCategorie.AutoSize = true;
+            this.lbl_NomDeLaCategorie.Location = new System.Drawing.Point(12, 64);
+            this.lbl_NomDeLaCategorie.Name = "lbl_NomDeLaCategorie";
+            this.lbl_NomDeLaCategorie.Size = new System.Drawing.Size(146, 20);
+            this.lbl_NomDeLaCategorie.TabIndex = 0;
+            this.lbl_NomDeLaCategorie.Text = "Nom de la categorie";
             // 
             // btn_AjouterCategorie
             // 
@@ -67,7 +67,7 @@ namespace travail_pratique_2
             this.ClientSize = new System.Drawing.Size(442, 184);
             this.Controls.Add(this.txtAjoutCategorie);
             this.Controls.Add(this.btn_AjouterCategorie);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbl_NomDeLaCategorie);
             this.Name = "AjouterUneCategorie";
             this.Text = "AjouterUneCategorie";
             this.ResumeLayout(false);
@@ -77,7 +77,7 @@ namespace travail_pratique_2
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_NomDeLaCategorie;
         private System.Windows.Forms.Button btn_AjouterCategorie;
         private System.Windows.Forms.TextBox txtAjoutCategorie;
     }

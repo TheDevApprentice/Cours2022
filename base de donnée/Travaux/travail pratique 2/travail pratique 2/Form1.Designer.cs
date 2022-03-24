@@ -30,14 +30,14 @@ namespace travail_pratique_2
         private void InitializeComponent()
         {
             this.btnAjouter = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_NombreHeure = new System.Windows.Forms.Label();
+            this.label_categorie = new System.Windows.Forms.Label();
             this.txtNbHeure = new System.Windows.Forms.TextBox();
             this.radioButton_Oui = new System.Windows.Forms.RadioButton();
             this.radioButton_Non = new System.Windows.Forms.RadioButton();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.cmbListeCategorie = new System.Windows.Forms.ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbl_NomDuCours = new System.Windows.Forms.Label();
             this.txtNomDuCours = new System.Windows.Forms.TextBox();
             this.btn_AjoutCategorie = new System.Windows.Forms.Button();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
@@ -59,23 +59,23 @@ namespace travail_pratique_2
             this.btnAjouter.UseVisualStyleBackColor = true;
             this.btnAjouter.Click += new System.EventHandler(this.btnAjouter_Click);
             // 
-            // label3
+            // lbl_NombreHeure
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(99, 200);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Nombre d\'heure";
+            this.lbl_NombreHeure.AutoSize = true;
+            this.lbl_NombreHeure.Location = new System.Drawing.Point(99, 200);
+            this.lbl_NombreHeure.Name = "lbl_NombreHeure";
+            this.lbl_NombreHeure.Size = new System.Drawing.Size(117, 20);
+            this.lbl_NombreHeure.TabIndex = 2;
+            this.lbl_NombreHeure.Text = "Nombre d\'heure";
             // 
-            // label4
+            // label_categorie
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(99, 424);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Categorie";
+            this.label_categorie.AutoSize = true;
+            this.label_categorie.Location = new System.Drawing.Point(99, 424);
+            this.label_categorie.Name = "label_categorie";
+            this.label_categorie.Size = new System.Drawing.Size(74, 20);
+            this.label_categorie.TabIndex = 3;
+            this.label_categorie.Text = "Categorie";
             // 
             // txtNbHeure
             // 
@@ -126,14 +126,14 @@ namespace travail_pratique_2
             this.cmbListeCategorie.Size = new System.Drawing.Size(261, 28);
             this.cmbListeCategorie.TabIndex = 11;
             // 
-            // label1
+            // lbl_NomDuCours
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(99, 81);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Nom du cours";
+            this.lbl_NomDuCours.AutoSize = true;
+            this.lbl_NomDuCours.Location = new System.Drawing.Point(99, 81);
+            this.lbl_NomDuCours.Name = "lbl_NomDuCours";
+            this.lbl_NomDuCours.Size = new System.Drawing.Size(102, 20);
+            this.lbl_NomDuCours.TabIndex = 0;
+            this.lbl_NomDuCours.Text = "Nom du cours";
             // 
             // txtNomDuCours
             // 
@@ -203,9 +203,9 @@ namespace travail_pratique_2
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.txtNbHeure);
             this.Controls.Add(this.txtNomDuCours);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.label_categorie);
+            this.Controls.Add(this.lbl_NombreHeure);
+            this.Controls.Add(this.lbl_NomDuCours);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -220,14 +220,14 @@ namespace travail_pratique_2
 
         #endregion
         private System.Windows.Forms.Button btnAjouter;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_NombreHeure;
+        private System.Windows.Forms.Label label_categorie;
         private System.Windows.Forms.TextBox txtNbHeure;
         private System.Windows.Forms.RadioButton radioButton_Oui;
         private System.Windows.Forms.RadioButton radioButton_Non;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.ComboBox cmbListeCategorie;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_NomDuCours;
         private System.Windows.Forms.TextBox txtNomDuCours;
         private System.Windows.Forms.Button btn_AjoutCategorie;
         private System.Windows.Forms.ToolStrip toolStrip1;

@@ -34,8 +34,8 @@ namespace travail_pratique_2
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.btn_AjouterCategorie = new System.Windows.Forms.Button();
             this.lbl_Categorie = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.label_NombreHeure = new System.Windows.Forms.Label();
+            this.lbl_NomDuCOurs = new System.Windows.Forms.Label();
             this.grpbox_Mixte = new System.Windows.Forms.GroupBox();
             this.rad_Non = new System.Windows.Forms.RadioButton();
             this.rad_Oui = new System.Windows.Forms.RadioButton();
@@ -72,8 +72,8 @@ namespace travail_pratique_2
             // 
             this.groupBox2.Controls.Add(this.btn_AjouterCategorie);
             this.groupBox2.Controls.Add(this.lbl_Categorie);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.label1);
+            this.groupBox2.Controls.Add(this.label_NombreHeure);
+            this.groupBox2.Controls.Add(this.lbl_NomDuCOurs);
             this.groupBox2.Controls.Add(this.grpbox_Mixte);
             this.groupBox2.Controls.Add(this.btn_Detruire);
             this.groupBox2.Controls.Add(this.btn_Modifier);
@@ -106,23 +106,23 @@ namespace travail_pratique_2
             this.lbl_Categorie.TabIndex = 11;
             this.lbl_Categorie.Text = "Categorie";
             // 
-            // label3
+            // label_NombreHeure
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(79, 119);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(117, 20);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Nombre d\'heure";
+            this.label_NombreHeure.AutoSize = true;
+            this.label_NombreHeure.Location = new System.Drawing.Point(79, 119);
+            this.label_NombreHeure.Name = "label_NombreHeure";
+            this.label_NombreHeure.Size = new System.Drawing.Size(117, 20);
+            this.label_NombreHeure.TabIndex = 10;
+            this.label_NombreHeure.Text = "Nombre d\'heure";
             // 
-            // label1
+            // lbl_NomDuCOurs
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(79, 39);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 20);
-            this.label1.TabIndex = 8;
-            this.label1.Text = "Nom du cours";
+            this.lbl_NomDuCOurs.AutoSize = true;
+            this.lbl_NomDuCOurs.Location = new System.Drawing.Point(79, 39);
+            this.lbl_NomDuCOurs.Name = "lbl_NomDuCOurs";
+            this.lbl_NomDuCOurs.Size = new System.Drawing.Size(102, 20);
+            this.lbl_NomDuCOurs.TabIndex = 8;
+            this.lbl_NomDuCOurs.Text = "Nom du cours";
             // 
             // grpbox_Mixte
             // 
@@ -235,7 +235,7 @@ namespace travail_pratique_2
         private System.Windows.Forms.TextBox txt_NbHeure;
         private System.Windows.Forms.Button btn_AjouterCategorie;
         private System.Windows.Forms.Label lbl_Categorie;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label_NombreHeure;
+        private System.Windows.Forms.Label lbl_NomDuCOurs;
     }
 }
