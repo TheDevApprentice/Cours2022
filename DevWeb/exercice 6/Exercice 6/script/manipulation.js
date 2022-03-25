@@ -11,7 +11,7 @@ function InitialiserEvenements()
 	document.getElementById("boutonString").addEventListener("click", TraiterChaine);
 	document.getElementById("boutonMath").addEventListener("click", TraiterMath);
 	document.getElementById("boutonGenerer").addEventListener("click", Calculer);
-	// DebuterChrono();
+	DebuterChrono();
 }
 
 //exercice 1
@@ -96,22 +96,23 @@ function Calculer()
 
 	var total=0;
 	GenererNombres();
-	for (cpt=0; cpt<elements.length; cpt++)
+	for (cpt=0; cpt < elements.length; cpt++)
 	{
-		elements[cpt].innerHTML = nombreDetermine[cpt];
+		elements[cpt].innerHTML = nombres[cpt];
+		total += nombres[cpt];
 	
 	}
 
-
+	document.getElementById("somme").innerHTML = total;
 }
 
  function GenererNombres()
  {
-	
-	for(var cpt = 0; cpt <= nombreDetermine.length; cpt++)
+	 var cpt= 0;
+	for( cpt = 0; cpt < nombres.length; cpt++)
 	{
 
-		nombreDetermine[cpt] = Math.floor((Math.random() * 10) + 1); 
+		nombres[cpt] = Math.floor((Math.random() * 10) + 1); 
 	
 	}
  }
@@ -119,10 +120,27 @@ function Calculer()
  function DebuterChrono() 
 {
 	setInterval("AfficherHeure()",1000);
+
 }
 
 function AfficherHeure()
 {
+	heure = 0;
+	seconde += 1;
+	if(seconde >= 9)
+	{
+		if(seconde == 60)
+		{
+			seconde = 0; 
+			minute += 1;
 
+			if(minute == 60)
+			{
+				heure += 1;
+			} 
+		}
+	}
+
+	document.getElementById("chrono").innerHTML =  heure + " 0 : 0 " + minute+ " : " + seconde;
 }
 
