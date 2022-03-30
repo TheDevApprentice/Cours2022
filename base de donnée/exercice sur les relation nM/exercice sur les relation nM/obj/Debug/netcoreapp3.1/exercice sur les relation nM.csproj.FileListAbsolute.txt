@@ -1,0 +1,22 @@
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.exe
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.deps.json
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.runtimeconfig.json
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.runtimeconfig.dev.json
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\exercice sur les relation nM.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.csproj.AssemblyReference.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice_sur_les_relation_nM.Form1.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.csproj.GenerateResource.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.AssemblyInfoInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.AssemblyInfo.cs
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.csproj.CoreCompileInputs.cache
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.dll
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.pdb
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.genruntimeconfig.cache
