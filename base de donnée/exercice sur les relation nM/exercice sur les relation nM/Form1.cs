@@ -100,7 +100,7 @@ namespace exercice_sur_les_relation_nM
             {
                 MessageBox.Show("Vous devez choisir une valeur dans les deux listes");
                 EffacerTextBox(); 
-
+                //bcbcvbc
             }
         }
     }
