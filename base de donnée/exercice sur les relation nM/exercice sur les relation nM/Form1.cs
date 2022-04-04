@@ -71,7 +71,7 @@ namespace exercice_sur_les_relation_nM
 
         private void btn_associerEtudiantHobby_Click(object sender, EventArgs e)
         {
-            
+
             if (cmb_etudiant.Text != "" && cmb_Hobby.Text != "")
             {
                 int no_etudiant = int.Parse(cmb_etudiant.SelectedValue.ToString());
@@ -99,8 +99,35 @@ namespace exercice_sur_les_relation_nM
             else
             {
                 MessageBox.Show("Vous devez choisir une valeur dans les deux listes");
-                EffacerTextBox(); 
-             
+                EffacerTextBox();
+
+            }
+        }
+
+        private void nombreDeHobbyToolStripMenuItem_Click_1(object sender, EventArgs e)
+        {
+            {
+                NombreDehobby nombreDehobby = new NombreDehobby();
+
+                nombreDehobby.ShowDialog();
+            }
+        }
+
+        private void Ajouter_Click(object sender, EventArgs e)
+        {
+            string hobby;
+  
+            try
+            {
+                hobby = txt_hobby.Text;
+                managerEtudiant.ajouterNouveauHobbyEtAssocier(hobby.ToString());
+ 
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+
             }
         }
     }

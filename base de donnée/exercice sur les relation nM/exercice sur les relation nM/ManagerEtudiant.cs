@@ -66,7 +66,25 @@ namespace exercice_sur_les_relation_nM
 
             return readerDeHobbys;
         }
+        public SqlDataReader AfficherNombreDeHobby()
+        {
+            // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
+            SqlConnection listerNombreHobbyConnection = getConnexion();
 
+            // déclarer une commande
+            string sql = "listeNombreHobbyEtudiant"; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                                         // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            SqlCommand cmdAfficherLesCours = new SqlCommand(sql, listerNombreHobbyConnection);
+            cmdAfficherLesCours.CommandType = CommandType.StoredProcedure;
+
+            // ouvrir une connexion 
+            listerNombreHobbyConnection.Open();
+            // executer la commande
+
+            SqlDataReader readerNombreDeHobby = cmdAfficherLesCours.ExecuteReader(CommandBehavior.CloseConnection);
+
+            return readerNombreDeHobby;
+        }
         public void AssocierEtudiantHobby(int no_etudiant, int no_hobby)
         {
             using (SqlConnection AssocierEtudiantHobby = getConnexion())
@@ -219,6 +237,63 @@ namespace exercice_sur_les_relation_nM
                 //exectue la commande
                 cmd.ExecuteNonQuery();
             }
+        }
+
+        public int compteurNombreHobby(int no_etudiant)
+        {
+            int nombreDeHobby; 
+            using (SqlConnection maConnexion = getConnexion())
+            {
+                string sql = "listeNombreHobbyEtudiant";
+                SqlCommand cmd = new SqlCommand(sql, maConnexion);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // creer des paramètres
+
+                cmd.Parameters.Add("@no_etudiant", SqlDbType.Int);
+
+                // donner valeur paramètre
+
+                cmd.Parameters["@no_etudiant"].Value = no_etudiant;
+
+
+                // ouvrir connexion 
+                maConnexion.Open();
+                //exectue la commande
+                nombreDeHobby = (int)cmd.ExecuteScalar(); 
+            }
+
+            return nombreDeHobby;
+        }
+
+        public int ajouterNouveauHobbyEtAssocier(string hobby)
+        {
+            
+            using (SqlConnection AjouterHobbyConnection  = getConnexion())
+            {
+              
+                //créer ma commande
+                string sql = "AjouterHobby";
+                SqlCommand cmd = new SqlCommand(sql, AjouterHobbyConnection);
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+
+                // creer des paramètres
+
+                cmd.Parameters.Add("@hobby", SqlDbType.NVarChar, 100);
+
+
+                // donner valeur paramètre
+
+                cmd.Parameters["@hobby"].Value = hobby.ToString();
+
+                // ouvrir connexion 
+                AjouterHobbyConnection.Open();
+                //exectue la commande
+               
+                return (int)cmd.ExecuteScalar();
+            }
+
+     
         }
     }
 }
