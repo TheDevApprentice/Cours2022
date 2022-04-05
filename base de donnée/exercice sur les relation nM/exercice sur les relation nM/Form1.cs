@@ -115,13 +115,19 @@ namespace exercice_sur_les_relation_nM
 
         private void Ajouter_Click(object sender, EventArgs e)
         {
+
+            int no_etudiant = int.Parse(cmb_etudiant.SelectedValue.ToString()); 
+
             string hobby;
   
             try
             {
                 hobby = txt_hobby.Text;
-                managerEtudiant.ajouterNouveauHobbyEtAssocier(hobby.ToString());
- 
+               
+                int no_hobby = managerEtudiant.ajouterNouveauHobbyEtAssocier(hobby);
+                managerEtudiant.AssocierEtudiantHobby(no_etudiant, no_hobby);
+
+                MessageBox.Show("Le hobby a bien été lier à l'étudiant sélectionné ");
             }
             catch (Exception ex)
             {
@@ -129,6 +135,15 @@ namespace exercice_sur_les_relation_nM
                 MessageBox.Show(ex.Message);
 
             }
+        }
+
+        private void btn_ajouterHobbyEtAssocier_Click(object sender, EventArgs e)
+        {
+            if (cmb_etudiant.Text != "" || cmb_etudiant.SelectedValue != null)
+            {
+                grp_ajouterEtAssocierHobby.Visible = true;
+            }
+            
         }
     }
 }

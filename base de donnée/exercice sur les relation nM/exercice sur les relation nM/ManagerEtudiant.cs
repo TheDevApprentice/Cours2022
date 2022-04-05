@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using System.Data.SqlClient;
 
 namespace exercice_sur_les_relation_nM
@@ -289,8 +290,11 @@ namespace exercice_sur_les_relation_nM
                 // ouvrir connexion 
                 AjouterHobbyConnection.Open();
                 //exectue la commande
-               
-                return (int)cmd.ExecuteScalar();
+                int no_hobby; 
+
+                no_hobby = Convert.ToInt32(cmd.ExecuteScalar());
+
+                return no_hobby; 
             }
 
      
