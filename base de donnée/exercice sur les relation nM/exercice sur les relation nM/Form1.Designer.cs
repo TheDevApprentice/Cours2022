@@ -29,6 +29,7 @@ namespace exercice_sur_les_relation_nM
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmb_etudiant = new System.Windows.Forms.ComboBox();
             this.cmb_Hobby = new System.Windows.Forms.ComboBox();
             this.lbl_etudiant = new System.Windows.Forms.Label();
@@ -41,11 +42,11 @@ namespace exercice_sur_les_relation_nM
             this.btn_ajouter = new System.Windows.Forms.Button();
             this.txt_hobby = new System.Windows.Forms.TextBox();
             this.btn_ajouterHobbyEtAssocier = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_hobbyEtudiant = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.grp_ajouterEtAssocierHobby.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hobbyEtudiant)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -56,6 +57,9 @@ namespace exercice_sur_les_relation_nM
             this.cmb_etudiant.Name = "cmb_etudiant";
             this.cmb_etudiant.Size = new System.Drawing.Size(382, 28);
             this.cmb_etudiant.TabIndex = 0;
+            this.cmb_etudiant.SelectedIndexChanged += new System.EventHandler(this.cmb_etudiant_SelectedIndexChanged);
+            this.cmb_etudiant.SelectionChangeCommitted += new System.EventHandler(this.cmb_etudiant_SelectionChangeCommitted);
+            this.cmb_etudiant.SelectedValueChanged += new System.EventHandler(this.cmb_etudiant_SelectedValueChanged);
             // 
             // cmb_Hobby
             // 
@@ -121,7 +125,7 @@ namespace exercice_sur_les_relation_nM
             this.grp_ajouterEtAssocierHobby.Size = new System.Drawing.Size(461, 172);
             this.grp_ajouterEtAssocierHobby.TabIndex = 6;
             this.grp_ajouterEtAssocierHobby.TabStop = false;
-            this.grp_ajouterEtAssocierHobby.Text = "Ajouter un hobby";
+            this.grp_ajouterEtAssocierHobby.Text = "Ajouter un hobby et associer";
             this.grp_ajouterEtAssocierHobby.Visible = false;
             // 
             // btn_annuler
@@ -132,14 +136,16 @@ namespace exercice_sur_les_relation_nM
             this.btn_annuler.TabIndex = 2;
             this.btn_annuler.Text = "Annuler";
             this.btn_annuler.UseVisualStyleBackColor = true;
+            this.btn_annuler.Click += new System.EventHandler(this.btn_annuler_Click);
             // 
             // btn_ajouter
             // 
+            this.btn_ajouter.CausesValidation = false;
             this.btn_ajouter.Location = new System.Drawing.Point(183, 110);
             this.btn_ajouter.Name = "btn_ajouter";
             this.btn_ajouter.Size = new System.Drawing.Size(94, 29);
             this.btn_ajouter.TabIndex = 1;
-            this.btn_ajouter.Text = "btn_ajouterhobby";
+            this.btn_ajouter.Text = "Ajouter et associer";
             this.btn_ajouter.UseVisualStyleBackColor = true;
             this.btn_ajouter.Click += new System.EventHandler(this.Ajouter_Click);
             // 
@@ -160,19 +166,21 @@ namespace exercice_sur_les_relation_nM
             this.btn_ajouterHobbyEtAssocier.UseVisualStyleBackColor = true;
             this.btn_ajouterHobbyEtAssocier.Click += new System.EventHandler(this.btn_ajouterHobbyEtAssocier_Click);
             // 
-            // dataGridView1
+            // dgv_hobbyEtudiant
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(6, 26);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 29;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 190);
-            this.dataGridView1.TabIndex = 8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.dgv_hobbyEtudiant.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_hobbyEtudiant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_hobbyEtudiant.Location = new System.Drawing.Point(6, 26);
+            this.dgv_hobbyEtudiant.Name = "dgv_hobbyEtudiant";
+            this.dgv_hobbyEtudiant.RowHeadersWidth = 51;
+            this.dgv_hobbyEtudiant.RowTemplate.Height = 29;
+            this.dgv_hobbyEtudiant.Size = new System.Drawing.Size(586, 190);
+            this.dgv_hobbyEtudiant.TabIndex = 8;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.dataGridView1);
+            this.groupBox1.Controls.Add(this.dgv_hobbyEtudiant);
             this.groupBox1.Location = new System.Drawing.Point(12, 216);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(601, 222);
@@ -202,7 +210,7 @@ namespace exercice_sur_les_relation_nM
             this.menuStrip1.PerformLayout();
             this.grp_ajouterEtAssocierHobby.ResumeLayout(false);
             this.grp_ajouterEtAssocierHobby.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_hobbyEtudiant)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -223,7 +231,7 @@ namespace exercice_sur_les_relation_nM
         private System.Windows.Forms.Button btn_ajouter;
         private System.Windows.Forms.TextBox txt_hobby;
         private System.Windows.Forms.Button btn_ajouterHobbyEtAssocier;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgv_hobbyEtudiant;
         private System.Windows.Forms.GroupBox groupBox1;
     }
 }

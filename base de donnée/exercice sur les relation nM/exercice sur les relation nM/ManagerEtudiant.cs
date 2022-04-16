@@ -67,6 +67,30 @@ namespace exercice_sur_les_relation_nM
 
             return readerDeHobbys;
         }
+        public SqlDataReader ListerHobbyEtudiant(int no_etudiant)
+        {
+            // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
+            SqlConnection ListerHobbyEtudiantConnection = getConnexion();
+
+            // déclarer une commande
+            string sql = "ListerHobbyEtudiant"; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                                         // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            SqlCommand cmdListerHobbyEtudiant = new SqlCommand(sql, ListerHobbyEtudiantConnection);
+            cmdListerHobbyEtudiant.CommandType = CommandType.StoredProcedure;
+            cmdListerHobbyEtudiant.Parameters.Add("@no_etudiant", SqlDbType.Int);
+
+            // donner valeur paramètre
+
+            cmdListerHobbyEtudiant.Parameters["@no_etudiant"].Value = no_etudiant;
+            // ouvrir une connexion 
+            ListerHobbyEtudiantConnection.Open();
+            // executer la commande
+
+            SqlDataReader readerHobbyEtudiant = cmdListerHobbyEtudiant.ExecuteReader(CommandBehavior.CloseConnection);
+
+            return readerHobbyEtudiant;
+        }
+      
         public SqlDataReader AfficherNombreDeHobby()
         {
             // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
@@ -112,6 +136,7 @@ namespace exercice_sur_les_relation_nM
                 cmdAssocierEtudiantHobby.ExecuteNonQuery();
             }
         }
+      
         public void modifierCours(int no_cours, string nom_cours, string nbHeureDeCours, string mixte, int no_categorie)
         {
             using (SqlConnection updateConnection = getConnexion())
