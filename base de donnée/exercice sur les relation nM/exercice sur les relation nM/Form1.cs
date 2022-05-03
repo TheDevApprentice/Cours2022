@@ -22,11 +22,13 @@ namespace exercice_sur_les_relation_nM
 
 
             AfficherLesEtudiants();
-            AfficherLesHobbys();
+           
+         
             EffacerTextBox();
          
                 dgv_hobbyEtudiant.Rows.Clear();
 
+         
 
             
 
@@ -64,16 +66,48 @@ namespace exercice_sur_les_relation_nM
             }
 
         }
-        private void AfficherLesHobbys()
+        //private void AfficherLesHobbys()
+        //{
+        //    try
+        //    {
+        //        using (SqlDataReader readerDeHobbys = managerEtudiant.AfficherLesHobbys())
+        //        {
+        //            if (readerDeHobbys.HasRows)
+        //            {
+        //                bindingSourceHobbys.DataSource = readerDeHobbys;
+        //                cmb_Hobby.ValueMember = "no_hobby";
+        //                cmb_Hobby.DisplayMember = "nom_hobby";
+        //                cmb_Hobby.DataSource = bindingSourceHobbys;
+        //            }
+                  
+        //        }
+        //    }
+        //    catch (Exception ex)
+        //    {
+
+        //        MessageBox.Show(ex.Message);
+        //    }
+
+        //}
+        private void AfficherLesHobbysNonChoisiDunEtudiant(int no_etudiant)
         {
+            cmb_Hobby.SelectedValue = ""; 
             try
             {
-                using (SqlDataReader readerDeHobbys = managerEtudiant.AfficherLesHobbys())
+                using (SqlDataReader readerDeHobbysNonChoisi = managerEtudiant.AfficherHobbysNonChoisiDunEtudiant(no_etudiant))
                 {
-                    bindingSourceHobbys.DataSource = readerDeHobbys;
-                    cmb_Hobby.ValueMember = "no_hobby";
-                    cmb_Hobby.DisplayMember = "nom_hobby";
-                    cmb_Hobby.DataSource = bindingSourceHobbys;
+                    if (readerDeHobbysNonChoisi.HasRows)
+                    {
+                        bindingSourceHobbys.DataSource = readerDeHobbysNonChoisi;
+                        cmb_Hobby.ValueMember = "no_hobby";
+                        cmb_Hobby.DisplayMember = "nom_hobby";
+                        cmb_Hobby.DataSource = bindingSourceHobbys;
+                    }
+                    else
+                    {
+                        dgv_hobbyEtudiant.Rows.Clear(); 
+                    }
+                  
                 }
             }
             catch (Exception ex)
@@ -83,7 +117,6 @@ namespace exercice_sur_les_relation_nM
             }
 
         }
-
         private void btn_associerEtudiantHobby_Click(object sender, EventArgs e)
         {
 
@@ -95,6 +128,7 @@ namespace exercice_sur_les_relation_nM
                 try
                 {
                     managerEtudiant.AssocierEtudiantHobby(no_etudiant, no_hobby);
+                   
                 }
                 catch (SqlException sqlLex)
                 {
@@ -145,6 +179,8 @@ namespace exercice_sur_les_relation_nM
                     managerEtudiant.AssocierEtudiantHobby(no_etudiant, no_hobby);
 
                     MessageBox.Show("Le hobby a bien été lier à l'étudiant sélectionné ");
+                    AfficherLesHobbysNonChoisiDunEtudiant(no_etudiant);
+                    remplirDGV(no_etudiant); 
                 }
                 catch (SqlException Sqlex)
                 {
@@ -193,26 +229,14 @@ namespace exercice_sur_les_relation_nM
         {
 
             dgv_hobbyEtudiant.Rows.Clear();
-
+            cmb_Hobby.SelectedValue = ""; 
             try
             {
-                int no_etudiant;
-                no_etudiant = int.Parse(cmb_etudiant.SelectedValue.ToString());
+             
+                int no_etudiant = int.Parse(cmb_etudiant.SelectedValue.ToString());
 
-
-                using (SqlDataReader ReaderdataGridView = managerEtudiant.ListerHobbyEtudiant(no_etudiant))
-                {
-                    if (ReaderdataGridView.HasRows)
-                    {
-                        bindingDataGrid.DataSource = ReaderdataGridView;
-                        dgv_hobbyEtudiant.DataSource = bindingDataGrid;
-                        
-                    }
-                    else
-                    {
-                        dgv_hobbyEtudiant.Rows.Clear(); 
-                    }
-                }
+                AfficherLesHobbysNonChoisiDunEtudiant(no_etudiant);
+                remplirDGV(no_etudiant); 
             }
             catch (Exception ex)
             {
@@ -220,6 +244,32 @@ namespace exercice_sur_les_relation_nM
                 MessageBox.Show(ex.Message); 
             }
       
+        }
+
+        private void remplirDGV(int no_etudiant)
+        {
+            try
+            {
+                using (SqlDataReader ReaderdataGridView = managerEtudiant.ListerHobbyEtudiant(no_etudiant))
+                {
+                    if (ReaderdataGridView.HasRows)
+                    {
+
+                        bindingDataGrid.DataSource = ReaderdataGridView;
+                        dgv_hobbyEtudiant.DataSource = bindingDataGrid;
+
+                    }
+                    else
+                    {
+                        dgv_hobbyEtudiant.Rows.Clear();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

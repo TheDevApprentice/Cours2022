@@ -21,3 +21,4 @@ C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation 
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.pdb
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.genruntimeconfig.cache
 C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice_sur_les_relation_nM.NombreDehobby.resources
+C:\Users\hugoe\Documents\GitHub\Cours\base de donnée\exercice sur les relation nM\exercice sur les relation nM\obj\Debug\netcoreapp3.1\exercice sur les relation nM.csproj.CopyComplete

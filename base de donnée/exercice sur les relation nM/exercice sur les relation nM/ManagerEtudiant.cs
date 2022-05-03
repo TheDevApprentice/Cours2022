@@ -48,6 +48,29 @@ namespace exercice_sur_les_relation_nM
 
             return readerEtudiants;
         }
+        public SqlDataReader AfficherHobbysNonChoisiDunEtudiant(int no_etudiant)
+        {
+            // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
+            SqlConnection listerHobbyNonChoisiConnection = getConnexion();
+
+            // déclarer une commande
+            string sql = "AfficherHobbysNonChoisiDunEtudiant"; //Ici on rentre le code select que l'on a généré (voir après)// ici nous n'avons pas la table de la provenance quand j'aurais rempris le projet tout ira mieux mais pour l'instant on suit le cours 
+                                         // dans sql manager faire une requete concepteur avec la table proveannce avec les teux colone trié et la proveancen en ordre croissant
+            SqlCommand cmdAfficherLeshobbyNonCHoisi = new SqlCommand(sql, listerHobbyNonChoisiConnection);
+            cmdAfficherLeshobbyNonCHoisi.CommandType = CommandType.StoredProcedure;
+            cmdAfficherLeshobbyNonCHoisi.Parameters.Add("@no_etudiant", SqlDbType.Int);
+
+            // donner valeur paramètre
+
+            cmdAfficherLeshobbyNonCHoisi.Parameters["@no_etudiant"].Value = no_etudiant;
+            // ouvrir une connexion 
+            listerHobbyNonChoisiConnection.Open();
+            // executer la commande
+
+            return cmdAfficherLeshobbyNonCHoisi.ExecuteReader(CommandBehavior.CloseConnection);
+
+            
+        }
         public SqlDataReader AfficherLesHobbys()
         {
             // déclarer une connexion on ne veut pas la fermer pour l'utilisation de datareader donc on n'utilise pas le using ici
